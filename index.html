@@ -1,0 +1,939 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bloom Atelier — Luxury Flower Shop</title>
+
+  <!-- Luxury Flower Favicon (4-Petal Blossom in Gold) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ca8a04' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='2.5'/><path d='M12 9.5c0-3 2-5 0-8-2 3 0 5 0 8z'/><path d='M14.5 12c3 0 5-2 8 0-3 2-5 0-8 0z'/><path d='M12 14.5c0 3-2 5 0 8 2-3 0-5 0-8z'/><path d='M9.5 12c-3 0-5 2-8 0 3-2 5 0 8 0z'/></svg>" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            playfair: ['Playfair Display', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif']
+          },
+          colors: {
+            primary: '#ca8a04',
+            primaryHover: '#a16207',
+            primaryLight: '#fefce8',
+            secondary: '#ca8a04',
+            secondaryHover: '#a16207',
+            accentCoral: '#f59e0b',
+            accentAmber: '#d97706',
+            brandLight: '#fafaf9',
+            brandDark: '#1c1917'
+          },
+          boxShadow: {
+            bloom: '0 10px 30px -5px rgba(202, 138, 4, 0.28)',
+            'bloom-hover': '0 20px 40px -10px rgba(202, 138, 4, 0.42)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+    html { scrollbar-width: thin; scrollbar-color: #ca8a04 #fefce8; }
+    html.dark { scrollbar-color: #ca8a04 #1c1917; }
+
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #fefce8; }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #ca8a04, #ca8a04);
+      border-radius: 9999px;
+      border: 2px solid #fefce8;
+    }
+    ::-webkit-scrollbar-thumb:hover { background: #a16207; }
+    html.dark ::-webkit-scrollbar-track { background: #1c1917; }
+    html.dark ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #ca8a04, #ca8a04);
+      border: 2px solid #1c1917;
+    }
+    html.dark ::-webkit-scrollbar-thumb:hover { background: #ca8a04; }
+
+    .bloom-scrollbar { scrollbar-width: thin; scrollbar-color: #ca8a04 transparent; }
+    .bloom-scrollbar::-webkit-scrollbar { width: 4px; }
+    .bloom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+    .bloom-scrollbar::-webkit-scrollbar-thumb {
+      background: #ca8a04;
+      border-radius: 9999px;
+    }
+    .bloom-scrollbar::-webkit-scrollbar-thumb:hover { background: #a16207; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+
+<body id="top" class="bg-brandLight dark:bg-brandDark text-stone-800 dark:text-stone-100 antialiased transition-colors duration-300">
+
+  <!-- ================= 1. NAVBAR ================= -->
+  <header class="sticky top-0 z-50 w-full bg-white/95 dark:bg-[#1c1917]/95 backdrop-blur-md border-b border-yellow-200/60 dark:border-stone-800/70 shadow-sm transition-colors duration-300">
+    <nav class="max-w-[1400px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between gap-4" aria-label="Main Navigation">
+
+      <!-- Brand -->
+      <a href="index.html" class="flex items-center gap-3 flex-shrink-0 group" aria-label="Bloom Atelier home">
+        <span class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-primary to-secondary flex items-center justify-center shadow-bloom text-white transition-transform duration-300 group-hover:scale-105">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="2.5"/>
+            <path d="M12 9.5c0-3 2-5 0-8-2 3 0 5 0 8z"/>
+            <path d="M14.5 12c3 0 5-2 8 0-3 2-5 0-8 0z"/>
+            <path d="M12 14.5c0 3-2 5 0 8 2-3 0-5 0-8z"/>
+            <path d="M9.5 12c-3 0-5 2-8 0 3-2 5 0 8 0z"/>
+          </svg>
+        </span>
+        <span class="flex flex-col">
+          <span class="text-2xl font-playfair font-extrabold tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight">
+            Bloom Atelier
+          </span>
+          <span class="text-[9px] uppercase font-bold tracking-widest text-yellow-600 dark:text-yellow-500 -mt-1">
+            Luxury Floral Studio
+          </span>
+        </span>
+      </a>
+
+      <!-- Desktop Links (Single Word) -->
+      <div class="hidden xl:flex items-center gap-6 2xl:gap-8">
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 text-[11px] font-bold tracking-[0.14em] uppercase text-primary dark:text-yellow-500 py-6 focus:outline-none">
+            Home
+            <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="absolute top-full start-0 w-48 bg-white dark:bg-[#292524] border border-yellow-200/60 dark:border-stone-800/40 shadow-bloom rounded-b-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 origin-top -translate-y-2 group-hover:translate-y-0 z-50">
+            <div class="py-2">
+              <a href="index.html" class="block px-4 py-2.5 text-[11px] font-bold tracking-[0.14em] uppercase text-primary dark:text-yellow-500 bg-primaryLight/60 dark:bg-stone-800/40 transition-colors">home1</a>
+              <a href="home-2.html" class="block px-4 py-2.5 text-[11px] font-bold tracking-[0.14em] uppercase text-stone-700 dark:text-stone-300 hover:bg-primaryLight dark:hover:bg-stone-800/60 hover:text-primary transition-colors">home2</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="about.html" class="text-[11px] font-bold tracking-[0.14em] uppercase text-stone-700 dark:text-stone-200 hover:text-primary dark:hover:text-yellow-500 transition-colors">About</a>
+        <a href="flowers.html" class="text-[11px] font-bold tracking-[0.14em] uppercase text-stone-700 dark:text-stone-200 hover:text-primary dark:hover:text-yellow-500 transition-colors">Flowers</a>
+        <a href="shop.html" class="text-[11px] font-bold tracking-[0.14em] uppercase text-stone-700 dark:text-stone-200 hover:text-primary dark:hover:text-yellow-500 transition-colors">Shop</a>
+        <a href="custom.html" class="text-[11px] font-bold tracking-[0.14em] uppercase text-stone-700 dark:text-stone-200 hover:text-primary dark:hover:text-yellow-500 transition-colors">Custom</a>
+        <a href="delivery.html" class="text-[11px] font-bold tracking-[0.14em] uppercase text-stone-700 dark:text-stone-200 hover:text-primary dark:hover:text-yellow-500 transition-colors">Delivery</a>
+        <a href="contact.html" class="text-[11px] font-bold tracking-[0.14em] uppercase text-stone-700 dark:text-stone-200 hover:text-primary dark:hover:text-yellow-500 transition-colors">Contact</a>
+      </div>
+
+      <!-- Desktop Utility & Actions -->
+      <div class="hidden xl:flex items-center gap-5">
+        <button type="button" onclick="toggleRTL()" aria-label="Toggle text direction" class="text-[11px] font-bold uppercase tracking-[0.14em] text-stone-600 dark:text-stone-400 hover:text-primary transition-colors flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+          </svg>
+          <span id="rtl-label">RTL</span>
+        </button>
+
+        <button type="button" onclick="toggleTheme()" aria-label="Toggle color theme" class="text-stone-600 dark:text-stone-400 hover:text-primary transition-colors p-1.5">
+          <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+
+        <a href="shop.html" class="bg-gradient-to-r from-primary to-secondary hover:from-primaryHover hover:to-secondaryHover text-white text-[11px] font-bold uppercase tracking-[0.14em] px-6 py-3 rounded-lg shadow-bloom hover:shadow-bloom-hover hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 border border-yellow-400/40">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg>
+          <span>Order</span>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="hamburger-btn" type="button" class="xl:hidden text-primary dark:text-yellow-500 p-2 focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg id="menu-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden flex-col bg-white dark:bg-[#1c1917] border-t border-yellow-200/60 dark:border-stone-800/70 w-full shadow-2xl max-h-[85vh] overflow-y-auto px-6 py-8 bloom-scrollbar">
+      <div class="flex flex-col gap-6">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-[0.14em] text-stone-400 block mb-2">Home</span>
+          <div class="flex flex-col gap-3 ps-3 border-s-2 border-primary">
+            <a href="index.html" class="text-sm font-bold uppercase tracking-[0.14em] text-primary dark:text-yellow-500">home1</a>
+            <a href="home-2.html" class="text-sm font-bold uppercase tracking-[0.14em] text-stone-700 dark:text-stone-300 hover:text-primary">home2</a>
+          </div>
+        </div>
+
+        <a href="about.html" class="text-sm font-bold uppercase tracking-[0.14em] text-stone-800 dark:text-stone-100 hover:text-primary">About</a>
+        <a href="flowers.html" class="text-sm font-bold uppercase tracking-[0.14em] text-stone-800 dark:text-stone-100 hover:text-primary">Flowers</a>
+        <a href="shop.html" class="text-sm font-bold uppercase tracking-[0.14em] text-stone-800 dark:text-stone-100 hover:text-primary">Shop</a>
+        <a href="custom.html" class="text-sm font-bold uppercase tracking-[0.14em] text-stone-800 dark:text-stone-100 hover:text-primary">Custom</a>
+        <a href="delivery.html" class="text-sm font-bold uppercase tracking-[0.14em] text-stone-800 dark:text-stone-100 hover:text-primary">Delivery</a>
+        <a href="contact.html" class="text-sm font-bold uppercase tracking-[0.14em] text-stone-800 dark:text-stone-100 hover:text-primary">Contact</a>
+
+        <hr class="border-yellow-200/60 dark:border-stone-800/70 my-1" />
+
+        <div class="flex items-center justify-between gap-4">
+          <button type="button" onclick="toggleRTL()" class="flex-1 flex items-center justify-center gap-2 text-[11px] font-bold uppercase tracking-[0.14em] text-stone-600 dark:text-stone-300 border border-yellow-200/60 dark:border-stone-800/60 rounded-lg px-4 py-3">
+            <span id="rtl-label-mobile">RTL</span>
+          </button>
+          <button type="button" onclick="toggleTheme()" class="flex-1 flex items-center justify-center gap-2 text-[11px] font-bold uppercase tracking-[0.14em] text-stone-600 dark:text-stone-300 border border-yellow-200/60 dark:border-stone-800/60 rounded-lg px-4 py-3">
+            <span class="hidden dark:inline">Light</span>
+            <span class="inline dark:hidden">Dark</span>
+          </button>
+        </div>
+
+        <a href="shop.html" class="text-center bg-gradient-to-r from-primary to-secondary text-white text-sm font-bold uppercase tracking-[0.14em] px-6 py-3.5 rounded-lg shadow-bloom">
+          Order Now
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= 2. HERO BANNER ================= -->
+  <section class="relative w-full pt-16 pb-24 lg:pt-28 lg:pb-32 overflow-hidden bg-brandLight dark:bg-brandDark transition-colors duration-300">
+    <div class="absolute top-0 right-0 -me-20 -mt-20 w-[550px] h-[550px] bg-primary/10 rounded-full blur-[130px] dark:bg-primary/20 pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 -ms-20 -mb-20 w-[450px] h-[450px] bg-secondary/10 rounded-full blur-[110px] dark:bg-secondary/15 pointer-events-none"></div>
+
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+        <!-- Left Copy Column -->
+        <div class="flex flex-col items-start text-start order-2 lg:order-1">
+          <div class="inline-flex items-center gap-2.5 bg-yellow-50 dark:bg-stone-800/50 border border-yellow-200/70 dark:border-stone-700/60 rounded-full px-5 py-2 mb-8 shadow-sm">
+            <span class="flex h-2.5 w-2.5 relative">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-500 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
+            </span>
+            <span class="text-[11px] font-bold tracking-[0.14em] uppercase text-yellow-700 dark:text-yellow-400">
+              Fresh &amp; Elegant
+            </span>
+          </div>
+
+          <h1 class="font-playfair text-5xl sm:text-6xl lg:text-7xl leading-[1.2] tracking-tight mb-6 text-stone-900 dark:text-white font-extrabold">
+            Fresh blooms for every moment,
+            <span class="block mt-2 font-normal italic pb-1 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              delivered with care.
+            </span>
+          </h1>
+
+          <p class="text-lg sm:text-xl mb-10 text-stone-600 dark:text-stone-300 leading-relaxed max-w-xl">
+            Discover our seasonal bouquet collections, hand-tied by expert florists and delivered fresh to your door — for birthdays, anniversaries, weddings, and every celebration in between.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+            <a href="shop.html" class="w-full sm:w-auto inline-flex items-center justify-center px-10 py-4 bg-gradient-to-r from-primary to-secondary hover:from-primaryHover hover:to-secondaryHover text-white text-sm font-bold uppercase tracking-wider rounded-lg shadow-bloom hover:shadow-bloom-hover hover:-translate-y-0.5 transition-all duration-300 border border-yellow-400/40">
+              Shop
+            </a>
+            <a href="delivery.html" class="w-full sm:w-auto inline-flex items-center justify-center px-10 py-4 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white dark:border-yellow-500 dark:text-yellow-500 dark:hover:bg-yellow-500 dark:hover:text-stone-900 text-sm font-bold uppercase tracking-wider rounded-lg transition-all duration-300">
+              Delivery
+            </a>
+          </div>
+
+          <div class="mt-12 flex items-center gap-8 pt-8 border-t border-yellow-200/60 dark:border-stone-800/70 w-full max-w-md">
+            <div class="flex flex-col">
+              <span class="text-3xl font-playfair font-bold text-primary dark:text-yellow-500 mb-1">50+</span>
+              <span class="text-[11px] text-stone-500 dark:text-stone-400 uppercase tracking-[0.14em] font-semibold">Seasonal Blooms</span>
+            </div>
+            <div class="w-px h-12 bg-yellow-200/80 dark:bg-stone-800/60"></div>
+            <div class="flex flex-col">
+              <span class="text-3xl font-playfair font-bold text-secondary dark:text-yellow-400 mb-1">Same-Day</span>
+              <span class="text-[11px] text-stone-500 dark:text-stone-400 uppercase tracking-[0.14em] font-semibold">Local Delivery</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Visual Showcase -->
+        <div class="relative order-1 lg:order-2 w-full h-[430px] sm:h-[530px] lg:h-[630px]">
+          <div class="absolute end-0 top-0 w-[85%] lg:w-[90%] h-full rounded-[2rem] overflow-hidden shadow-2xl shadow-stone-900/20 border border-yellow-200/40 dark:border-stone-800/40">
+            <img src="img/WhatsApp Image 2026-10-09 at 1.59.52 PM (27).jpeg" alt="Lush seasonal bouquet with roses and peonies" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/50 via-transparent to-transparent"></div>
+          </div>
+
+          <div class="absolute start-0 bottom-8 sm:bottom-12 w-[68%] lg:w-[60%] rounded-2xl overflow-hidden shadow-2xl shadow-stone-900/30 border-4 border-white dark:border-[#292524] transition-transform duration-300 hover:-translate-y-1 z-20 bg-white dark:bg-[#292524]">
+            <img src="img/WhatsApp Image 2026-10-09 at 1.59.52 PM (14).jpeg" alt="Fresh cut roses and seasonal flowers" class="w-full h-36 sm:h-44 object-cover" />
+            <div class="p-4 flex items-center justify-between">
+              <div>
+                <span class="inline-block bg-primaryLight text-primary text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded mb-1">Freshly Cut</span>
+                <p class="font-bold text-xs uppercase tracking-wider text-stone-800 dark:text-white">Signature Bouquet</p>
+                <p class="text-xs text-primary dark:text-yellow-500 font-semibold">Roses &amp; Peonies</p>
+              </div>
+              <div class="w-9 h-9 rounded-full bg-yellow-100 dark:bg-stone-800/40 flex items-center justify-center text-primary dark:text-yellow-500 flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 3. WHY CHOOSE US (FEATURES) ================= -->
+  <section class="relative w-full py-20 lg:py-28 bg-brandLight dark:bg-[#1c1917] transition-colors duration-300 overflow-hidden">
+    <div class="absolute -top-24 end-0 w-[420px] h-[420px] bg-primary/10 dark:bg-primary/15 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
+
+      <div class="max-w-2xl mx-auto text-center mb-14 lg:mb-16">
+        <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">
+          Why Bloom Atelier
+        </span>
+        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-5">
+          Flowers crafted with
+          <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">love</span>,
+          delivered with precision
+        </h2>
+        <p class="text-base sm:text-lg text-stone-600 dark:text-stone-400 leading-relaxed">
+          Every bouquet is hand-tied the morning of delivery, using stems sourced from local growers and premium international farms.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-7">
+
+        <!-- Feature 1 -->
+        <article class="group bg-white dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl p-7 shadow-sm hover:shadow-bloom hover:-translate-y-1 transition-all duration-300">
+          <span class="w-12 h-12 rounded-xl bg-primaryLight dark:bg-stone-800/60 text-primary dark:text-yellow-500 flex items-center justify-center mb-5 group-hover:bg-gradient-to-tr group-hover:from-primary group-hover:to-secondary group-hover:text-white transition-all duration-300">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 2c-1.5 4-5 6-5 10a5 5 0 0010 0c0-4-3.5-6-5-10z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 22v-4"/>
+            </svg>
+          </span>
+          <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-2">Fresh Cut Daily</h3>
+          <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            Stems arrive every morning from partner growers so your bouquet always feels garden-fresh.
+          </p>
+        </article>
+
+        <!-- Feature 2 -->
+        <article class="group bg-white dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl p-7 shadow-sm hover:shadow-bloom hover:-translate-y-1 transition-all duration-300">
+          <span class="w-12 h-12 rounded-xl bg-primaryLight dark:bg-stone-800/60 text-primary dark:text-yellow-500 flex items-center justify-center mb-5 group-hover:bg-gradient-to-tr group-hover:from-primary group-hover:to-secondary group-hover:text-white transition-all duration-300">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 21s-7-4.35-7-9a4 4 0 017-2.65A4 4 0 0119 12c0 4.65-7 9-7 9z"/>
+            </svg>
+          </span>
+          <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-2">Hand-Tied Bouquets</h3>
+          <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            Every arrangement is bound by hand in our studio — no two bouquets are ever truly alike.
+          </p>
+        </article>
+
+        <!-- Feature 3 -->
+        <article class="group bg-white dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl p-7 shadow-sm hover:shadow-bloom hover:-translate-y-1 transition-all duration-300">
+          <span class="w-12 h-12 rounded-xl bg-primaryLight dark:bg-stone-800/60 text-primary dark:text-yellow-500 flex items-center justify-center mb-5 group-hover:bg-gradient-to-tr group-hover:from-primary group-hover:to-secondary group-hover:text-white transition-all duration-300">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8v4l3 2"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </span>
+          <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-2">Same-Day Delivery</h3>
+          <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            Order before 1 PM and we'll hand-deliver your blooms anywhere in the city the same day.
+          </p>
+        </article>
+
+        <!-- Feature 4 -->
+        <article class="group bg-white dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl p-7 shadow-sm hover:shadow-bloom hover:-translate-y-1 transition-all duration-300">
+          <span class="w-12 h-12 rounded-xl bg-primaryLight dark:bg-stone-800/60 text-primary dark:text-yellow-500 flex items-center justify-center mb-5 group-hover:bg-gradient-to-tr group-hover:from-primary group-hover:to-secondary group-hover:text-white transition-all duration-300">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 13l4 4L19 7"/>
+            </svg>
+          </span>
+          <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-2">7-Day Freshness</h3>
+          <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            Every bouquet comes with a care card and our freshness promise — guaranteed for a week.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 4. SEASONAL BOUQUET COLLECTIONS ================= -->
+  <section class="relative w-full py-20 lg:py-28 bg-white dark:bg-[#221f1d] transition-colors duration-300">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
+        <div class="max-w-2xl">
+          <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">
+            Seasonal Collections
+          </span>
+          <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-4">
+            Bouquets you'll
+            <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">fall in love with</span>
+          </h2>
+          <p class="text-base sm:text-lg text-stone-600 dark:text-stone-400 leading-relaxed">
+            Three of the collections our clients order again and again — each one crafted around the finest blooms of the season.
+          </p>
+        </div>
+        <a href="shop.html" class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.14em] text-primary dark:text-yellow-500 hover:text-secondary transition-colors group flex-shrink-0">
+          <span>View Full Shop</span>
+          <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 rtl:group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 lg:gap-8">
+
+        <!-- Bouquet 1 -->
+        <article class="group bg-brandLight dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl overflow-hidden shadow-sm hover:shadow-bloom-hover hover:-translate-y-1.5 transition-all duration-300 flex flex-col">
+          <div class="relative h-60 overflow-hidden">
+            <img src="img/WhatsApp Image 2026-10-09 at 1.59.52 PM (25).jpeg" alt="Blush rose bouquet" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <span class="absolute top-4 start-4 bg-white/95 dark:bg-[#1c1917]/95 backdrop-blur-sm text-primary dark:text-yellow-500 text-[10px] font-bold uppercase tracking-[0.14em] px-3 py-1.5 rounded-full shadow-sm">
+              Best Seller
+            </span>
+          </div>
+          <div class="p-7 flex flex-col flex-1">
+            <h3 class="font-playfair text-2xl font-bold text-stone-900 dark:text-white mb-2">Blush Rose Bouquet</h3>
+            <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-6 flex-1">
+              A romantic cluster of garden roses and eucalyptus, wrapped in ivory silk ribbon.
+            </p>
+            <div class="flex items-center justify-between pt-5 border-t border-yellow-100 dark:border-stone-800/60">
+              <span class="font-playfair text-2xl font-bold text-primary dark:text-yellow-500">$48.00</span>
+              <a href="shop.html" class="text-[11px] font-bold uppercase tracking-[0.14em] text-stone-700 dark:text-stone-200 hover:text-primary dark:hover:text-yellow-500 transition-colors">
+                Add to Order
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Bouquet 2 -->
+        <article class="group bg-brandLight dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl overflow-hidden shadow-sm hover:shadow-bloom-hover hover:-translate-y-1.5 transition-all duration-300 flex flex-col">
+          <div class="relative h-60 overflow-hidden">
+            <img src="img/WhatsApp Image 2026-10-09 at 1.59.52 PM (26).jpeg" alt="Pastel peony arrangement" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <span class="absolute top-4 start-4 bg-white/95 dark:bg-[#1c1917]/95 backdrop-blur-sm text-primary dark:text-yellow-500 text-[10px] font-bold uppercase tracking-[0.14em] px-3 py-1.5 rounded-full shadow-sm">
+              New
+            </span>
+          </div>
+          <div class="p-7 flex flex-col flex-1">
+            <h3 class="font-playfair text-2xl font-bold text-stone-900 dark:text-white mb-2">Pastel Peony Dream</h3>
+            <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-6 flex-1">
+              Soft pink peonies and lisianthus gathered into a dreamy, garden-style arrangement.
+            </p>
+            <div class="flex items-center justify-between pt-5 border-t border-yellow-100 dark:border-stone-800/60">
+              <span class="font-playfair text-2xl font-bold text-primary dark:text-yellow-500">$56.00</span>
+              <a href="shop.html" class="text-[11px] font-bold uppercase tracking-[0.14em] text-stone-700 dark:text-stone-200 hover:text-primary dark:hover:text-yellow-500 transition-colors">
+                Add to Order
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Bouquet 3 -->
+        <article class="group bg-brandLight dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl overflow-hidden shadow-sm hover:shadow-bloom-hover hover:-translate-y-1.5 transition-all duration-300 flex flex-col md:col-span-2 lg:col-span-1">
+          <div class="relative h-60 overflow-hidden">
+            <img src="img/WhatsApp Image 2026-10-09 at 1.59.52 PM (27).jpeg" alt="Golden orchid arrangement" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <span class="absolute top-4 start-4 bg-white/95 dark:bg-[#1c1917]/95 backdrop-blur-sm text-primary dark:text-yellow-500 text-[10px] font-bold uppercase tracking-[0.14em] px-3 py-1.5 rounded-full shadow-sm">
+              Seasonal
+            </span>
+          </div>
+          <div class="p-7 flex flex-col flex-1">
+            <h3 class="font-playfair text-2xl font-bold text-stone-900 dark:text-white mb-2">Golden Orchid Arrangement</h3>
+            <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-6 flex-1">
+              Elegant phalaenopsis orchids in a sculptural vase — a modern statement piece.
+            </p>
+            <div class="flex items-center justify-between pt-5 border-t border-yellow-100 dark:border-stone-800/60">
+              <span class="font-playfair text-2xl font-bold text-primary dark:text-yellow-500">$72.00</span>
+              <a href="shop.html" class="text-[11px] font-bold uppercase tracking-[0.14em] text-stone-700 dark:text-stone-200 hover:text-primary dark:hover:text-yellow-500 transition-colors">
+                Add to Order
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 5. OUR STORY ================= -->
+  <section class="relative w-full py-20 lg:py-28 bg-brandLight dark:bg-[#1c1917] transition-colors duration-300 overflow-hidden">
+    <div class="absolute bottom-0 start-0 -ms-24 -mb-24 w-[420px] h-[420px] bg-secondary/10 dark:bg-secondary/15 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+        <!-- Visual -->
+        <div class="relative w-full h-[380px] sm:h-[460px] lg:h-[540px]">
+          <div class="absolute start-0 top-0 w-[78%] h-[72%] rounded-[1.75rem] overflow-hidden shadow-2xl shadow-stone-900/20 border border-yellow-200/50 dark:border-stone-800/40">
+            <img src="img/WhatsApp Image 2026-10-09 at 1.59.52 PM (7).jpeg" alt="Florist arranging a fresh bouquet in the studio" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+          </div>
+          <div class="absolute end-0 bottom-0 w-[62%] h-[58%] rounded-[1.75rem] overflow-hidden shadow-2xl shadow-stone-900/25 border-4 border-white dark:border-[#292524] z-20">
+            <img src="img/WhatsApp Image 2026-10-09 at 1.59.52 PM (3).jpeg" alt="Colourful tulips in the Bloom Atelier studio" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+          </div>
+          <div class="absolute start-4 sm:start-6 top-[68%] z-30 bg-white dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl shadow-bloom px-5 py-4">
+            <span class="block font-playfair text-3xl font-bold text-primary dark:text-yellow-500 leading-none mb-1">2014</span>
+            <span class="block text-[10px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400">Since Day One</span>
+          </div>
+        </div>
+
+        <!-- Copy -->
+        <div class="flex flex-col items-start text-start">
+          <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">
+            Our Story
+          </span>
+          <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-6">
+            A small studio that grew into a
+            <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">floral destination</span>
+          </h2>
+          <p class="text-base sm:text-lg text-stone-600 dark:text-stone-300 leading-relaxed mb-5">
+            Bloom Atelier began as a single workbench, one bucket of roses, and a promise to never compromise on freshness.
+            Word travelled fast, and the orders never really stopped.
+          </p>
+          <p class="text-base text-stone-600 dark:text-stone-400 leading-relaxed mb-10">
+            Today we still condition every stem by hand, still wrap each bouquet in recycled silk ribbon, and still greet
+            every client like they're walking into our own home.
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 w-full mb-10 pt-8 border-t border-yellow-200/60 dark:border-stone-800/70">
+            <div>
+              <span class="block font-playfair text-3xl font-bold text-primary dark:text-yellow-500 mb-1">11</span>
+              <span class="block text-[10px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400">Years Blooming</span>
+            </div>
+            <div>
+              <span class="block font-playfair text-3xl font-bold text-secondary dark:text-yellow-400 mb-1">25k+</span>
+              <span class="block text-[10px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400">Bouquets Tied</span>
+            </div>
+            <div>
+              <span class="block font-playfair text-3xl font-bold text-accentAmber mb-1">4.9★</span>
+              <span class="block text-[10px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400">Average Rating</span>
+            </div>
+          </div>
+
+          <a href="about.html" class="inline-flex items-center justify-center px-9 py-4 bg-gradient-to-r from-primary to-secondary hover:from-primaryHover hover:to-secondaryHover text-white text-sm font-bold uppercase tracking-wider rounded-lg shadow-bloom hover:shadow-bloom-hover hover:-translate-y-0.5 transition-all duration-300 border border-yellow-400/40">
+            Read Full Story
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 6. HOW IT WORKS (STEPS) ================= -->
+  <section class="relative w-full py-20 lg:py-28 bg-white dark:bg-[#221f1d] transition-colors duration-300">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+
+      <div class="max-w-2xl mx-auto text-center mb-14 lg:mb-16">
+        <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">
+          How It Works
+        </span>
+        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-5">
+          Four simple steps to the
+          <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">perfect bouquet</span>
+        </h2>
+        <p class="text-base sm:text-lg text-stone-600 dark:text-stone-400 leading-relaxed">
+          From choosing your stems to the moment they arrive at the door — it's all designed to be effortless.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-7">
+
+        <!-- Step 1 -->
+        <div class="relative bg-brandLight dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl p-7 hover:shadow-bloom hover:-translate-y-1 transition-all duration-300">
+          <span class="absolute -top-5 start-7 w-11 h-11 rounded-xl bg-gradient-to-tr from-primary to-secondary text-white font-playfair font-bold text-lg flex items-center justify-center shadow-bloom">01</span>
+          <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mt-5 mb-2">Choose Your Blooms</h3>
+          <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            Browse our seasonal collections or build your own bouquet from fifty-plus fresh stems.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative bg-brandLight dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl p-7 hover:shadow-bloom hover:-translate-y-1 transition-all duration-300">
+          <span class="absolute -top-5 start-7 w-11 h-11 rounded-xl bg-gradient-to-tr from-primary to-secondary text-white font-playfair font-bold text-lg flex items-center justify-center shadow-bloom">02</span>
+          <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mt-5 mb-2">Add a Note</h3>
+          <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            Include a hand-written message on our signature card — we'll tuck it inside the wrap.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative bg-brandLight dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl p-7 hover:shadow-bloom hover:-translate-y-1 transition-all duration-300">
+          <span class="absolute -top-5 start-7 w-11 h-11 rounded-xl bg-gradient-to-tr from-primary to-secondary text-white font-playfair font-bold text-lg flex items-center justify-center shadow-bloom">03</span>
+          <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mt-5 mb-2">We Hand-Tie It</h3>
+          <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            Our florists condition, arrange and wrap your bouquet the same morning it ships.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="relative bg-brandLight dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl p-7 hover:shadow-bloom hover:-translate-y-1 transition-all duration-300">
+          <span class="absolute -top-5 start-7 w-11 h-11 rounded-xl bg-gradient-to-tr from-primary to-secondary text-white font-playfair font-bold text-lg flex items-center justify-center shadow-bloom">04</span>
+          <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mt-5 mb-2">Delivered Fresh</h3>
+          <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            Your blooms arrive in our signature kraft box, ready to unwrap and enjoy.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 7. TESTIMONIALS ================= -->
+  <section class="relative w-full py-20 lg:py-28 bg-brandLight dark:bg-[#1c1917] transition-colors duration-300 overflow-hidden">
+    <div class="absolute top-0 start-1/2 -translate-x-1/2 w-[520px] h-[520px] bg-primary/10 dark:bg-primary/15 rounded-full blur-[130px] pointer-events-none"></div>
+
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
+
+      <div class="max-w-2xl mx-auto text-center mb-14 lg:mb-16">
+        <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">
+          Kind Words
+        </span>
+        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-5">
+          Loved by our
+          <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">clients</span>
+        </h2>
+        <p class="text-base sm:text-lg text-stone-600 dark:text-stone-400 leading-relaxed">
+          Over 1,800 reviews and a lot of happy celebrations.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-7">
+
+        <!-- Testimonial 1 -->
+        <figure class="flex flex-col bg-white dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl p-7 shadow-sm hover:shadow-bloom hover:-translate-y-1 transition-all duration-300 h-full">
+          <div class="flex gap-1 mb-5 text-primary" aria-label="Rated 5 out of 5">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+          </div>
+          <blockquote class="text-sm text-stone-600 dark:text-stone-300 leading-relaxed mb-6 flex-1">
+            "The peony bouquet I ordered for my mum's birthday was absolutely stunning. She said it was the freshest arrangement she's ever received."
+          </blockquote>
+          <figcaption class="flex items-center gap-3 pt-5 border-t border-yellow-100 dark:border-stone-800/60">
+            <div class="w-11 h-11 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-primary/30 dark:ring-yellow-500/30">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" alt="Amelia Hart portrait" class="w-full h-full object-cover" />
+            </div>
+            <span class="flex flex-col min-w-0">
+              <span class="text-sm font-bold text-stone-900 dark:text-white truncate">Amelia Hart</span>
+              <span class="text-[11px] uppercase tracking-[0.14em] font-semibold text-stone-500 dark:text-stone-400 truncate">Regular since 2021</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <!-- Testimonial 2 -->
+        <figure class="flex flex-col bg-white dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl p-7 shadow-sm hover:shadow-bloom hover:-translate-y-1 transition-all duration-300 h-full">
+          <div class="flex gap-1 mb-5 text-primary" aria-label="Rated 5 out of 5">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+          </div>
+          <blockquote class="text-sm text-stone-600 dark:text-stone-300 leading-relaxed mb-6 flex-1">
+            "Our wedding florals were a dream. The team handled everything — bouquets, table runners, arch — and stayed calm through every change."
+          </blockquote>
+          <figcaption class="flex items-center gap-3 pt-5 border-t border-yellow-100 dark:border-stone-800/60">
+            <div class="w-11 h-11 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-primary/30 dark:ring-yellow-500/30">
+              <img src="img/WhatsApp Image 2026-10-09 at 1.59.52 PM (8).jpeg" alt="Marcus Lin portrait" class="w-full h-full object-cover" />
+            </div>
+            <span class="flex flex-col min-w-0">
+              <span class="text-sm font-bold text-stone-900 dark:text-white truncate">Marcus Lin</span>
+              <span class="text-[11px] uppercase tracking-[0.14em] font-semibold text-stone-500 dark:text-stone-400 truncate">Wedding Client</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <!-- Testimonial 3 -->
+        <figure class="flex flex-col bg-white dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl p-7 shadow-sm hover:shadow-bloom hover:-translate-y-1 transition-all duration-300 h-full md:col-span-2 lg:col-span-1">
+          <div class="flex gap-1 mb-5 text-primary" aria-label="Rated 5 out of 5">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+          </div>
+          <blockquote class="text-sm text-stone-600 dark:text-stone-300 leading-relaxed mb-6 flex-1">
+            "I order a fresh bouquet every month for our office. Beautiful, on time, and the team is genuinely lovely to deal with."
+          </blockquote>
+          <figcaption class="flex items-center gap-3 pt-5 border-t border-yellow-100 dark:border-stone-800/60">
+            <div class="w-11 h-11 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-primary/30 dark:ring-yellow-500/30">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80" alt="Sofia Reyes portrait" class="w-full h-full object-cover" />
+            </div>
+            <span class="flex flex-col min-w-0">
+              <span class="text-sm font-bold text-stone-900 dark:text-white truncate">Sofia Reyes</span>
+              <span class="text-[11px] uppercase tracking-[0.14em] font-semibold text-stone-500 dark:text-stone-400 truncate">Office Subscription</span>
+            </span>
+          </figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 8. LOYALTY / NEWSLETTER CTA ================= -->
+  <section class="relative w-full py-20 lg:py-28 bg-white dark:bg-[#221f1d] transition-colors duration-300">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+
+      <div class="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-primary via-secondary to-primary shadow-bloom-hover px-7 py-14 sm:px-12 lg:px-16 lg:py-20">
+        <div class="absolute -top-20 -end-16 w-72 h-72 bg-white/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -start-16 w-80 h-80 bg-black/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+          <div class="text-start">
+            <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-white/85 mb-4">
+              Bloom Atelier Loyalty
+            </span>
+            <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-white mb-5">
+              Every 5th bouquet is on us.
+            </h2>
+            <p class="text-base sm:text-lg text-white/90 leading-relaxed mb-8 max-w-lg">
+              Join the Bloom Circle and collect a petal with every bouquet, arrangement or gift box. No app, no fees — just fresh flowers and a very good reason to come back.
+            </p>
+
+            <ul class="flex flex-col gap-3 mb-9">
+              <li class="flex items-start gap-3 text-sm font-medium text-white/95">
+                <span class="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span class="min-w-0">Free seasonal bouquet on your birthday</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm font-medium text-white/95">
+                <span class="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span class="min-w-0">Early access to limited seasonal collections</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm font-medium text-white/95">
+                <span class="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span class="min-w-0">Members-only floral workshop evenings</span>
+              </li>
+            </ul>
+
+            <a href="custom.html" class="inline-flex items-center justify-center px-9 py-4 bg-white text-primaryHover hover:bg-brandLight text-sm font-bold uppercase tracking-wider rounded-lg shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+              Join The Circle
+            </a>
+          </div>
+
+          <div class="w-full bg-white/10 backdrop-blur-sm border border-white/25 rounded-2xl p-7 sm:p-9">
+            <h3 class="font-playfair text-2xl font-bold text-white mb-2">Get the bloom letter</h3>
+            <p class="text-sm text-white/85 leading-relaxed mb-6">
+              One short email a month — new collections, seasonal menus and the occasional floral tip. No spam, ever.
+            </p>
+
+            <form class="flex flex-col gap-3" onsubmit="event.preventDefault();">
+              <label for="cta-email" class="sr-only">Email address</label>
+              <input
+                id="cta-email"
+                type="email"
+                required
+                placeholder="your@email.com"
+                class="w-full rounded-lg bg-white/95 text-stone-800 placeholder-stone-400 text-sm font-medium px-5 py-3.5 border border-white/40 focus:outline-none focus:ring-2 focus:ring-white/70 transition"
+              />
+              <button type="submit" class="w-full inline-flex items-center justify-center gap-2 bg-stone-900/85 hover:bg-stone-900 text-white text-[11px] font-bold uppercase tracking-[0.14em] px-6 py-3.5 rounded-lg transition-colors duration-300">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <span>Subscribe</span>
+              </button>
+            </form>
+
+            <p class="text-[11px] text-white/75 mt-4 leading-relaxed">
+              By subscribing you agree to our
+              <a href="privacy.html" class="underline hover:text-white transition-colors">Privacy Policy</a>.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 9. COMPACT FOOTER ================= -->
+  <footer class="relative bg-[#0c0a09] text-stone-100 pt-10 pb-6 overflow-hidden border-t border-stone-800/70">
+    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-primary"></div>
+
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 mb-10">
+
+        <!-- Column 1: Brand & Identity (4 Cols) -->
+        <div class="lg:col-span-4">
+          <a href="index.html" class="flex items-center gap-3 mb-4" aria-label="Bloom Atelier home">
+            <span class="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary to-secondary flex items-center justify-center text-white shadow-bloom flex-shrink-0">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="2.5"/>
+                <path d="M12 9.5c0-3 2-5 0-8-2 3 0 5 0 8z"/>
+                <path d="M14.5 12c3 0 5-2 8 0-3 2-5 0-8 0z"/>
+                <path d="M12 14.5c0 3-2 5 0 8 2-3 0-5 0-8z"/>
+                <path d="M9.5 12c-3 0-5 2-8 0 3-2 5 0 8 0z"/>
+              </svg>
+            </span>
+            <span class="flex flex-col">
+              <span class="text-xl font-playfair font-extrabold tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight">
+                Bloom Atelier
+              </span>
+              <span class="text-[8px] uppercase font-bold tracking-widest text-yellow-500">
+                Luxury Floral Studio
+              </span>
+            </span>
+          </a>
+          <p class="text-sm text-stone-400 leading-relaxed mb-6 font-medium max-w-sm">
+            A luxury floral studio offering hand-tied seasonal bouquets, premium blooms, and same-day delivery for every occasion.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="inline-flex items-center gap-1 bg-stone-800/60 border border-stone-700/60 rounded-full px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-yellow-500">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+              Fresh Cut Daily
+            </span>
+            <span class="inline-flex items-center gap-1 bg-stone-800/60 border border-stone-700/60 rounded-full px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-yellow-500">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+              Locally Sourced
+            </span>
+          </div>
+
+          <div class="flex gap-2">
+            <a href="#" aria-label="X Profile" class="w-8 h-8 rounded-full bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-stone-400 hover:text-white hover:border-yellow-500/40 transition-all duration-300">
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
+            </a>
+            <a href="#" aria-label="Instagram Profile" class="w-8 h-8 rounded-full bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-stone-400 hover:text-white hover:border-yellow-500/40 transition-all duration-300">
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z" /></svg>
+            </a>
+            <a href="#" aria-label="Facebook Profile" class="w-8 h-8 rounded-full bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-stone-400 hover:text-white hover:border-yellow-500/40 transition-all duration-300">
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Our Flowers (2 Cols) -->
+        <div class="lg:col-span-2">
+          <h4 class="text-white font-bold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">
+            Flowers
+            <span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span>
+          </h4>
+          <ul class="flex flex-col gap-2.5">
+            <li><a href="shop.html#seasonal" class="text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">Seasonal</a></li>
+            <li><a href="shop.html#roses" class="text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">Roses</a></li>
+            <li><a href="shop.html#peonies" class="text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">Peonies</a></li>
+            <li><a href="shop.html#orchids" class="text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">Orchids</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Discover (2 Cols) -->
+        <div class="lg:col-span-2">
+          <h4 class="text-white font-bold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">
+            Discover
+            <span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span>
+          </h4>
+          <ul class="flex flex-col gap-2.5">
+            <li><a href="custom.html" class="text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">Custom</a></li>
+            <li><a href="delivery.html" class="text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">Delivery</a></li>
+            <li><a href="about.html" class="text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">Story</a></li>
+            <li><a href="journal.html" class="text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">Journal</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact & Operations (4 Cols) -->
+        <div class="lg:col-span-4">
+          <h4 class="text-white font-bold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">
+            Visit Us
+            <span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span>
+          </h4>
+          <ul class="flex flex-col gap-3">
+            <li>
+              <a href="contact.html#map" class="group flex items-start gap-2 text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">
+                <span class="w-6 h-6 rounded bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-yellow-500 flex-shrink-0">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </span>
+                <span class="pt-0.5">Location</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:hello@bloomatelier.com" class="group flex items-start gap-2 text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">
+                <span class="w-6 h-6 rounded bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-yellow-500 flex-shrink-0">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </span>
+                <span class="pt-0.5">hello@bloomatelier.com</span>
+              </a>
+            </li>
+            <li class="flex items-start gap-2 text-sm text-stone-400 font-medium">
+              <span class="w-6 h-6 rounded bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-yellow-500 flex-shrink-0">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </span>
+              <span class="pt-0.5">Mon–Sun · 8:00 AM – 7:00 PM</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Sub-Bar -->
+      <div class="border-t border-stone-800/60 pt-4 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-[11px] text-stone-500 font-medium text-center md:text-start">
+          &copy; 2026 <span class="text-stone-300 font-semibold">Bloom Atelier</span>. All rights reserved.
+        </p>
+        <div class="flex items-center gap-6">
+          <a href="privacy.html" class="text-[11px] text-stone-500 hover:text-yellow-500 transition-colors font-medium">Privacy</a>
+          <a href="terms.html" class="text-[11px] text-stone-500 hover:text-yellow-500 transition-colors font-medium">Terms</a>
+        </div>
+        <a href="#top" aria-label="Back to top" class="w-8 h-8 rounded-full bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-stone-400 hover:text-white transition-all duration-300 hover:-translate-y-0.5">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= 10. COMPACT SCRIPT ================= -->
+  <script>
+    (function () {
+      'use strict';
+      const hamburgerBtn = document.getElementById('hamburger-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+
+      hamburgerBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.toggle('hidden');
+        menuIcon.innerHTML = isHidden
+          ? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />'
+          : '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
+        hamburgerBtn.setAttribute('aria-expanded', String(!isHidden));
+      });
+
+      window.toggleRTL = function () {
+        const isLtr = document.documentElement.getAttribute('dir') === 'ltr';
+        const nextDir = isLtr ? 'rtl' : 'ltr';
+        document.documentElement.setAttribute('dir', nextDir);
+        document.getElementById('rtl-label').textContent = isLtr ? 'LTR' : 'RTL';
+        document.getElementById('rtl-label-mobile').textContent = isLtr ? 'LTR' : 'RTL';
+        localStorage.setItem('dir', nextDir);
+      };
+
+      window.toggleTheme = function () {
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      };
+
+      // Sync user preferences
+      if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+      if (localStorage.getItem('dir') === 'rtl') {
+        document.documentElement.setAttribute('dir', 'rtl');
+        document.getElementById('rtl-label').textContent = 'LTR';
+        document.getElementById('rtl-label-mobile').textContent = 'LTR';
+      }
+    })();
+  </script>
+</body>
+</html>
