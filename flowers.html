@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flowers Ã¢â‚¬â€ Bloom Atelier</title>
+  <title>Flowers — Bloom Atelier</title>
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ca8a04' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='2.5'/><path d='M12 9.5c0-3 2-5 0-8-2 3 0 5 0 8z'/><path d='M14.5 12c3 0 5-2 8 0-3 2-5 0-8 0z'/><path d='M12 14.5c0 3-2 5 0 8 2-3 0-5 0-8z'/><path d='M9.5 12c-3 0-5 2-8 0 3-2 5 0 8 0z'/></svg>" />
 
@@ -36,6 +36,9 @@
   <style>
     html { scroll-behavior: smooth; }
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    /* Consistent Typography: 600 headings, 400-550 body */
+    h1, h2, h3, h4, h5, h6 { font-weight: 600 !important; }
+    p { font-weight: 400; }
     html { scrollbar-width: thin; scrollbar-color: #ca8a04 #fefce8; }
     html.dark { scrollbar-color: #ca8a04 #1c1917; }
     ::-webkit-scrollbar { width: 8px; height: 8px; }
@@ -56,14 +59,14 @@
 <body id="top" class="bg-brandLight dark:bg-brandDark text-stone-800 dark:text-stone-100 antialiased transition-colors duration-300">
 
   <!-- ================= 1. NAVBAR (unchanged) ================= -->
-  <header class="sticky top-0 z-50 w-full bg-white/95 dark:bg-[#1c1917]/95 backdrop-blur-md border-b border-yellow-200/60 dark:border-stone-800/70 shadow-sm transition-colors duration-300">
+  <header class="sticky top-0 z-50 w-full relative bg-white/95 dark:bg-[#1c1917]/95 backdrop-blur-md border-b border-yellow-200/60 dark:border-stone-800/70 shadow-sm transition-colors duration-300">
     <nav class="max-w-[1400px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between gap-4" aria-label="Main Navigation">
       <a href="index.html" class="flex items-center gap-3 flex-shrink-0 group" aria-label="Bloom Atelier home">
         <span class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-primary to-secondary flex items-center justify-center shadow-bloom text-white transition-transform duration-300 group-hover:scale-105">
           <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2.5"/><path d="M12 9.5c0-3 2-5 0-8-2 3 0 5 0 8z"/><path d="M14.5 12c3 0 5-2 8 0-3 2-5 0-8 0z"/><path d="M12 14.5c0 3-2 5 0 8 2-3 0-5 0-8z"/><path d="M9.5 12c-3 0-5 2-8 0 3-2 5 0 8 0z"/></svg>
         </span>
         <span class="flex flex-col">
-          <span class="text-2xl font-playfair font-extrabold tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight">Bloom Atelier</span>
+          <span class="text-2xl font-playfair font-semibold tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight">Bloom Atelier</span>
           <span class="text-[9px] uppercase font-bold tracking-widest text-yellow-600 dark:text-yellow-500 -mt-1">Luxury Floral Studio</span>
         </span>
       </a>
@@ -110,7 +113,7 @@
       </button>
     </nav>
 
-    <div id="mobile-menu" class="hidden flex-col bg-white dark:bg-[#1c1917] border-t border-yellow-200/60 dark:border-stone-800/70 w-full shadow-2xl max-h-[85vh] overflow-y-auto px-6 py-8 bloom-scrollbar">
+    <div id="mobile-menu" class="hidden absolute top-full left-0 right-0 w-full flex flex-col bg-white dark:bg-[#1c1917] border-t border-yellow-200/60 dark:border-stone-800/70 shadow-2xl max-h-[85vh] overflow-y-auto px-6 py-8 bloom-scrollbar z-50">
       <div class="flex flex-col gap-6">
         <div>
           <span class="text-[11px] font-bold uppercase tracking-[0.14em] text-stone-400 block mb-2">Home</span>
@@ -152,16 +155,16 @@
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
             <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
           </span>
-          <span class="text-[11px] font-bold tracking-[0.14em] uppercase text-white/95">Our Blooms</span>
+          <span class="text-[11px] font-semibold tracking-[0.14em] uppercase text-white/95">Artisanal Cut Flowers &amp; Botanicals</span>
         </div>
 
-        <h1 class="font-playfair text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[1.12] tracking-tight mb-7 text-white font-extrabold drop-shadow-[0_4px_24px_rgba(0,0,0,0.55)]">
+        <h1 class="font-playfair text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[1.12] tracking-tight mb-7 text-white font-semibold drop-shadow-[0_4px_24px_rgba(0,0,0,0.55)]">
           Every flower has a story,
-          <span class="block mt-2 font-normal italic pb-2 bg-gradient-to-r from-yellow-200 via-yellow-400 to-amber-500 bg-clip-text text-transparent">we know them all.</span>
+          <span class="block mt-2 font-normal italic pb-2 bg-gradient-to-r from-yellow-200 via-yellow-400 to-amber-500 bg-clip-text text-transparent">expertly grown, conditioned, and curated.</span>
         </h1>
 
-        <p class="text-lg sm:text-xl mb-10 text-white/85 leading-relaxed max-w-2xl mx-auto font-sans drop-shadow-[0_2px_12px_rgba(0,0,0,0.5)]">
-          From garden roses to sculptural orchids Ã¢â‚¬â€ explore the full range of seasonal stems we source, condition and hand-tie in our studio every week.
+        <p class="text-lg sm:text-xl mb-10 text-white/90 leading-relaxed max-w-2xl mx-auto font-sans font-normal drop-shadow-[0_2px_12px_rgba(0,0,0,0.5)]">
+          Discover our complete botanical collection of premium fresh flowers, luxury garden roses, and rare seasonal stems. Carefully conditioned and artfully arranged by master florists, our blooms bring natural elegance and lasting fragrance to every occasion.
         </p>
 
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
@@ -184,13 +187,13 @@
   <section id="flowers" class="relative w-full py-20 lg:py-28 bg-white dark:bg-[#221f1d] transition-colors duration-300">
     <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
       <div class="max-w-2xl mx-auto text-center mb-14">
-        <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">Shop by Flower</span>
-        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-5">
-          Every flower,
-          <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">every mood</span>
+        <span class="inline-block text-[11px] font-semibold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">Floral Collections</span>
+        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-stone-900 dark:text-white mb-5">
+          Explore by flower variety,
+          <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">tailored to every mood</span>
         </h2>
-        <p class="text-base sm:text-lg text-stone-600 dark:text-stone-400 leading-relaxed">
-          Six families of bloom we work with most. Tap a tile to browse that collection.
+        <p class="text-base sm:text-lg text-stone-600 dark:text-stone-400 leading-relaxed font-normal">
+          Browse our signature flower families sourced directly from sustainable grower partnerships. Whether you are searching for timeless roses, plush peonies, or exotic orchids, choose your favorite variety to discover handcrafted bouquets designed around each stem.
         </p>
       </div>
 
@@ -200,8 +203,8 @@
           <img src="img/WhatsApp Image 2026-10-09 at 1.59.52 PM.jpeg" alt="Roses" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-4 text-center">
-            <p class="font-playfair text-lg font-bold text-white">Roses</p>
-            <span class="text-[10px] uppercase tracking-[0.14em] font-bold text-yellow-300">32 Varieties</span>
+            <h3 class="font-playfair text-lg font-semibold text-white">Roses</h3>
+            <span class="text-[10px] uppercase tracking-[0.14em] font-medium text-yellow-300">32 Varieties</span>
           </div>
         </a>
 
@@ -209,8 +212,8 @@
           <img src="img/WhatsApp Image 2026-10-09 at 1.59.49 PM.jpeg" alt="Peonies" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-4 text-center">
-            <p class="font-playfair text-lg font-bold text-white">Peonies</p>
-            <span class="text-[10px] uppercase tracking-[0.14em] font-bold text-yellow-300">8 Varieties</span>
+            <h3 class="font-playfair text-lg font-semibold text-white">Peonies</h3>
+            <span class="text-[10px] uppercase tracking-[0.14em] font-medium text-yellow-300">8 Varieties</span>
           </div>
         </a>
 
@@ -218,8 +221,8 @@
           <img src="img/WhatsApp Image 2026-10-09 at 1.59.51 PM (1).jpeg" alt="Tulips" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-4 text-center">
-            <p class="font-playfair text-lg font-bold text-white">Tulips</p>
-            <span class="text-[10px] uppercase tracking-[0.14em] font-bold text-yellow-300">14 Varieties</span>
+            <h3 class="font-playfair text-lg font-semibold text-white">Tulips</h3>
+            <span class="text-[10px] uppercase tracking-[0.14em] font-medium text-yellow-300">14 Varieties</span>
           </div>
         </a>
 
@@ -227,8 +230,8 @@
           <img src="img/WhatsApp Image 2026-10-09 at 1.59.51 PM.jpeg" alt="Orchids" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-4 text-center">
-            <p class="font-playfair text-lg font-bold text-white">Orchids</p>
-            <span class="text-[10px] uppercase tracking-[0.14em] font-bold text-yellow-300">6 Varieties</span>
+            <h3 class="font-playfair text-lg font-semibold text-white">Orchids</h3>
+            <span class="text-[10px] uppercase tracking-[0.14em] font-medium text-yellow-300">6 Varieties</span>
           </div>
         </a>
 
@@ -236,8 +239,8 @@
           <img src="img/WhatsApp Image 2026-10-09 at 1.59.52 PM (1).jpeg" alt="Lilies" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-4 text-center">
-            <p class="font-playfair text-lg font-bold text-white">Lilies</p>
-            <span class="text-[10px] uppercase tracking-[0.14em] font-bold text-yellow-300">5 Varieties</span>
+            <h3 class="font-playfair text-lg font-semibold text-white">Lilies</h3>
+            <span class="text-[10px] uppercase tracking-[0.14em] font-medium text-yellow-300">5 Varieties</span>
           </div>
         </a>
 
@@ -245,8 +248,8 @@
           <img src="img/WhatsApp Image 2026-10-09 at 1.59.52 PM (18).jpeg" alt="Wildflowers" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-4 text-center">
-            <p class="font-playfair text-lg font-bold text-white">Wildflowers</p>
-            <span class="text-[10px] uppercase tracking-[0.14em] font-bold text-yellow-300">Seasonal</span>
+            <h3 class="font-playfair text-lg font-semibold text-white">Wildflowers</h3>
+            <span class="text-[10px] uppercase tracking-[0.14em] font-medium text-yellow-300">Seasonal</span>
           </div>
         </a>
 
@@ -261,12 +264,12 @@
     <div class="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
       <div class="max-w-2xl mx-auto text-center mb-14">
         <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">Seasonal Guide</span>
-        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-5">
+        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-stone-900 dark:text-white mb-5">
           What's in bloom
           <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">right now</span>
         </h2>
-        <p class="text-base sm:text-lg text-stone-600 dark:text-stone-400 leading-relaxed">
-          A season-by-season look at the flowers we source throughout the year.
+        <p class="text-base sm:text-lg text-stone-600 dark:text-stone-400 leading-relaxed font-normal">
+          Follow nature's calendar with our seasonal floral sourcing guide. We partner with local greenhouses and open-air fields to bring you seasonal stems at their absolute pinnacle of fragrance, color, and vase life.
         </p>
       </div>
 
@@ -276,10 +279,10 @@
         <article class="group bg-white dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl overflow-hidden shadow-sm hover:shadow-bloom hover:-translate-y-1 transition-all duration-300 flex flex-col">
           <div class="relative h-40 overflow-hidden">
             <img src="img/WhatsApp Image 2026-10-09 at 1.59.52 PM (6).jpeg" alt="Spring flowers" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <span class="absolute top-4 start-4 bg-white/95 dark:bg-[#1c1917]/95 backdrop-blur-sm text-primary dark:text-yellow-500 text-[10px] font-bold uppercase tracking-[0.14em] px-3 py-1.5 rounded-full shadow-sm">MarchÃ¢â‚¬â€œMay</span>
+            <span class="absolute top-4 start-4 bg-white/95 dark:bg-[#1c1917]/95 backdrop-blur-sm text-primary dark:text-yellow-500 text-[10px] font-semibold uppercase tracking-[0.14em] px-3 py-1.5 rounded-full shadow-sm">March—œMay</span>
           </div>
           <div class="p-6 flex flex-col flex-1">
-            <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-3">Spring</h3>
+            <h3 class="font-playfair text-xl font-semibold text-stone-900 dark:text-white mb-3">Spring</h3>
             <ul class="flex flex-col gap-2 flex-1">
               <li class="flex items-center gap-2 text-sm text-stone-600 dark:text-stone-400"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Tulips</li>
               <li class="flex items-center gap-2 text-sm text-stone-600 dark:text-stone-400"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Peonies</li>
@@ -292,10 +295,10 @@
         <article class="group bg-white dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl overflow-hidden shadow-sm hover:shadow-bloom hover:-translate-y-1 transition-all duration-300 flex flex-col">
           <div class="relative h-40 overflow-hidden">
             <img src="img/WhatsApp Image 2026-10-09 at 1.59.52 PM (12).jpeg" alt="Summer flowers" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <span class="absolute top-4 start-4 bg-white/95 dark:bg-[#1c1917]/95 backdrop-blur-sm text-primary dark:text-yellow-500 text-[10px] font-bold uppercase tracking-[0.14em] px-3 py-1.5 rounded-full shadow-sm">JuneÃ¢â‚¬â€œAug</span>
+            <span class="absolute top-4 start-4 bg-white/95 dark:bg-[#1c1917]/95 backdrop-blur-sm text-primary dark:text-yellow-500 text-[10px] font-semibold uppercase tracking-[0.14em] px-3 py-1.5 rounded-full shadow-sm">June—œAug</span>
           </div>
           <div class="p-6 flex flex-col flex-1">
-            <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-3">Summer</h3>
+            <h3 class="font-playfair text-xl font-semibold text-stone-900 dark:text-white mb-3">Summer</h3>
             <ul class="flex flex-col gap-2 flex-1">
               <li class="flex items-center gap-2 text-sm text-stone-600 dark:text-stone-400"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Sunflowers</li>
               <li class="flex items-center gap-2 text-sm text-stone-600 dark:text-stone-400"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Lavender</li>
@@ -308,10 +311,10 @@
         <article class="group bg-white dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl overflow-hidden shadow-sm hover:shadow-bloom hover:-translate-y-1 transition-all duration-300 flex flex-col">
           <div class="relative h-40 overflow-hidden">
             <img src="img/WhatsApp Image 2026-10-09 at 1.59.52 PM (13).jpeg" alt="Autumn flowers" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <span class="absolute top-4 start-4 bg-white/95 dark:bg-[#1c1917]/95 backdrop-blur-sm text-primary dark:text-yellow-500 text-[10px] font-bold uppercase tracking-[0.14em] px-3 py-1.5 rounded-full shadow-sm">SepÃ¢â‚¬â€œNov</span>
+            <span class="absolute top-4 start-4 bg-white/95 dark:bg-[#1c1917]/95 backdrop-blur-sm text-primary dark:text-yellow-500 text-[10px] font-semibold uppercase tracking-[0.14em] px-3 py-1.5 rounded-full shadow-sm">Sep—œNov</span>
           </div>
           <div class="p-6 flex flex-col flex-1">
-            <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-3">Autumn</h3>
+            <h3 class="font-playfair text-xl font-semibold text-stone-900 dark:text-white mb-3">Autumn</h3>
             <ul class="flex flex-col gap-2 flex-1">
               <li class="flex items-center gap-2 text-sm text-stone-600 dark:text-stone-400"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Chrysanthemums</li>
               <li class="flex items-center gap-2 text-sm text-stone-600 dark:text-stone-400"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Dahlias</li>
@@ -324,10 +327,10 @@
         <article class="group bg-white dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl overflow-hidden shadow-sm hover:shadow-bloom hover:-translate-y-1 transition-all duration-300 flex flex-col">
           <div class="relative h-40 overflow-hidden">
             <img src="img/WhatsApp Image 2026-10-09 at 1.59.52 PM (14).jpeg" alt="Winter flowers" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <span class="absolute top-4 start-4 bg-white/95 dark:bg-[#1c1917]/95 backdrop-blur-sm text-primary dark:text-yellow-500 text-[10px] font-bold uppercase tracking-[0.14em] px-3 py-1.5 rounded-full shadow-sm">DecÃ¢â‚¬â€œFeb</span>
+            <span class="absolute top-4 start-4 bg-white/95 dark:bg-[#1c1917]/95 backdrop-blur-sm text-primary dark:text-yellow-500 text-[10px] font-semibold uppercase tracking-[0.14em] px-3 py-1.5 rounded-full shadow-sm">Dec—œFeb</span>
           </div>
           <div class="p-6 flex flex-col flex-1">
-            <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-3">Winter</h3>
+            <h3 class="font-playfair text-xl font-semibold text-stone-900 dark:text-white mb-3">Winter</h3>
             <ul class="flex flex-col gap-2 flex-1">
               <li class="flex items-center gap-2 text-sm text-stone-600 dark:text-stone-400"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Amaryllis</li>
               <li class="flex items-center gap-2 text-sm text-stone-600 dark:text-stone-400"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Hellebores</li>
@@ -348,14 +351,14 @@
         <!-- Left: heading + image -->
         <div class="lg:col-span-5">
           <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">Language of Flowers</span>
-          <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-6">
+          <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-stone-900 dark:text-white mb-6">
             Every bloom has a
             <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">meaning</span>
           </h2>
-          <p class="text-base text-stone-600 dark:text-stone-400 leading-relaxed mb-8">
-            Floriography Ã¢â‚¬â€ the language of flowers Ã¢â‚¬â€ has been used for centuries to say what words can't. Here are the meanings behind some of our favourites.
+          <p class="text-base text-stone-600 dark:text-stone-400 leading-relaxed mb-8 font-normal">
+            Floriography — the traditional Victorian language of flowers — allows you to express heartfelt emotions without uttering a single word. Discover the rich symbolism and romantic heritage behind each of our signature blooms.
           </p>
-          <div class="rounded-[1.75rem] overflow-hidden shadow-2xl shadow-stone-900/20 border border-yellow-200/40 dark:border-stone-800/40 aspect-[4/5]">
+          <div class="rounded-2xl overflow-hidden shadow-xl shadow-stone-900/10 border border-yellow-200/50 dark:border-stone-800 h-64 sm:h-72 w-full max-w-md aspect-[16/10]">
             <img src="img/WhatsApp Image 2026-10-09 at 1.59.52 PM (15).jpeg" alt="Roses with a handwritten note" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
           </div>
         </div>
@@ -367,7 +370,7 @@
             <span class="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.14em] text-primary dark:text-yellow-500 mb-3">
               <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Roses
             </span>
-            <p class="font-playfair text-lg font-bold text-stone-900 dark:text-white mb-2">Love Ã‚Â· Passion</p>
+            <h3 class="font-playfair text-lg font-semibold text-stone-900 dark:text-white mb-2">Love · Passion</h3>
             <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">The most classic declaration of love, long associated with romance and desire.</p>
           </div>
 
@@ -375,23 +378,23 @@
             <span class="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.14em] text-primary dark:text-yellow-500 mb-3">
               <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Peonies
             </span>
-            <p class="font-playfair text-lg font-bold text-stone-900 dark:text-white mb-2">Prosperity Ã‚Â· Honour</p>
-            <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">A symbol of good fortune and a happy marriage Ã¢â‚¬â€ a wedding favourite for a reason.</p>
+            <h3 class="font-playfair text-lg font-semibold text-stone-900 dark:text-white mb-2">Prosperity · Honour</h3>
+            <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">A symbol of good fortune and a happy marriage — a wedding favourite for a reason.</p>
           </div>
 
           <div class="bg-brandLight dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl p-6 hover:shadow-bloom hover:-translate-y-1 transition-all duration-300">
             <span class="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.14em] text-primary dark:text-yellow-500 mb-3">
               <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Tulips
             </span>
-            <p class="font-playfair text-lg font-bold text-stone-900 dark:text-white mb-2">Perfect Love</p>
-            <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">Associated with deep, enduring love Ã¢â‚¬â€ and the promise of spring renewal.</p>
+            <h3 class="font-playfair text-lg font-semibold text-stone-900 dark:text-white mb-2">Perfect Love</h3>
+            <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">Associated with deep, enduring love — and the promise of spring renewal.</p>
           </div>
 
           <div class="bg-brandLight dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl p-6 hover:shadow-bloom hover:-translate-y-1 transition-all duration-300">
             <span class="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.14em] text-primary dark:text-yellow-500 mb-3">
               <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Lilies
             </span>
-            <p class="font-playfair text-lg font-bold text-stone-900 dark:text-white mb-2">Purity Ã‚Â· Devotion</p>
+            <h3 class="font-playfair text-lg font-semibold text-stone-900 dark:text-white mb-2">Purity · Devotion</h3>
             <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">Revered for elegance and often given to celebrate new beginnings or lasting bonds.</p>
           </div>
 
@@ -399,15 +402,15 @@
             <span class="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.14em] text-primary dark:text-yellow-500 mb-3">
               <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Sunflowers
             </span>
-            <p class="font-playfair text-lg font-bold text-stone-900 dark:text-white mb-2">Adoration Ã‚Â· Loyalty</p>
-            <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">A warm symbol of joy, warmth, and unwavering devotion Ã¢â‚¬â€ perfect for friends.</p>
+            <h3 class="font-playfair text-lg font-semibold text-stone-900 dark:text-white mb-2">Adoration · Loyalty</h3>
+            <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">A warm symbol of joy, warmth, and unwavering devotion — perfect for friends.</p>
           </div>
 
           <div class="bg-brandLight dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl p-6 hover:shadow-bloom hover:-translate-y-1 transition-all duration-300">
             <span class="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.14em] text-primary dark:text-yellow-500 mb-3">
               <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Lavender
             </span>
-            <p class="font-playfair text-lg font-bold text-stone-900 dark:text-white mb-2">Calm Ã‚Â· Serenity</p>
+            <h3 class="font-playfair text-lg font-semibold text-stone-900 dark:text-white mb-2">Calm · Serenity</h3>
             <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">Known for its soothing scent, lavender also carries a meaning of peace and quiet affection.</p>
           </div>
 
@@ -417,89 +420,99 @@
   </section>
 
   <!-- ================= 6. COLOUR PALETTE PICKER (Swatch Cards) ================= -->
-  <section class="relative w-full py-20 lg:py-28 bg-brandLight dark:bg-[#1c1917] transition-colors duration-300 overflow-hidden">
+  <section class="relative w-full py-20 lg:py-28 bg-brandLight dark:bg-[#1a1715] transition-colors duration-300 overflow-hidden">
     <div class="absolute bottom-0 start-0 -ms-24 -mb-24 w-[420px] h-[420px] bg-secondary/10 dark:bg-secondary/15 rounded-full blur-[120px] pointer-events-none"></div>
 
     <div class="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
       <div class="max-w-2xl mx-auto text-center mb-14">
-        <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">Colour Palettes</span>
-        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-5">
+        <span class="inline-block text-[11px] font-semibold uppercase tracking-[0.2em] text-primary dark:text-yellow-400 mb-3">Colour Palettes</span>
+        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-stone-900 dark:text-white mb-5">
           Pick your
           <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">palette</span>
         </h2>
-        <p class="text-base sm:text-lg text-stone-600 dark:text-stone-400 leading-relaxed">
-          Whether you want soft romance or bold vibrance, choose a palette and we'll curate the rest.
+        <p class="text-base sm:text-lg text-stone-600 dark:text-stone-300 leading-relaxed font-normal">
+          From delicate pastel blush tones and crisp neutral ivories to energetic citrus golds and romantic lilacs, select a tailored color palette that complements your interior space or event theme.
         </p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 lg:gap-6">
 
         <!-- Blush -->
-        <article class="group bg-white dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl overflow-hidden shadow-sm hover:shadow-bloom hover:-translate-y-1 transition-all duration-300">
-          <div class="h-28 bg-gradient-to-br from-pink-100 via-pink-200 to-rose-300 dark:from-pink-900/40 dark:via-pink-800/40 dark:to-rose-900/40"></div>
-          <div class="p-5">
-            <h3 class="font-playfair text-lg font-bold text-stone-900 dark:text-white mb-1">Blush</h3>
-            <p class="text-[10px] uppercase tracking-[0.14em] font-bold text-primary dark:text-yellow-500 mb-3">Soft Ã‚Â· Romantic</p>
-            <div class="flex gap-1.5">
-              <span class="w-5 h-5 rounded-full bg-pink-100 border border-pink-200"></span>
-              <span class="w-5 h-5 rounded-full bg-pink-200 border border-pink-300"></span>
-              <span class="w-5 h-5 rounded-full bg-rose-300 border border-rose-400"></span>
+        <article class="group bg-white dark:bg-[#252220] border border-stone-200/80 dark:border-stone-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-bloom hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-28 bg-gradient-to-br from-pink-200 via-rose-200 to-pink-300 dark:from-pink-800/80 dark:via-rose-800/70 dark:to-pink-900/80 border-b border-pink-100 dark:border-stone-800"></div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-playfair text-lg font-semibold text-stone-900 dark:text-white mb-1">Blush</h3>
+              <p class="text-[10px] uppercase tracking-[0.14em] font-medium text-pink-600 dark:text-pink-400 mb-3">Soft · Romantic</p>
+            </div>
+            <div class="flex gap-2 items-center">
+              <span class="w-5 h-5 rounded-full bg-pink-100 border border-stone-300 dark:border-stone-600 shadow-sm" title="#FCE7F3"></span>
+              <span class="w-5 h-5 rounded-full bg-pink-200 border border-stone-300 dark:border-stone-600 shadow-sm" title="#FBCFE8"></span>
+              <span class="w-5 h-5 rounded-full bg-rose-300 border border-stone-300 dark:border-stone-600 shadow-sm" title="#FDA4AF"></span>
             </div>
           </div>
         </article>
 
         <!-- Ivory -->
-        <article class="group bg-white dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl overflow-hidden shadow-sm hover:shadow-bloom hover:-translate-y-1 transition-all duration-300">
-          <div class="h-28 bg-gradient-to-br from-stone-100 via-amber-50 to-yellow-100 dark:from-stone-800/40 dark:via-amber-900/30 dark:to-yellow-900/30"></div>
-          <div class="p-5">
-            <h3 class="font-playfair text-lg font-bold text-stone-900 dark:text-white mb-1">Ivory</h3>
-            <p class="text-[10px] uppercase tracking-[0.14em] font-bold text-primary dark:text-yellow-500 mb-3">Pure Ã‚Â· Classic</p>
-            <div class="flex gap-1.5">
-              <span class="w-5 h-5 rounded-full bg-white border border-stone-200"></span>
-              <span class="w-5 h-5 rounded-full bg-stone-100 border border-stone-200"></span>
-              <span class="w-5 h-5 rounded-full bg-yellow-100 border border-yellow-200"></span>
+        <article class="group bg-white dark:bg-[#252220] border border-stone-200/80 dark:border-stone-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-bloom hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-28 bg-gradient-to-br from-stone-100 via-amber-50 to-stone-200 dark:from-stone-700/80 dark:via-amber-950/60 dark:to-stone-800/90 border-b border-stone-200/60 dark:border-stone-800"></div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-playfair text-lg font-semibold text-stone-900 dark:text-white mb-1">Ivory</h3>
+              <p class="text-[10px] uppercase tracking-[0.14em] font-medium text-amber-700 dark:text-amber-300 mb-3">Pure · Classic</p>
+            </div>
+            <div class="flex gap-2 items-center">
+              <span class="w-5 h-5 rounded-full bg-stone-50 border border-stone-300 dark:border-stone-600 shadow-sm" title="#FAFAF9"></span>
+              <span class="w-5 h-5 rounded-full bg-stone-100 border border-stone-300 dark:border-stone-600 shadow-sm" title="#F5F5F4"></span>
+              <span class="w-5 h-5 rounded-full bg-amber-100 border border-stone-300 dark:border-stone-600 shadow-sm" title="#FEF3C7"></span>
             </div>
           </div>
         </article>
 
         <!-- Golden -->
-        <article class="group bg-white dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl overflow-hidden shadow-sm hover:shadow-bloom hover:-translate-y-1 transition-all duration-300">
-          <div class="h-28 bg-gradient-to-br from-yellow-200 via-amber-300 to-orange-400 dark:from-yellow-900/40 dark:via-amber-900/40 dark:to-orange-900/40"></div>
-          <div class="p-5">
-            <h3 class="font-playfair text-lg font-bold text-stone-900 dark:text-white mb-1">Golden</h3>
-            <p class="text-[10px] uppercase tracking-[0.14em] font-bold text-primary dark:text-yellow-500 mb-3">Warm Ã‚Â· Radiant</p>
-            <div class="flex gap-1.5">
-              <span class="w-5 h-5 rounded-full bg-yellow-200 border border-yellow-300"></span>
-              <span class="w-5 h-5 rounded-full bg-amber-300 border border-amber-400"></span>
-              <span class="w-5 h-5 rounded-full bg-orange-400 border border-orange-500"></span>
+        <article class="group bg-white dark:bg-[#252220] border border-stone-200/80 dark:border-stone-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-bloom hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-28 bg-gradient-to-br from-amber-200 via-yellow-300 to-amber-400 dark:from-amber-700/80 dark:via-yellow-700/70 dark:to-amber-800/80 border-b border-amber-200 dark:border-stone-800"></div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-playfair text-lg font-semibold text-stone-900 dark:text-white mb-1">Golden</h3>
+              <p class="text-[10px] uppercase tracking-[0.14em] font-medium text-amber-600 dark:text-amber-400 mb-3">Warm · Radiant</p>
+            </div>
+            <div class="flex gap-2 items-center">
+              <span class="w-5 h-5 rounded-full bg-yellow-200 border border-stone-300 dark:border-stone-600 shadow-sm" title="#FEF08A"></span>
+              <span class="w-5 h-5 rounded-full bg-amber-300 border border-stone-300 dark:border-stone-600 shadow-sm" title="#FCD34D"></span>
+              <span class="w-5 h-5 rounded-full bg-amber-500 border border-stone-300 dark:border-stone-600 shadow-sm" title="#F59E0B"></span>
             </div>
           </div>
         </article>
 
         <!-- Coral -->
-        <article class="group bg-white dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl overflow-hidden shadow-sm hover:shadow-bloom hover:-translate-y-1 transition-all duration-300">
-          <div class="h-28 bg-gradient-to-br from-orange-200 via-rose-300 to-red-400 dark:from-orange-900/40 dark:via-rose-900/40 dark:to-red-900/40"></div>
-          <div class="p-5">
-            <h3 class="font-playfair text-lg font-bold text-stone-900 dark:text-white mb-1">Coral</h3>
-            <p class="text-[10px] uppercase tracking-[0.14em] font-bold text-primary dark:text-yellow-500 mb-3">Bold Ã‚Â· Playful</p>
-            <div class="flex gap-1.5">
-              <span class="w-5 h-5 rounded-full bg-orange-200 border border-orange-300"></span>
-              <span class="w-5 h-5 rounded-full bg-rose-300 border border-rose-400"></span>
-              <span class="w-5 h-5 rounded-full bg-red-400 border border-red-500"></span>
+        <article class="group bg-white dark:bg-[#252220] border border-stone-200/80 dark:border-stone-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-bloom hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-28 bg-gradient-to-br from-orange-200 via-rose-300 to-red-400 dark:from-orange-800/80 dark:via-rose-800/70 dark:to-red-800/80 border-b border-orange-200 dark:border-stone-800"></div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-playfair text-lg font-semibold text-stone-900 dark:text-white mb-1">Coral</h3>
+              <p class="text-[10px] uppercase tracking-[0.14em] font-medium text-orange-600 dark:text-orange-400 mb-3">Bold · Playful</p>
+            </div>
+            <div class="flex gap-2 items-center">
+              <span class="w-5 h-5 rounded-full bg-orange-200 border border-stone-300 dark:border-stone-600 shadow-sm" title="#FED7AA"></span>
+              <span class="w-5 h-5 rounded-full bg-rose-300 border border-stone-300 dark:border-stone-600 shadow-sm" title="#FDA4AF"></span>
+              <span class="w-5 h-5 rounded-full bg-red-400 border border-stone-300 dark:border-stone-600 shadow-sm" title="#F87171"></span>
             </div>
           </div>
         </article>
 
         <!-- Lilac -->
-        <article class="group bg-white dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl overflow-hidden shadow-sm hover:shadow-bloom hover:-translate-y-1 transition-all duration-300">
-          <div class="h-28 bg-gradient-to-br from-purple-200 via-violet-300 to-indigo-400 dark:from-purple-900/40 dark:via-violet-900/40 dark:to-indigo-900/40"></div>
-          <div class="p-5">
-            <h3 class="font-playfair text-lg font-bold text-stone-900 dark:text-white mb-1">Lilac</h3>
-            <p class="text-[10px] uppercase tracking-[0.14em] font-bold text-primary dark:text-yellow-500 mb-3">Dreamy Ã‚Â· Serene</p>
-            <div class="flex gap-1.5">
-              <span class="w-5 h-5 rounded-full bg-purple-200 border border-purple-300"></span>
-              <span class="w-5 h-5 rounded-full bg-violet-300 border border-violet-400"></span>
-              <span class="w-5 h-5 rounded-full bg-indigo-400 border border-indigo-500"></span>
+        <article class="group bg-white dark:bg-[#252220] border border-stone-200/80 dark:border-stone-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-bloom hover:-translate-y-1 transition-all duration-300 flex flex-col">
+          <div class="h-28 bg-gradient-to-br from-purple-200 via-violet-300 to-indigo-300 dark:from-purple-800/80 dark:via-violet-800/70 dark:to-indigo-800/80 border-b border-purple-200 dark:border-stone-800"></div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-playfair text-lg font-semibold text-stone-900 dark:text-white mb-1">Lilac</h3>
+              <p class="text-[10px] uppercase tracking-[0.14em] font-medium text-purple-600 dark:text-purple-400 mb-3">Dreamy · Serene</p>
+            </div>
+            <div class="flex gap-2 items-center">
+              <span class="w-5 h-5 rounded-full bg-purple-200 border border-stone-300 dark:border-stone-600 shadow-sm" title="#E9D5FF"></span>
+              <span class="w-5 h-5 rounded-full bg-violet-300 border border-stone-300 dark:border-stone-600 shadow-sm" title="#C4B5FD"></span>
+              <span class="w-5 h-5 rounded-full bg-indigo-400 border border-stone-300 dark:border-stone-600 shadow-sm" title="#818CF8"></span>
             </div>
           </div>
         </article>
@@ -513,12 +526,12 @@
     <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
       <div class="max-w-2xl mx-auto text-center mb-14">
         <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">Flower Facts</span>
-        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-5">
+        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-stone-900 dark:text-white mb-5">
           A few things you
           <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">might not know</span>
         </h2>
-        <p class="text-base sm:text-lg text-stone-600 dark:text-stone-400 leading-relaxed">
-          Little bits of trivia from inside the studio Ã¢â‚¬â€ things we've picked up over eleven years of working with flowers.
+        <p class="text-base sm:text-lg text-stone-600 dark:text-stone-400 leading-relaxed font-normal">
+          Delve into the fascinating botany and care science behind cut flowers. Our studio team shares essential knowledge gained from over a decade of artisanal conditioning and floral styling.
         </p>
       </div>
 
@@ -540,7 +553,7 @@
         </div>
 
         <div class="bg-brandLight dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl p-7 text-center hover:shadow-bloom hover:-translate-y-1 transition-all duration-300">
-          <span class="block font-playfair text-4xl sm:text-5xl font-extrabold text-primary dark:text-yellow-500 leading-none mb-4">3Ã‚Â°C</span>
+          <span class="block font-playfair text-4xl sm:text-5xl font-extrabold text-primary dark:text-yellow-500 leading-none mb-4">3°C</span>
           <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">The ideal cooler temperature for cut-stem storage.</p>
         </div>
 
@@ -560,49 +573,49 @@
             <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent"></div>
           </div>
           <div class="absolute -bottom-5 -end-5 bg-white dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl shadow-bloom px-5 py-4 max-w-[200px]">
-            <span class="block font-playfair text-2xl font-bold text-primary dark:text-yellow-500 leading-tight">14</span>
-            <span class="block text-[10px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400 mt-1">Partner Farms</span>
+            <span class="block font-playfair text-2xl font-semibold text-primary dark:text-yellow-500 leading-tight">14</span>
+            <span class="block text-[10px] uppercase tracking-[0.14em] font-medium text-stone-500 dark:text-stone-400 mt-1">Partner Farms</span>
           </div>
         </div>
 
         <!-- Content -->
         <div class="lg:col-span-6 order-1 lg:order-2">
           <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">Sourcing</span>
-          <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-6">
+          <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-stone-900 dark:text-white mb-6">
             Where our
             <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">flowers come from</span>
           </h2>
-          <p class="text-base sm:text-lg text-stone-600 dark:text-stone-300 leading-relaxed mb-8">
-            We work with fourteen local farms and three specialty growers to bring you the freshest stems throughout the year.
+          <p class="text-base sm:text-lg text-stone-600 dark:text-stone-300 leading-relaxed mb-8 font-normal">
+            We believe sustainable beauty begins in the soil. Bloom Atelier collaborates with trusted local family-owned farms and sustainable growers to deliver fresh, pesticide-conscious stems harvested within hours of arrangement.
           </p>
 
           <ul class="flex flex-col gap-3 mb-8">
             <li class="flex items-start gap-3 bg-white dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-xl px-4 py-3.5">
               <span class="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary to-secondary text-white font-playfair font-bold text-sm flex items-center justify-center flex-shrink-0">MD</span>
               <div>
-                <p class="text-sm font-bold text-stone-900 dark:text-white">Meadowbrook Gardens</p>
-                <p class="text-xs text-stone-500 dark:text-stone-400">Roses, peonies and garden herbs Ã‚Â· 40 km</p>
+                <h4 class="text-sm font-semibold text-stone-900 dark:text-white">Meadowbrook Gardens</h4>
+                <p class="text-xs text-stone-500 dark:text-stone-400">Roses, peonies and garden herbs · 40 km</p>
               </div>
             </li>
             <li class="flex items-start gap-3 bg-white dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-xl px-4 py-3.5">
               <span class="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary to-secondary text-white font-playfair font-bold text-sm flex items-center justify-center flex-shrink-0">TL</span>
               <div>
-                <p class="text-sm font-bold text-stone-900 dark:text-white">Tulip Lane Farm</p>
-                <p class="text-xs text-stone-500 dark:text-stone-400">Tulips, ranunculus and anemones Ã‚Â· 55 km</p>
+                <h4 class="text-sm font-semibold text-stone-900 dark:text-white">Tulip Lane Farm</h4>
+                <p class="text-xs text-stone-500 dark:text-stone-400">Tulips, ranunculus and anemones · 55 km</p>
               </div>
             </li>
             <li class="flex items-start gap-3 bg-white dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-xl px-4 py-3.5">
               <span class="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary to-secondary text-white font-playfair font-bold text-sm flex items-center justify-center flex-shrink-0">SF</span>
               <div>
-                <p class="text-sm font-bold text-stone-900 dark:text-white">Sunfield Flowers</p>
-                <p class="text-xs text-stone-500 dark:text-stone-400">Sunflowers, dahlias and chrysanthemums Ã‚Â· 38 km</p>
+                <h4 class="text-sm font-semibold text-stone-900 dark:text-white">Sunfield Flowers</h4>
+                <p class="text-xs text-stone-500 dark:text-stone-400">Sunflowers, dahlias and chrysanthemums · 38 km</p>
               </div>
             </li>
             <li class="flex items-start gap-3 bg-white dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-xl px-4 py-3.5">
               <span class="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary to-secondary text-white font-playfair font-bold text-sm flex items-center justify-center flex-shrink-0">OR</span>
               <div>
-                <p class="text-sm font-bold text-stone-900 dark:text-white">Orchid Ridge</p>
-                <p class="text-xs text-stone-500 dark:text-stone-400">Phalaenopsis and specialty orchids Ã‚Â· 120 km</p>
+                <h4 class="text-sm font-semibold text-stone-900 dark:text-white">Orchid Ridge</h4>
+                <p class="text-xs text-stone-500 dark:text-stone-400">Phalaenopsis and specialty orchids · 120 km</p>
               </div>
             </li>
           </ul>
@@ -630,7 +643,7 @@
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2.5"/><path d="M12 9.5c0-3 2-5 0-8-2 3 0 5 0 8z"/><path d="M14.5 12c3 0 5-2 8 0-3 2-5 0-8 0z"/><path d="M12 14.5c0 3-2 5 0 8 2-3 0-5 0-8z"/><path d="M9.5 12c-3 0-5 2-8 0 3-2 5 0 8 0z"/></svg>
             </span>
             <span class="flex flex-col">
-              <span class="text-xl font-playfair font-extrabold tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight">Bloom Atelier</span>
+              <span class="text-xl font-playfair font-semibold tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight">Bloom Atelier</span>
               <span class="text-[8px] uppercase font-bold tracking-widest text-yellow-500">Luxury Floral Studio</span>
             </span>
           </a>
@@ -641,13 +654,13 @@
           </div>
           <div class="flex gap-2">
             <a href="#" aria-label="X Profile" class="w-8 h-8 rounded-full bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-stone-400 hover:text-white hover:border-yellow-500/40 transition-all duration-300"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-            <a href="#" aria-label="Instagram Profile" class="w-8 h-8 rounded-full bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-stone-400 hover:text-white hover:border-yellow-500/40 transition-all duration-300"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/></svg></a>
+            <a href="#" aria-label="Instagram Profile" class="w-8 h-8 rounded-full bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-stone-400 hover:text-white hover:border-yellow-500/40 transition-all duration-300"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
             <a href="#" aria-label="Facebook Profile" class="w-8 h-8 rounded-full bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-stone-400 hover:text-white hover:border-yellow-500/40 transition-all duration-300"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg></a>
           </div>
         </div>
 
         <div class="lg:col-span-2">
-          <h4 class="text-white font-bold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">Flowers<span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span></h4>
+          <h4 class="text-white font-semibold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">Flowers<span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span></h4>
           <ul class="flex flex-col gap-2.5">
             <li><a href="shop.html#seasonal" class="text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">Seasonal</a></li>
             <li><a href="shop.html#roses" class="text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">Roses</a></li>
@@ -657,7 +670,7 @@
         </div>
 
         <div class="lg:col-span-2">
-          <h4 class="text-white font-bold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">Discover<span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span></h4>
+          <h4 class="text-white font-semibold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">Discover<span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span></h4>
           <ul class="flex flex-col gap-2.5">
             <li><a href="custom.html" class="text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">Custom</a></li>
             <li><a href="delivery.html" class="text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">Delivery</a></li>
@@ -667,7 +680,7 @@
         </div>
 
         <div class="lg:col-span-4">
-          <h4 class="text-white font-bold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">Visit Us<span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span></h4>
+          <h4 class="text-white font-semibold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">Visit Us<span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span></h4>
           <ul class="flex flex-col gap-3">
             <li>
               <a href="contact.html#map" class="group flex items-start gap-2 text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">
@@ -683,7 +696,7 @@
             </li>
             <li class="flex items-start gap-2 text-sm text-stone-400 font-medium">
               <span class="w-6 h-6 rounded bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-yellow-500 flex-shrink-0"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>
-              <span class="pt-0.5">MonÃ¢â‚¬â€œSun Ã‚Â· 8:00 AM Ã¢â‚¬â€œ 7:00 PM</span>
+              <span class="pt-0.5">Mon—œSun · 8:00 AM —œ 7:00 PM</span>
             </li>
           </ul>
         </div>

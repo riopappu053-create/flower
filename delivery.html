@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bloom Atelier â€” Delivery</title>
+  <title>Flower Delivery — Bloom Atelier</title>
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ca8a04' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='2.5'/><path d='M12 9.5c0-3 2-5 0-8-2 3 0 5 0 8z'/><path d='M14.5 12c3 0 5-2 8 0-3 2-5 0-8 0z'/><path d='M12 14.5c0 3-2 5 0 8 2-3 0-5 0-8z'/><path d='M9.5 12c-3 0-5 2-8 0 3-2 5 0 8 0z'/></svg>" />
 
@@ -36,6 +36,9 @@
   <style>
     html { scroll-behavior: smooth; }
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    /* Consistent Typography: 600 headings, 400-550 body */
+    h1, h2, h3, h4, h5, h6 { font-weight: 600 !important; }
+    p { font-weight: 400; }
     html { scrollbar-width: thin; scrollbar-color: #ca8a04 #fefce8; }
     html.dark { scrollbar-color: #ca8a04 #1c1917; }
     ::-webkit-scrollbar { width: 8px; height: 8px; }
@@ -56,14 +59,14 @@
 <body id="top" class="bg-brandLight dark:bg-brandDark text-stone-800 dark:text-stone-100 antialiased transition-colors duration-300">
 
   <!-- ================= 1. NAVBAR (unchanged) ================= -->
-  <header class="sticky top-0 z-50 w-full bg-white/95 dark:bg-[#1c1917]/95 backdrop-blur-md border-b border-yellow-200/60 dark:border-stone-800/70 shadow-sm transition-colors duration-300">
+  <header class="sticky top-0 z-50 w-full relative bg-white/95 dark:bg-[#1c1917]/95 backdrop-blur-md border-b border-yellow-200/60 dark:border-stone-800/70 shadow-sm transition-colors duration-300">
     <nav class="max-w-[1400px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between gap-4" aria-label="Main Navigation">
       <a href="index.html" class="flex items-center gap-3 flex-shrink-0 group" aria-label="Bloom Atelier home">
         <span class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-primary to-secondary flex items-center justify-center shadow-bloom text-white transition-transform duration-300 group-hover:scale-105">
           <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2.5"/><path d="M12 9.5c0-3 2-5 0-8-2 3 0 5 0 8z"/><path d="M14.5 12c3 0 5-2 8 0-3 2-5 0-8 0z"/><path d="M12 14.5c0 3-2 5 0 8 2-3 0-5 0-8z"/><path d="M9.5 12c-3 0-5 2-8 0 3-2 5 0 8 0z"/></svg>
         </span>
         <span class="flex flex-col">
-          <span class="text-2xl font-playfair font-extrabold tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight">Bloom Atelier</span>
+          <span class="text-2xl font-playfair font-semibold tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight">Bloom Atelier</span>
           <span class="text-[9px] uppercase font-bold tracking-widest text-yellow-600 dark:text-yellow-500 -mt-1">Luxury Floral Studio</span>
         </span>
       </a>
@@ -110,7 +113,7 @@
       </button>
     </nav>
 
-    <div id="mobile-menu" class="hidden flex-col bg-white dark:bg-[#1c1917] border-t border-yellow-200/60 dark:border-stone-800/70 w-full shadow-2xl max-h-[85vh] overflow-y-auto px-6 py-8 bloom-scrollbar">
+    <div id="mobile-menu" class="hidden absolute top-full left-0 right-0 w-full flex flex-col bg-white dark:bg-[#1c1917] border-t border-yellow-200/60 dark:border-stone-800/70 shadow-2xl max-h-[85vh] overflow-y-auto px-6 py-8 bloom-scrollbar z-50">
       <div class="flex flex-col gap-6">
         <div>
           <span class="text-[11px] font-bold uppercase tracking-[0.14em] text-stone-400 block mb-2">Home</span>
@@ -151,7 +154,7 @@
         </span>
         <span class="text-[11px] font-bold tracking-[0.14em] uppercase text-white drop-shadow-md">Same-Day Delivery</span>
       </div>
-      <h1 class="font-playfair text-5xl sm:text-6xl lg:text-7xl leading-[1.2] tracking-tight mb-6 text-white font-extrabold drop-shadow-lg">Delivered with Care</h1>
+      <h1 class="font-playfair text-5xl sm:text-6xl lg:text-7xl leading-[1.2] tracking-tight mb-6 text-white font-semibold drop-shadow-lg">Delivered with Care</h1>
       <p class="text-lg sm:text-xl text-white/90 leading-relaxed max-w-2xl drop-shadow-md">Freshly hand-tied bouquets delivered straight to your door, anywhere in the city.</p>
     </div>
   </section>
@@ -161,12 +164,12 @@
     <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
       <div class="max-w-2xl mx-auto text-center mb-14">
         <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">Delivery Options</span>
-        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-5">
+        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-stone-900 dark:text-white mb-5">
           Choose how your
           <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">blooms arrive</span>
         </h2>
         <p class="text-base sm:text-lg text-stone-600 dark:text-stone-400 leading-relaxed">
-          Three delivery speeds to suit every occasion â€” from a last-minute surprise to a planned celebration.
+          Three delivery speeds to suit every occasion — from a last-minute surprise to a planned celebration.
         </p>
       </div>
 
@@ -177,7 +180,7 @@
           <span class="w-14 h-14 rounded-2xl bg-primaryLight dark:bg-stone-800/60 text-primary dark:text-yellow-500 flex items-center justify-center mb-5 group-hover:bg-gradient-to-tr group-hover:from-primary group-hover:to-secondary group-hover:text-white transition-all duration-300">
             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 7V3m8 4V3M3 11h18M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
           </span>
-          <h3 class="font-playfair text-2xl font-bold text-stone-900 dark:text-white mb-1">Standard</h3>
+          <h3 class="font-playfair text-2xl font-semibold text-stone-900 dark:text-white mb-1">Standard</h3>
           <span class="text-[10px] uppercase tracking-[0.14em] font-bold text-primary dark:text-yellow-500 mb-4">Next-Day Delivery</span>
           <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-6 flex-1">
             Order by 6 PM today and your bouquet is hand-delivered tomorrow morning between 9 AM and 12 PM.
@@ -199,7 +202,7 @@
           <span class="w-14 h-14 rounded-2xl bg-primaryLight dark:bg-stone-800/60 text-primary dark:text-yellow-500 flex items-center justify-center mb-5 group-hover:bg-gradient-to-tr group-hover:from-primary group-hover:to-secondary group-hover:text-white transition-all duration-300">
             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
           </span>
-          <h3 class="font-playfair text-2xl font-bold text-stone-900 dark:text-white mb-1">Same-Day</h3>
+          <h3 class="font-playfair text-2xl font-semibold text-stone-900 dark:text-white mb-1">Same-Day</h3>
           <span class="text-[10px] uppercase tracking-[0.14em] font-bold text-primary dark:text-yellow-500 mb-4">Today before 1 PM</span>
           <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-6 flex-1">
             Order before 1 PM and we'll hand-deliver the very same day across the entire metro area.
@@ -220,10 +223,10 @@
           <span class="w-14 h-14 rounded-2xl bg-primaryLight dark:bg-stone-800/60 text-primary dark:text-yellow-500 flex items-center justify-center mb-5 group-hover:bg-gradient-to-tr group-hover:from-primary group-hover:to-secondary group-hover:text-white transition-all duration-300">
             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9" stroke-width="1.8"/></svg>
           </span>
-          <h3 class="font-playfair text-2xl font-bold text-stone-900 dark:text-white mb-1">Express</h3>
+          <h3 class="font-playfair text-2xl font-semibold text-stone-900 dark:text-white mb-1">Express</h3>
           <span class="text-[10px] uppercase tracking-[0.14em] font-bold text-primary dark:text-yellow-500 mb-4">Under 3 Hours</span>
           <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-6 flex-1">
-            A dedicated courier delivers your bouquet within three hours of ordering â€” perfect for surprises.
+            A dedicated courier delivers your bouquet within three hours of ordering — perfect for surprises.
           </p>
           <ul class="flex flex-col gap-2 mb-6">
             <li class="flex items-center gap-2 text-sm text-stone-600 dark:text-stone-400"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>3-hour window</li>
@@ -247,12 +250,12 @@
     <div class="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
       <div class="max-w-2xl mx-auto text-center mb-14">
         <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">Coverage</span>
-        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-5">
+        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-stone-900 dark:text-white mb-5">
           Where we
           <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">deliver</span>
         </h2>
         <p class="text-base sm:text-lg text-stone-600 dark:text-stone-400 leading-relaxed">
-          Three coverage tiers â€” check which one your delivery address falls into.
+          Three coverage tiers — check which one your delivery address falls into.
         </p>
       </div>
 
@@ -265,9 +268,9 @@
               <span class="w-10 h-10 rounded-xl bg-primaryLight dark:bg-stone-800/60 text-primary dark:text-yellow-500 flex items-center justify-center flex-shrink-0">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
               </span>
-              <h3 class="font-playfair text-lg font-bold text-stone-900 dark:text-white">Zone 1 Â· Central</h3>
+              <h3 class="font-playfair text-lg font-semibold text-stone-900 dark:text-white">Zone 1 · Central</h3>
             </div>
-            <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-4">The city core â€” Old Town, Midtown, Riverside.</p>
+            <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-4">The city core — Old Town, Midtown, Riverside.</p>
             <span class="inline-flex items-center gap-1.5 bg-primary/10 text-primaryHover dark:text-yellow-500 text-[10px] font-bold uppercase tracking-[0.14em] px-3 py-1.5 rounded-full">
               <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
               Same-day available
@@ -279,9 +282,9 @@
               <span class="w-10 h-10 rounded-xl bg-primaryLight dark:bg-stone-800/60 text-primary dark:text-yellow-500 flex items-center justify-center flex-shrink-0">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
               </span>
-              <h3 class="font-playfair text-lg font-bold text-stone-900 dark:text-white">Zone 2 Â· Suburban</h3>
+              <h3 class="font-playfair text-lg font-semibold text-stone-900 dark:text-white">Zone 2 · Suburban</h3>
             </div>
-            <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-4">Outer neighbourhoods â€” Rosewood, Cedar Hills, Westgate.</p>
+            <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-4">Outer neighbourhoods — Rosewood, Cedar Hills, Westgate.</p>
             <span class="inline-flex items-center gap-1.5 bg-primary/10 text-primaryHover dark:text-yellow-500 text-[10px] font-bold uppercase tracking-[0.14em] px-3 py-1.5 rounded-full">
               <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
               Same-day by 6 PM
@@ -293,9 +296,9 @@
               <span class="w-10 h-10 rounded-xl bg-primaryLight dark:bg-stone-800/60 text-primary dark:text-yellow-500 flex items-center justify-center flex-shrink-0">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
               </span>
-              <h3 class="font-playfair text-lg font-bold text-stone-900 dark:text-white">Zone 3 Â· Extended</h3>
+              <h3 class="font-playfair text-lg font-semibold text-stone-900 dark:text-white">Zone 3 · Extended</h3>
             </div>
-            <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-4">Satellite towns â€” Maple Grove, Willow Creek, Ashfield.</p>
+            <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-4">Satellite towns — Maple Grove, Willow Creek, Ashfield.</p>
             <span class="inline-flex items-center gap-1.5 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400 text-[10px] font-bold uppercase tracking-[0.14em] px-3 py-1.5 rounded-full">
               Next-day delivery
             </span>
@@ -306,7 +309,7 @@
               <span class="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary to-secondary text-white flex items-center justify-center flex-shrink-0 shadow-bloom">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
               </span>
-              <h3 class="font-playfair text-lg font-bold text-stone-900 dark:text-white">Not Sure?</h3>
+              <h3 class="font-playfair text-lg font-semibold text-stone-900 dark:text-white">Not Sure?</h3>
             </div>
             <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-4">Enter your postcode at checkout and we'll confirm your zone instantly.</p>
             <a href="contact.html" class="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-primary dark:text-yellow-500 hover:text-secondary transition-colors">
@@ -324,7 +327,7 @@
             <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
               <span class="text-[11px] font-bold uppercase tracking-[0.2em] text-yellow-300 mb-2">Our Coverage</span>
               <span class="block font-playfair text-5xl font-extrabold mb-2">82%</span>
-              <p class="text-sm text-white/85 leading-relaxed max-w-xs">of the metro area is eligible for same-day delivery â€” over 240,000 households.</p>
+              <p class="text-sm text-white/85 leading-relaxed max-w-xs">of the metro area is eligible for same-day delivery — over 240,000 households.</p>
             </div>
           </div>
         </div>
@@ -338,12 +341,12 @@
     <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
       <div class="max-w-2xl mx-auto text-center mb-14">
         <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">The Journey</span>
-        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-5">
+        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-stone-900 dark:text-white mb-5">
           From studio to
           <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">your doorstep</span>
         </h2>
         <p class="text-base sm:text-lg text-stone-600 dark:text-stone-400 leading-relaxed">
-          Three simple stages â€” you order, we craft, we deliver. It really is that easy.
+          Three simple stages — you order, we craft, we deliver. It really is that easy.
         </p>
       </div>
 
@@ -361,9 +364,9 @@
                   <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
                 </span>
               </span>
-              <span class="absolute -bottom-2 -end-2 w-10 h-10 rounded-full bg-white dark:bg-[#1c1917] border-2 border-primary flex items-center justify-center font-playfair font-extrabold text-primary dark:text-yellow-500">01</span>
+              <span class="absolute -bottom-2 -end-2 w-10 h-10 rounded-full bg-white dark:bg-[#1c1917] border-2 border-primary flex items-center justify-center font-playfair font-semibold text-primary dark:text-yellow-500">01</span>
             </div>
-            <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-2">You Place Your Order</h3>
+            <h3 class="font-playfair text-xl font-semibold text-stone-900 dark:text-white mb-2">You Place Your Order</h3>
             <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed max-w-xs mx-auto">Choose a bouquet, add a hand-written card, and pick your delivery window at checkout.</p>
           </div>
 
@@ -375,10 +378,10 @@
                   <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2.5"/><path d="M12 9.5c0-3 2-5 0-8-2 3 0 5 0 8z"/><path d="M14.5 12c3 0 5-2 8 0-3 2-5 0-8 0z"/><path d="M12 14.5c0 3-2 5 0 8 2-3 0-5 0-8z"/><path d="M9.5 12c-3 0-5 2-8 0 3-2 5 0 8 0z"/></svg>
                 </span>
               </span>
-              <span class="absolute -bottom-2 -end-2 w-10 h-10 rounded-full bg-white dark:bg-[#1c1917] border-2 border-primary flex items-center justify-center font-playfair font-extrabold text-primary dark:text-yellow-500">02</span>
+              <span class="absolute -bottom-2 -end-2 w-10 h-10 rounded-full bg-white dark:bg-[#1c1917] border-2 border-primary flex items-center justify-center font-playfair font-semibold text-primary dark:text-yellow-500">02</span>
             </div>
-            <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-2">We Hand-Tie Your Bouquet</h3>
-            <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed max-w-xs mx-auto">Our florists condition and arrange the stems the morning it ships â€” never sooner.</p>
+            <h3 class="font-playfair text-xl font-semibold text-stone-900 dark:text-white mb-2">We Hand-Tie Your Bouquet</h3>
+            <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed max-w-xs mx-auto">Our florists condition and arrange the stems the morning it ships — never sooner.</p>
           </div>
 
           <!-- Step 3 -->
@@ -389,10 +392,10 @@
                   <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
                 </span>
               </span>
-              <span class="absolute -bottom-2 -end-2 w-10 h-10 rounded-full bg-white dark:bg-[#1c1917] border-2 border-primary flex items-center justify-center font-playfair font-extrabold text-primary dark:text-yellow-500">03</span>
+              <span class="absolute -bottom-2 -end-2 w-10 h-10 rounded-full bg-white dark:bg-[#1c1917] border-2 border-primary flex items-center justify-center font-playfair font-semibold text-primary dark:text-yellow-500">03</span>
             </div>
-            <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-2">We Hand-Deliver</h3>
-            <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed max-w-xs mx-auto">Your bloom arrives in our signature kraft box â€” with a smile and a care card.</p>
+            <h3 class="font-playfair text-xl font-semibold text-stone-900 dark:text-white mb-2">We Hand-Deliver</h3>
+            <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed max-w-xs mx-auto">Your bloom arrives in our signature kraft box — with a smile and a care card.</p>
           </div>
 
         </div>
@@ -407,12 +410,12 @@
     <div class="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
       <div class="max-w-2xl mx-auto text-center mb-14">
         <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">Delivery Pricing</span>
-        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-5">
+        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-stone-900 dark:text-white mb-5">
           Transparent, simple
           <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">delivery fees</span>
         </h2>
         <p class="text-base sm:text-lg text-stone-600 dark:text-stone-400 leading-relaxed">
-          No hidden charges â€” just clear pricing based on zone and speed.
+          No hidden charges — just clear pricing based on zone and speed.
         </p>
       </div>
 
@@ -430,8 +433,8 @@
           <tbody>
             <tr class="border-b border-yellow-100 dark:border-stone-800/60">
               <td class="py-5 px-6">
-                <span class="block font-playfair text-base font-bold text-stone-900 dark:text-white">Zone 1 Â· Central</span>
-                <span class="block text-[11px] text-stone-500 dark:text-stone-400 font-medium mt-0.5">Old Town Â· Midtown Â· Riverside</span>
+                <span class="block font-playfair text-base font-bold text-stone-900 dark:text-white">Zone 1 · Central</span>
+                <span class="block text-[11px] text-stone-500 dark:text-stone-400 font-medium mt-0.5">Old Town · Midtown · Riverside</span>
               </td>
               <td class="text-center py-5 px-6 font-playfair text-lg font-bold text-primary dark:text-yellow-500">$8</td>
               <td class="text-center py-5 px-6 font-playfair text-lg font-bold text-primary dark:text-yellow-500">$14</td>
@@ -439,21 +442,21 @@
             </tr>
             <tr class="border-b border-yellow-100 dark:border-stone-800/60 bg-brandLight/60 dark:bg-[#221f1d]">
               <td class="py-5 px-6">
-                <span class="block font-playfair text-base font-bold text-stone-900 dark:text-white">Zone 2 Â· Suburban</span>
-                <span class="block text-[11px] text-stone-500 dark:text-stone-400 font-medium mt-0.5">Rosewood Â· Cedar Hills Â· Westgate</span>
+                <span class="block font-playfair text-base font-bold text-stone-900 dark:text-white">Zone 2 · Suburban</span>
+                <span class="block text-[11px] text-stone-500 dark:text-stone-400 font-medium mt-0.5">Rosewood · Cedar Hills · Westgate</span>
               </td>
               <td class="text-center py-5 px-6 font-playfair text-lg font-bold text-primary dark:text-yellow-500">$12</td>
               <td class="text-center py-5 px-6 font-playfair text-lg font-bold text-primary dark:text-yellow-500">$18</td>
-              <td class="text-center py-5 px-6 text-stone-400 dark:text-stone-500 font-medium text-sm">â€”</td>
+              <td class="text-center py-5 px-6 text-stone-400 dark:text-stone-500 font-medium text-sm">—</td>
             </tr>
             <tr>
               <td class="py-5 px-6">
-                <span class="block font-playfair text-base font-bold text-stone-900 dark:text-white">Zone 3 Â· Extended</span>
-                <span class="block text-[11px] text-stone-500 dark:text-stone-400 font-medium mt-0.5">Maple Grove Â· Willow Creek Â· Ashfield</span>
+                <span class="block font-playfair text-base font-bold text-stone-900 dark:text-white">Zone 3 · Extended</span>
+                <span class="block text-[11px] text-stone-500 dark:text-stone-400 font-medium mt-0.5">Maple Grove · Willow Creek · Ashfield</span>
               </td>
               <td class="text-center py-5 px-6 font-playfair text-lg font-bold text-primary dark:text-yellow-500">$16</td>
-              <td class="text-center py-5 px-6 text-stone-400 dark:text-stone-500 font-medium text-sm">â€”</td>
-              <td class="text-center py-5 px-6 text-stone-400 dark:text-stone-500 font-medium text-sm">â€”</td>
+              <td class="text-center py-5 px-6 text-stone-400 dark:text-stone-500 font-medium text-sm">—</td>
+              <td class="text-center py-5 px-6 text-stone-400 dark:text-stone-500 font-medium text-sm">—</td>
             </tr>
           </tbody>
         </table>
@@ -462,8 +465,8 @@
       <!-- Mobile cards -->
       <div class="md:hidden flex flex-col gap-4">
         <div class="bg-white dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl p-6">
-          <span class="block font-playfair text-lg font-bold text-stone-900 dark:text-white mb-1">Zone 1 Â· Central</span>
-          <span class="block text-[11px] text-stone-500 dark:text-stone-400 font-medium mb-4">Old Town Â· Midtown Â· Riverside</span>
+          <span class="block font-playfair text-lg font-bold text-stone-900 dark:text-white mb-1">Zone 1 · Central</span>
+          <span class="block text-[11px] text-stone-500 dark:text-stone-400 font-medium mb-4">Old Town · Midtown · Riverside</span>
           <div class="grid grid-cols-3 gap-3">
             <div><span class="block text-[10px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400 mb-1">Standard</span><span class="font-playfair text-lg font-bold text-primary dark:text-yellow-500">$8</span></div>
             <div><span class="block text-[10px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400 mb-1">Same-Day</span><span class="font-playfair text-lg font-bold text-primary dark:text-yellow-500">$14</span></div>
@@ -471,27 +474,27 @@
           </div>
         </div>
         <div class="bg-white dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl p-6">
-          <span class="block font-playfair text-lg font-bold text-stone-900 dark:text-white mb-1">Zone 2 Â· Suburban</span>
-          <span class="block text-[11px] text-stone-500 dark:text-stone-400 font-medium mb-4">Rosewood Â· Cedar Hills Â· Westgate</span>
+          <span class="block font-playfair text-lg font-bold text-stone-900 dark:text-white mb-1">Zone 2 · Suburban</span>
+          <span class="block text-[11px] text-stone-500 dark:text-stone-400 font-medium mb-4">Rosewood · Cedar Hills · Westgate</span>
           <div class="grid grid-cols-3 gap-3">
             <div><span class="block text-[10px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400 mb-1">Standard</span><span class="font-playfair text-lg font-bold text-primary dark:text-yellow-500">$12</span></div>
             <div><span class="block text-[10px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400 mb-1">Same-Day</span><span class="font-playfair text-lg font-bold text-primary dark:text-yellow-500">$18</span></div>
-            <div><span class="block text-[10px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400 mb-1">Express</span><span class="font-medium text-sm text-stone-400">â€”</span></div>
+            <div><span class="block text-[10px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400 mb-1">Express</span><span class="font-medium text-sm text-stone-400">—</span></div>
           </div>
         </div>
         <div class="bg-white dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl p-6">
-          <span class="block font-playfair text-lg font-bold text-stone-900 dark:text-white mb-1">Zone 3 Â· Extended</span>
-          <span class="block text-[11px] text-stone-500 dark:text-stone-400 font-medium mb-4">Maple Grove Â· Willow Creek Â· Ashfield</span>
+          <span class="block font-playfair text-lg font-bold text-stone-900 dark:text-white mb-1">Zone 3 · Extended</span>
+          <span class="block text-[11px] text-stone-500 dark:text-stone-400 font-medium mb-4">Maple Grove · Willow Creek · Ashfield</span>
           <div class="grid grid-cols-3 gap-3">
             <div><span class="block text-[10px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400 mb-1">Standard</span><span class="font-playfair text-lg font-bold text-primary dark:text-yellow-500">$16</span></div>
-            <div><span class="block text-[10px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400 mb-1">Same-Day</span><span class="font-medium text-sm text-stone-400">â€”</span></div>
-            <div><span class="block text-[10px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400 mb-1">Express</span><span class="font-medium text-sm text-stone-400">â€”</span></div>
+            <div><span class="block text-[10px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400 mb-1">Same-Day</span><span class="font-medium text-sm text-stone-400">—</span></div>
+            <div><span class="block text-[10px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400 mb-1">Express</span><span class="font-medium text-sm text-stone-400">—</span></div>
           </div>
         </div>
       </div>
 
       <p class="text-center text-sm text-stone-500 dark:text-stone-400 leading-relaxed mt-8">
-        Free standard delivery on orders over <span class="font-bold text-primary dark:text-yellow-500">$60</span> Â· Free same-day on orders over <span class="font-bold text-primary dark:text-yellow-500">$80</span>
+        Free standard delivery on orders over <span class="font-bold text-primary dark:text-yellow-500">$60</span> · Free same-day on orders over <span class="font-bold text-primary dark:text-yellow-500">$80</span>
       </p>
     </div>
   </section>
@@ -505,7 +508,7 @@
         <!-- Left: heading + contact card -->
         <div class="lg:col-span-5 lg:sticky lg:top-28">
           <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">Delivery FAQ</span>
-          <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-6">
+          <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-stone-900 dark:text-white mb-6">
             Questions,
             <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">answered</span>
           </h2>
@@ -514,7 +517,7 @@
           </p>
 
           <div class="bg-brandLight dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl p-6 shadow-sm">
-            <h3 class="font-playfair text-lg font-bold text-stone-900 dark:text-white mb-2">Still have questions?</h3>
+            <h3 class="font-playfair text-lg font-semibold text-stone-900 dark:text-white mb-2">Still have questions?</h3>
             <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-4">Our florists reply to emails within an hour during opening times.</p>
             <a href="contact.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-primary to-secondary hover:from-primaryHover hover:to-secondaryHover text-white text-[11px] font-bold uppercase tracking-[0.14em] rounded-lg shadow-bloom hover:shadow-bloom-hover transition-all duration-300">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
@@ -548,7 +551,7 @@
               <svg class="w-5 h-5 text-primary dark:text-yellow-500 flex-shrink-0 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
             </summary>
             <div class="px-6 pb-6 pt-0">
-              <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed border-t border-yellow-100 dark:border-stone-800/60 pt-5">Absolutely. You can schedule a delivery up to 90 days in advance at checkout â€” pick any date and time window that suits you.</p>
+              <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed border-t border-yellow-100 dark:border-stone-800/60 pt-5">Absolutely. You can schedule a delivery up to 90 days in advance at checkout — pick any date and time window that suits you.</p>
             </div>
           </details>
 
@@ -574,7 +577,7 @@
               <svg class="w-5 h-5 text-primary dark:text-yellow-500 flex-shrink-0 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
             </summary>
             <div class="px-6 pb-6 pt-0">
-              <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed border-t border-yellow-100 dark:border-stone-800/60 pt-5">Yes â€” we deliver every day of the week including most public holidays. Holiday slots book quickly, so we recommend ordering early.</p>
+              <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed border-t border-yellow-100 dark:border-stone-800/60 pt-5">Yes — we deliver every day of the week including most public holidays. Holiday slots book quickly, so we recommend ordering early.</p>
             </div>
           </details>
 
@@ -587,7 +590,7 @@
               <svg class="w-5 h-5 text-primary dark:text-yellow-500 flex-shrink-0 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
             </summary>
             <div class="px-6 pb-6 pt-0">
-              <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed border-t border-yellow-100 dark:border-stone-800/60 pt-5">Every bouquet is hand-delivered by our own courier team in a kraft box with a care card â€” never posted through a letterbox.</p>
+              <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed border-t border-yellow-100 dark:border-stone-800/60 pt-5">Every bouquet is hand-delivered by our own courier team in a kraft box with a care card — never posted through a letterbox.</p>
             </div>
           </details>
 
@@ -616,7 +619,7 @@
     <div class="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
       <div class="max-w-2xl mx-auto text-center mb-14">
         <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">Live Tracking</span>
-        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-5">
+        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-stone-900 dark:text-white mb-5">
           Follow your bloom
           <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">every step</span>
         </h2>
@@ -647,8 +650,8 @@
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
               </span>
               <div class="flex-1 pt-1">
-                <p class="text-sm font-bold text-stone-900 dark:text-white mb-0.5">Order received</p>
-                <p class="text-xs text-stone-500 dark:text-stone-400 font-medium">10:12 AM Â· Studio</p>
+                <h4 class="text-sm font-semibold text-stone-900 dark:text-white mb-0.5">Order received</h4>
+                <p class="text-xs text-stone-500 dark:text-stone-400 font-medium">10:12 AM · Studio</p>
               </div>
             </div>
 
@@ -658,8 +661,8 @@
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
               </span>
               <div class="flex-1 pt-1">
-                <p class="text-sm font-bold text-stone-900 dark:text-white mb-0.5">Bouquet hand-tied</p>
-                <p class="text-xs text-stone-500 dark:text-stone-400 font-medium">10:48 AM Â· Bloom Atelier studio</p>
+                <h4 class="text-sm font-semibold text-stone-900 dark:text-white mb-0.5">Bouquet hand-tied</h4>
+                <p class="text-xs text-stone-500 dark:text-stone-400 font-medium">10:48 AM · Bloom Atelier studio</p>
               </div>
             </div>
 
@@ -670,8 +673,8 @@
                 <span class="w-2.5 h-2.5 rounded-full bg-primary relative"></span>
               </span>
               <div class="flex-1 pt-1">
-                <p class="text-sm font-bold text-primary dark:text-yellow-500 mb-0.5">Out for delivery</p>
-                <p class="text-xs text-stone-500 dark:text-stone-400 font-medium">11:35 AM Â· 2.4 km away Â· ETA 12:15 PM</p>
+                <h4 class="text-sm font-semibold text-primary dark:text-yellow-500 mb-0.5">Out for delivery</h4>
+                <p class="text-xs text-stone-500 dark:text-stone-400 font-medium">11:35 AM · 2.4 km away · ETA 12:15 PM</p>
               </div>
             </div>
 
@@ -681,7 +684,7 @@
                 <span class="w-2 h-2 rounded-full bg-stone-300 dark:bg-stone-600"></span>
               </span>
               <div class="flex-1 pt-1 opacity-60">
-                <p class="text-sm font-bold text-stone-600 dark:text-stone-400 mb-0.5">Delivered</p>
+                <h4 class="text-sm font-semibold text-stone-600 dark:text-stone-400 mb-0.5">Delivered</h4>
                 <p class="text-xs text-stone-500 dark:text-stone-400 font-medium">Awaiting confirmation</p>
               </div>
             </div>
@@ -725,7 +728,7 @@
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2.5"/><path d="M12 9.5c0-3 2-5 0-8-2 3 0 5 0 8z"/><path d="M14.5 12c3 0 5-2 8 0-3 2-5 0-8 0z"/><path d="M12 14.5c0 3-2 5 0 8 2-3 0-5 0-8z"/><path d="M9.5 12c-3 0-5 2-8 0 3-2 5 0 8 0z"/></svg>
             </span>
             <span class="flex flex-col">
-              <span class="text-xl font-playfair font-extrabold tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight">Bloom Atelier</span>
+              <span class="text-xl font-playfair font-semibold tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight">Bloom Atelier</span>
               <span class="text-[8px] uppercase font-bold tracking-widest text-yellow-500">Luxury Floral Studio</span>
             </span>
           </a>
@@ -736,13 +739,13 @@
           </div>
           <div class="flex gap-2">
             <a href="#" aria-label="X Profile" class="w-8 h-8 rounded-full bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-stone-400 hover:text-white hover:border-yellow-500/40 transition-all duration-300"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-            <a href="#" aria-label="Instagram Profile" class="w-8 h-8 rounded-full bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-stone-400 hover:text-white hover:border-yellow-500/40 transition-all duration-300"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/></svg></a>
+            <a href="#" aria-label="Instagram Profile" class="w-8 h-8 rounded-full bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-stone-400 hover:text-white hover:border-yellow-500/40 transition-all duration-300"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
             <a href="#" aria-label="Facebook Profile" class="w-8 h-8 rounded-full bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-stone-400 hover:text-white hover:border-yellow-500/40 transition-all duration-300"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg></a>
           </div>
         </div>
 
         <div class="lg:col-span-2">
-          <h4 class="text-white font-bold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">Flowers<span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span></h4>
+          <h4 class="text-white font-semibold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">Flowers<span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span></h4>
           <ul class="flex flex-col gap-2.5">
             <li><a href="shop.html#seasonal" class="text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">Seasonal</a></li>
             <li><a href="shop.html#roses" class="text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">Roses</a></li>
@@ -752,7 +755,7 @@
         </div>
 
         <div class="lg:col-span-2">
-          <h4 class="text-white font-bold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">Discover<span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span></h4>
+          <h4 class="text-white font-semibold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">Discover<span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span></h4>
           <ul class="flex flex-col gap-2.5">
             <li><a href="custom.html" class="text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">Custom</a></li>
             <li><a href="delivery.html" class="text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">Delivery</a></li>
@@ -762,7 +765,7 @@
         </div>
 
         <div class="lg:col-span-4">
-          <h4 class="text-white font-bold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">Visit Us<span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span></h4>
+          <h4 class="text-white font-semibold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">Visit Us<span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span></h4>
           <ul class="flex flex-col gap-3">
             <li>
               <a href="contact.html#map" class="group flex items-start gap-2 text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">
@@ -778,7 +781,7 @@
             </li>
             <li class="flex items-start gap-2 text-sm text-stone-400 font-medium">
               <span class="w-6 h-6 rounded bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-yellow-500 flex-shrink-0"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>
-              <span class="pt-0.5">Monâ€“Sun Â· 8:00 AM â€“ 7:00 PM</span>
+              <span class="pt-0.5">Mon–Sun · 8:00 AM – 7:00 PM</span>
             </li>
           </ul>
         </div>

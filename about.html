@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About â€” Bloom Atelier</title>
+  <title>About Us — Bloom Atelier</title>
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ca8a04' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='2.5'/><path d='M12 9.5c0-3 2-5 0-8-2 3 0 5 0 8z'/><path d='M14.5 12c3 0 5-2 8 0-3 2-5 0-8 0z'/><path d='M12 14.5c0 3-2 5 0 8 2-3 0-5 0-8z'/><path d='M9.5 12c-3 0-5 2-8 0 3-2 5 0 8 0z'/></svg>" />
 
@@ -34,6 +34,9 @@
   <style>
     html { scroll-behavior: smooth; }
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    /* Consistent Typography: 600 headings, 400-550 body */
+    h1, h2, h3, h4, h5, h6 { font-weight: 600 !important; }
+    p { font-weight: 400; }
     html { scrollbar-width: thin; scrollbar-color: #ca8a04 #fefce8; }
     html.dark { scrollbar-color: #ca8a04 #1c1917; }
     ::-webkit-scrollbar { width: 8px; height: 8px; }
@@ -58,14 +61,14 @@
 <body id="top" class="bg-brandLight dark:bg-brandDark text-stone-800 dark:text-stone-100 antialiased transition-colors duration-300">
 
   <!-- ================= 1. NAVBAR ================= -->
-  <header class="sticky top-0 z-50 w-full bg-white/95 dark:bg-[#1c1917]/95 backdrop-blur-md border-b border-yellow-200/60 dark:border-stone-800/70 shadow-sm transition-colors duration-300">
+  <header class="sticky top-0 z-50 w-full relative bg-white/95 dark:bg-[#1c1917]/95 backdrop-blur-md border-b border-yellow-200/60 dark:border-stone-800/70 shadow-sm transition-colors duration-300">
     <nav class="max-w-[1400px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between gap-4" aria-label="Main Navigation">
       <a href="index.html" class="flex items-center gap-3 flex-shrink-0 group" aria-label="Bloom Atelier home">
         <span class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-primary to-secondary flex items-center justify-center shadow-bloom text-white transition-transform duration-300 group-hover:scale-105">
           <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2.5"/><path d="M12 9.5c0-3 2-5 0-8-2 3 0 5 0 8z"/><path d="M14.5 12c3 0 5-2 8 0-3 2-5 0-8 0z"/><path d="M12 14.5c0 3-2 5 0 8 2-3 0-5 0-8z"/><path d="M9.5 12c-3 0-5 2-8 0 3-2 5 0 8 0z"/></svg>
         </span>
         <span class="flex flex-col">
-          <span class="text-2xl font-playfair font-extrabold tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight">Bloom Atelier</span>
+          <span class="text-2xl font-playfair font-semibold tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight">Bloom Atelier</span>
           <span class="text-[9px] uppercase font-bold tracking-widest text-yellow-600 dark:text-yellow-500 -mt-1">Luxury Floral Studio</span>
         </span>
       </a>
@@ -111,7 +114,7 @@
       </button>
     </nav>
 
-    <div id="mobile-menu" class="hidden flex-col bg-white dark:bg-[#1c1917] border-t border-yellow-200/60 dark:border-stone-800/70 w-full shadow-2xl max-h-[85vh] overflow-y-auto px-6 py-8 bloom-scrollbar">
+    <div id="mobile-menu" class="hidden absolute top-full left-0 right-0 w-full flex flex-col bg-white dark:bg-[#1c1917] border-t border-yellow-200/60 dark:border-stone-800/70 shadow-2xl max-h-[85vh] overflow-y-auto px-6 py-8 bloom-scrollbar z-50">
       <div class="flex flex-col gap-6">
         <div>
           <span class="text-[11px] font-bold uppercase tracking-[0.14em] text-stone-400 block mb-2">Home</span>
@@ -158,13 +161,13 @@
           <span class="text-[11px] font-bold tracking-[0.14em] uppercase text-white/95">Our Story</span>
         </div>
 
-        <h1 class="font-playfair text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[1.12] tracking-tight mb-7 text-white font-extrabold drop-shadow-[0_4px_24px_rgba(0,0,0,0.55)]">
+        <h1 class="font-playfair text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[1.12] tracking-tight mb-7 text-white font-semibold drop-shadow-[0_4px_24px_rgba(0,0,0,0.55)]">
           A studio rooted in
           <span class="block mt-2 font-normal italic pb-2 bg-gradient-to-r from-yellow-200 via-yellow-400 to-amber-500 bg-clip-text text-transparent">craft, care &amp; colour.</span>
         </h1>
 
         <p class="text-lg sm:text-xl mb-10 text-white/85 leading-relaxed max-w-2xl mx-auto font-sans drop-shadow-[0_2px_12px_rgba(0,0,0,0.5)]">
-          Bloom Atelier began with a single workbench and one simple promise â€” never compromise on freshness. Today we're a full floral studio, but every bouquet is still conditioned, tied and wrapped by hand.
+          Bloom Atelier began with a single workbench and one simple promise — never compromise on freshness. Today we're a full floral studio, but every bouquet is still conditioned, tied and wrapped by hand.
         </p>
 
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
@@ -177,7 +180,7 @@
           <div class="w-px h-12 bg-white/25"></div>
           <div class="flex flex-col items-center"><span class="text-3xl sm:text-4xl font-playfair font-bold text-white mb-1">25k+</span><span class="text-[11px] text-white/75 uppercase tracking-[0.14em] font-semibold">Bouquets Tied</span></div>
           <div class="w-px h-12 bg-white/25 hidden sm:block"></div>
-          <div class="flex flex-col items-center"><span class="text-3xl sm:text-4xl font-playfair font-bold text-white mb-1">4.9â˜…</span><span class="text-[11px] text-white/75 uppercase tracking-[0.14em] font-semibold">Average Rating</span></div>
+          <div class="flex flex-col items-center"><span class="text-3xl sm:text-4xl font-playfair font-bold text-white mb-1">4.9 ★</span><span class="text-[11px] text-white/75 uppercase tracking-[0.14em] font-semibold">Average Rating</span></div>
         </div>
       </div>
     </div>
@@ -191,7 +194,7 @@
     <div class="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
       <div class="max-w-2xl mx-auto text-center mb-14 lg:mb-16">
         <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">What Drives Us</span>
-        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-5">
+        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-stone-900 dark:text-white mb-5">
           A vision worth
           <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">growing into</span>
         </h2>
@@ -209,12 +212,12 @@
               <span class="w-8 h-px bg-gradient-to-r from-primary to-secondary"></span>
               Our Vision
             </span>
-            <h3 class="font-playfair text-3xl sm:text-4xl font-extrabold leading-tight text-stone-900 dark:text-white mb-5">
+            <h3 class="font-playfair text-3xl sm:text-4xl font-semibold leading-tight text-stone-900 dark:text-white mb-5">
               To make every moment
               <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">bloom brighter.</span>
             </h3>
             <p class="text-base text-stone-600 dark:text-stone-400 leading-relaxed mb-6">
-              We imagine a city where every doorstep, every desk, and every celebration is quietly made better by flowers. Where fresh stems aren't a luxury â€” they're a small, everyday pleasure that anyone can reach for.
+              We imagine a city where every doorstep, every desk, and every celebration is quietly made better by flowers. Where fresh stems aren't a luxury — they're a small, everyday pleasure that anyone can reach for.
             </p>
 
             <!-- Vision bullet list (fills space) -->
@@ -254,12 +257,12 @@
               <span class="w-8 h-px bg-gradient-to-r from-primary to-secondary"></span>
               Our Mission
             </span>
-            <h3 class="font-playfair text-3xl sm:text-4xl font-extrabold leading-tight text-stone-900 dark:text-white mb-5">
+            <h3 class="font-playfair text-3xl sm:text-4xl font-semibold leading-tight text-stone-900 dark:text-white mb-5">
               Hand-tied flowers,
               <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">delivered with care.</span>
             </h3>
             <p class="text-base text-stone-600 dark:text-stone-400 leading-relaxed mb-6">
-              We exist to bring beautifully crafted bouquets to your door â€” grown locally where possible, arranged by hand, and delivered the same morning they're tied. No shortcuts, no compromise on freshness.
+              We exist to bring beautifully crafted bouquets to your door — grown locally where possible, arranged by hand, and delivered the same morning they're tied. No shortcuts, no compromise on freshness.
             </p>
 
             <!-- Mission bullet list (fills space) -->
@@ -270,7 +273,7 @@
               </li>
               <li class="flex items-start gap-3 text-sm text-stone-700 dark:text-stone-300">
                 <span class="w-5 h-5 rounded-full bg-primary/15 text-primary dark:text-yellow-500 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span>
-                <span>Tie and wrap every bouquet in-house â€” never pre-made</span>
+                <span>Tie and wrap every bouquet in-house — never pre-made</span>
               </li>
               <li class="flex items-start gap-3 text-sm text-stone-700 dark:text-stone-300">
                 <span class="w-5 h-5 rounded-full bg-primary/15 text-primary dark:text-yellow-500 flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span>
@@ -319,7 +322,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
         <div class="lg:col-span-5 lg:sticky lg:top-28">
           <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">Our Philosophy</span>
-          <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-6">
+          <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-stone-900 dark:text-white mb-6">
             Four beliefs that
             <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">guide every stem</span>
           </h2>
@@ -335,28 +338,28 @@
           <article class="group flex gap-6 bg-brandLight dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl p-7 hover:shadow-bloom hover:-translate-y-1 transition-all duration-300">
             <span class="font-playfair text-4xl sm:text-5xl font-bold text-primary dark:text-yellow-500 leading-none flex-shrink-0 opacity-70 group-hover:opacity-100 transition-opacity">01</span>
             <div>
-              <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-2">Freshness Before Everything</h3>
+              <h3 class="font-playfair text-xl font-semibold text-stone-900 dark:text-white mb-2">Freshness Before Everything</h3>
               <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">We'd rather turn down an order than send flowers we wouldn't place on our own table. Fresh stems first, always.</p>
             </div>
           </article>
           <article class="group flex gap-6 bg-brandLight dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl p-7 hover:shadow-bloom hover:-translate-y-1 transition-all duration-300">
             <span class="font-playfair text-4xl sm:text-5xl font-bold text-primary dark:text-yellow-500 leading-none flex-shrink-0 opacity-70 group-hover:opacity-100 transition-opacity">02</span>
             <div>
-              <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-2">Every Bouquet Is Hand-Made</h3>
+              <h3 class="font-playfair text-xl font-semibold text-stone-900 dark:text-white mb-2">Every Bouquet Is Hand-Made</h3>
               <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">No assembly lines, no pre-wrapped units sitting in the back. Each arrangement is tied the morning it ships.</p>
             </div>
           </article>
           <article class="group flex gap-6 bg-brandLight dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl p-7 hover:shadow-bloom hover:-translate-y-1 transition-all duration-300">
             <span class="font-playfair text-4xl sm:text-5xl font-bold text-primary dark:text-yellow-500 leading-none flex-shrink-0 opacity-70 group-hover:opacity-100 transition-opacity">03</span>
             <div>
-              <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-2">Local First, Always</h3>
+              <h3 class="font-playfair text-xl font-semibold text-stone-900 dark:text-white mb-2">Local First, Always</h3>
               <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">We buy from nearby farms whenever we can. Fresher stems, shorter journeys, and a kinder footprint.</p>
             </div>
           </article>
           <article class="group flex gap-6 bg-brandLight dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl p-7 hover:shadow-bloom hover:-translate-y-1 transition-all duration-300">
             <span class="font-playfair text-4xl sm:text-5xl font-bold text-primary dark:text-yellow-500 leading-none flex-shrink-0 opacity-70 group-hover:opacity-100 transition-opacity">04</span>
             <div>
-              <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-2">Kindness, Not Just Flowers</h3>
+              <h3 class="font-playfair text-xl font-semibold text-stone-900 dark:text-white mb-2">Kindness, Not Just Flowers</h3>
               <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">Good flowers come from good people. We hire kindly, pay fairly, and treat every client like a neighbour.</p>
             </div>
           </article>
@@ -372,7 +375,7 @@
     <div class="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
       <div class="max-w-2xl mx-auto text-center mb-14 lg:mb-16">
         <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">Milestones</span>
-        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-5">
+        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-stone-900 dark:text-white mb-5">
           From one workbench to
           <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">a full studio</span>
         </h2>
@@ -384,7 +387,7 @@
       <div class="relative max-w-5xl mx-auto">
         <div class="absolute left-4 sm:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary/40 via-primary/70 to-primary/40 -translate-x-1/2 sm:translate-x-0"></div>
 
-        <!-- Milestone 1 â€” left card with image, right side filled with detail card -->
+        <!-- Milestone 1 — left card with image, right side filled with detail card -->
         <div class="relative flex flex-col sm:flex-row items-start sm:items-center mb-10 ps-12 sm:ps-0">
           <div class="sm:w-1/2 sm:pe-10 w-full order-2 sm:order-1">
             <div class="bg-white dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl overflow-hidden shadow-sm hover:shadow-bloom transition-shadow duration-300">
@@ -393,7 +396,7 @@
                 <span class="absolute top-4 start-4 bg-white/95 dark:bg-[#1c1917]/95 backdrop-blur-sm text-primary dark:text-yellow-500 text-[10px] font-bold uppercase tracking-[0.14em] px-3 py-1.5 rounded-full shadow-sm">2014</span>
               </div>
               <div class="p-6 text-start">
-                <h3 class="font-playfair text-lg font-bold text-stone-900 dark:text-white mb-2">The First Workbench</h3>
+                <h3 class="font-playfair text-lg font-semibold text-stone-900 dark:text-white mb-2">The First Workbench</h3>
                 <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-4">Bloom Atelier opens as a single-table studio selling one rose bouquet and one lily arrangement from a rented corner on Rosewood Lane.</p>
                 <div class="flex flex-wrap gap-2">
                   <span class="text-[10px] font-bold uppercase tracking-[0.14em] text-primary dark:text-yellow-500 bg-primary/10 px-2.5 py-1 rounded-full">1 Recipe</span>
@@ -407,12 +410,12 @@
             <div class="bg-gradient-to-br from-primary/10 to-secondary/5 dark:from-primary/15 dark:to-secondary/10 border border-yellow-100 dark:border-stone-800/60 rounded-2xl p-6">
               <span class="inline-block text-[10px] font-bold uppercase tracking-[0.14em] text-primary dark:text-yellow-500 mb-2">Founding Note</span>
               <p class="font-playfair text-base italic text-stone-700 dark:text-stone-300 leading-relaxed">"One table, one promise: never send a bouquet I wouldn't keep."</p>
-              <p class="mt-3 text-xs font-bold uppercase tracking-[0.14em] text-stone-500 dark:text-stone-400">â€” Elena, Day 1</p>
+              <p class="mt-3 text-xs font-medium uppercase tracking-[0.14em] text-stone-500 dark:text-stone-400">— Elena, Day 1</p>
             </div>
           </div>
         </div>
 
-        <!-- Milestone 2 â€” right card with image, left side filled with detail card -->
+        <!-- Milestone 2 — right card with image, left side filled with detail card -->
         <div class="relative flex flex-col sm:flex-row items-start sm:items-center mb-10 ps-12 sm:ps-0">
           <div class="sm:w-1/2 sm:pe-10 w-full order-1 sm:order-1 mt-6 sm:mt-0">
             <div class="bg-gradient-to-br from-primary/10 to-secondary/5 dark:from-primary/15 dark:to-secondary/10 border border-yellow-100 dark:border-stone-800/60 rounded-2xl p-6">
@@ -441,14 +444,14 @@
                 <span class="absolute top-4 start-4 bg-white/95 dark:bg-[#1c1917]/95 backdrop-blur-sm text-primary dark:text-yellow-500 text-[10px] font-bold uppercase tracking-[0.14em] px-3 py-1.5 rounded-full shadow-sm">2017</span>
               </div>
               <div class="p-6">
-                <h3 class="font-playfair text-lg font-bold text-stone-900 dark:text-white mb-2">Moving Into The Studio</h3>
+                <h3 class="font-playfair text-lg font-semibold text-stone-900 dark:text-white mb-2">Moving Into The Studio</h3>
                 <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">We move into our first proper studio space with walk-in coolers and a dedicated wrapping room.</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Milestone 3 â€” left card with image, right side detail card -->
+        <!-- Milestone 3 — left card with image, right side detail card -->
         <div class="relative flex flex-col sm:flex-row items-start sm:items-center mb-10 ps-12 sm:ps-0">
           <div class="sm:w-1/2 sm:pe-10 w-full order-2 sm:order-1">
             <div class="bg-white dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl overflow-hidden shadow-sm hover:shadow-bloom transition-shadow duration-300">
@@ -457,8 +460,8 @@
                 <span class="absolute top-4 start-4 bg-white/95 dark:bg-[#1c1917]/95 backdrop-blur-sm text-primary dark:text-yellow-500 text-[10px] font-bold uppercase tracking-[0.14em] px-3 py-1.5 rounded-full shadow-sm">2020</span>
               </div>
               <div class="p-6 text-start">
-                <h3 class="font-playfair text-lg font-bold text-stone-900 dark:text-white mb-2">Same-Day Delivery Launches</h3>
-                <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-4">After months of planning, we launch same-day bouquet delivery across the city â€” orders by 1 PM, on your doorstep by evening.</p>
+                <h3 class="font-playfair text-lg font-semibold text-stone-900 dark:text-white mb-2">Same-Day Delivery Launches</h3>
+                <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-4">After months of planning, we launch same-day bouquet delivery across the city — orders by 1 PM, on your doorstep by evening.</p>
                 <div class="flex flex-wrap gap-2">
                   <span class="text-[10px] font-bold uppercase tracking-[0.14em] text-primary dark:text-yellow-500 bg-primary/10 px-2.5 py-1 rounded-full">Same-Day</span>
                   <span class="text-[10px] font-bold uppercase tracking-[0.14em] text-primary dark:text-yellow-500 bg-primary/10 px-2.5 py-1 rounded-full">City-Wide</span>
@@ -470,13 +473,13 @@
           <div class="sm:w-1/2 sm:ps-10 w-full order-1 sm:order-2 mt-6 sm:mt-0">
             <div class="bg-gradient-to-br from-primary/10 to-secondary/5 dark:from-primary/15 dark:to-secondary/10 border border-yellow-100 dark:border-stone-800/60 rounded-2xl p-6">
               <span class="inline-block text-[10px] font-bold uppercase tracking-[0.14em] text-primary dark:text-yellow-500 mb-2">Delivery Numbers</span>
-              <p class="font-playfair text-3xl font-bold text-primary dark:text-yellow-500 mb-1">420+</p>
+              <span class="block font-playfair text-3xl font-semibold text-primary dark:text-yellow-500 mb-1">420+</span>
               <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">Same-day orders delivered in the first month after launch.</p>
             </div>
           </div>
         </div>
 
-        <!-- Milestone 4 â€” right card with image, left side detail card -->
+        <!-- Milestone 4 — right card with image, left side detail card -->
         <div class="relative flex flex-col sm:flex-row items-start sm:items-center ps-12 sm:ps-0">
           <div class="sm:w-1/2 sm:pe-10 w-full order-1 sm:order-1 mt-6 sm:mt-0">
             <div class="bg-gradient-to-br from-primary/10 to-secondary/5 dark:from-primary/15 dark:to-secondary/10 border border-yellow-100 dark:border-stone-800/60 rounded-2xl p-6">
@@ -505,8 +508,8 @@
                 <span class="absolute top-4 start-4 bg-white/95 dark:bg-[#1c1917]/95 backdrop-blur-sm text-primary dark:text-yellow-500 text-[10px] font-bold uppercase tracking-[0.14em] px-3 py-1.5 rounded-full shadow-sm">2025</span>
               </div>
               <div class="p-6">
-                <h3 class="font-playfair text-lg font-bold text-stone-900 dark:text-white mb-2">25,000 Bouquets Later</h3>
-                <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">We cross 25,000 bouquets tied â€” and start a studio-wide sustainability programme the same week.</p>
+                <h3 class="font-playfair text-lg font-semibold text-stone-900 dark:text-white mb-2">25,000 Bouquets Later</h3>
+                <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">We cross 25,000 bouquets tied — and start a studio-wide sustainability programme the same week.</p>
               </div>
             </div>
           </div>
@@ -516,19 +519,19 @@
   </section>
 
  
-  <!-- ================= 7. MEET YOUR TEAM (Filled â€” no empty space) ================= -->
+  <!-- ================= 7. MEET YOUR TEAM (Filled — no empty space) ================= -->
   <section class="relative w-full py-20 lg:py-28 bg-brandLight dark:bg-[#1c1917] transition-colors duration-300">
     <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
 
       <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
         <div class="max-w-2xl">
           <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">Meet Your Team</span>
-          <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-4">
+          <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-stone-900 dark:text-white mb-4">
             The hands behind
             <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">every bloom</span>
           </h2>
           <p class="text-base sm:text-lg text-stone-600 dark:text-stone-400 leading-relaxed">
-            A small crew of florists, artists and delivery hands who genuinely love what they do â€” and it shows in every bouquet.
+            A small crew of florists, artists and delivery hands who genuinely love what they do — and it shows in every bouquet.
           </p>
         </div>
 
@@ -561,7 +564,7 @@
             </div>
             <div class="absolute bottom-0 left-0 right-0 p-5 text-white">
               <span class="text-[10px] uppercase tracking-[0.14em] font-bold text-yellow-300 mb-1 block">Studio Artist</span>
-              <h3 class="font-playfair text-xl font-bold">Maya Okafor</h3>
+              <h3 class="font-playfair text-xl font-semibold">Maya Okafor</h3>
             </div>
           </div>
           <div class="p-5 flex flex-col flex-1">
@@ -581,7 +584,7 @@
             </div>
             <div class="absolute bottom-0 left-0 right-0 p-5 text-white">
               <span class="text-[10px] uppercase tracking-[0.14em] font-bold text-yellow-300 mb-1 block">Arrangements</span>
-              <h3 class="font-playfair text-xl font-bold">Aiko Tanaka</h3>
+              <h3 class="font-playfair text-xl font-semibold">Aiko Tanaka</h3>
             </div>
           </div>
           <div class="p-5 flex flex-col flex-1">
@@ -599,7 +602,7 @@
             </div>
             <div class="absolute bottom-0 left-0 right-0 p-5 text-white">
               <span class="text-[10px] uppercase tracking-[0.14em] font-bold text-yellow-300 mb-1 block">Grower Relations</span>
-              <h3 class="font-playfair text-xl font-bold">Jonas Berg</h3>
+              <h3 class="font-playfair text-xl font-semibold">Jonas Berg</h3>
             </div>
           </div>
           <div class="p-5 flex flex-col flex-1">
@@ -628,14 +631,14 @@
     <div class="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
       <div class="text-center mb-10">
         <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-white/85 mb-3">Studio by the Numbers</span>
-        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">What eleven years looks like</h2>
+        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold text-white">What eleven years looks like</h2>
       </div>
 
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
         <div class="text-center"><span class="block font-playfair text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-none mb-2">25k+</span><span class="block text-[11px] uppercase tracking-[0.14em] font-bold text-white/85">Bouquets Tied</span></div>
         <div class="text-center"><span class="block font-playfair text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-none mb-2">14</span><span class="block text-[11px] uppercase tracking-[0.14em] font-bold text-white/85">Local Farm Partners</span></div>
         <div class="text-center"><span class="block font-playfair text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-none mb-2">60+</span><span class="block text-[11px] uppercase tracking-[0.14em] font-bold text-white/85">Flower Varieties</span></div>
-        <div class="text-center"><span class="block font-playfair text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-none mb-2">4.9â˜…</span><span class="block text-[11px] uppercase tracking-[0.14em] font-bold text-white/85">Average Rating</span></div>
+        <div class="text-center"><span class="block font-playfair text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-none mb-2">4.9 ★</span><span class="block text-[11px] uppercase tracking-[0.14em] font-bold text-white/85">Average Rating</span></div>
       </div>
     </div>
   </section>
@@ -646,7 +649,7 @@
     <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
       <div class="max-w-2xl mx-auto text-center mb-12">
         <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">Visit Us</span>
-        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-5">
+        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-stone-900 dark:text-white mb-5">
           Come see the studio
           <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">in person</span>
         </h2>
@@ -660,23 +663,23 @@
           <span class="w-12 h-12 rounded-xl bg-primaryLight dark:bg-stone-800/60 text-primary dark:text-yellow-500 flex items-center justify-center mb-5 group-hover:bg-gradient-to-tr group-hover:from-primary group-hover:to-secondary group-hover:text-white transition-all duration-300">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
           </span>
-          <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-2">The Studio</h3>
-          <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">18 Rosewood Lane<br/>Old Town Quarter<br/>Open Monâ€“Sun</p>
+          <h3 class="font-playfair text-xl font-semibold text-stone-900 dark:text-white mb-2">The Studio</h3>
+          <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">18 Rosewood Lane<br/>Old Town Quarter<br/>Open Mon–Sun</p>
         </article>
 
         <article class="group bg-brandLight dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl p-7 shadow-sm hover:shadow-bloom hover:-translate-y-1 transition-all duration-300">
           <span class="w-12 h-12 rounded-xl bg-primaryLight dark:bg-stone-800/60 text-primary dark:text-yellow-500 flex items-center justify-center mb-5 group-hover:bg-gradient-to-tr group-hover:from-primary group-hover:to-secondary group-hover:text-white transition-all duration-300">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9" stroke-width="1.8"/></svg>
           </span>
-          <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-2">Opening Hours</h3>
-          <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">Monâ€“Fri Â· 8 AM â€“ 7 PM<br/>Sat Â· 9 AM â€“ 6 PM<br/>Sun Â· 10 AM â€“ 4 PM</p>
+          <h3 class="font-playfair text-xl font-semibold text-stone-900 dark:text-white mb-2">Opening Hours</h3>
+          <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">Mon–Fri · 8 AM – 7 PM<br/>Sat · 9 AM – 6 PM<br/>Sun · 10 AM – 4 PM</p>
         </article>
 
         <article class="group bg-brandLight dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl p-7 shadow-sm hover:shadow-bloom hover:-translate-y-1 transition-all duration-300">
           <span class="w-12 h-12 rounded-xl bg-primaryLight dark:bg-stone-800/60 text-primary dark:text-yellow-500 flex items-center justify-center mb-5 group-hover:bg-gradient-to-tr group-hover:from-primary group-hover:to-secondary group-hover:text-white transition-all duration-300">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
           </span>
-          <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-2">Get In Touch</h3>
+          <h3 class="font-playfair text-xl font-semibold text-stone-900 dark:text-white mb-2">Get In Touch</h3>
           <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-3">hello@bloomatelier.com<br/>+1 (555) 012-3478</p>
           <a href="contact.html" class="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-primary dark:text-yellow-500 hover:text-secondary transition-colors">
             Contact Page
@@ -698,7 +701,7 @@
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2.5"/><path d="M12 9.5c0-3 2-5 0-8-2 3 0 5 0 8z"/><path d="M14.5 12c3 0 5-2 8 0-3 2-5 0-8 0z"/><path d="M12 14.5c0 3-2 5 0 8 2-3 0-5 0-8z"/><path d="M9.5 12c-3 0-5 2-8 0 3-2 5 0 8 0z"/></svg>
             </span>
             <span class="flex flex-col">
-              <span class="text-xl font-playfair font-extrabold tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight">Bloom Atelier</span>
+              <span class="text-xl font-playfair font-semibold tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight">Bloom Atelier</span>
               <span class="text-[8px] uppercase font-bold tracking-widest text-yellow-500">Luxury Floral Studio</span>
             </span>
           </a>
@@ -709,13 +712,13 @@
           </div>
           <div class="flex gap-2">
             <a href="#" aria-label="X Profile" class="w-8 h-8 rounded-full bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-stone-400 hover:text-white hover:border-yellow-500/40 transition-all duration-300"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-            <a href="#" aria-label="Instagram Profile" class="w-8 h-8 rounded-full bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-stone-400 hover:text-white hover:border-yellow-500/40 transition-all duration-300"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/></svg></a>
+            <a href="#" aria-label="Instagram Profile" class="w-8 h-8 rounded-full bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-stone-400 hover:text-white hover:border-yellow-500/40 transition-all duration-300"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
             <a href="#" aria-label="Facebook Profile" class="w-8 h-8 rounded-full bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-stone-400 hover:text-white hover:border-yellow-500/40 transition-all duration-300"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg></a>
           </div>
         </div>
 
         <div class="lg:col-span-2">
-          <h4 class="text-white font-bold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">Flowers<span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span></h4>
+          <h4 class="text-white font-semibold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">Flowers<span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span></h4>
           <ul class="flex flex-col gap-2.5">
             <li><a href="shop.html#seasonal" class="text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">Seasonal</a></li>
             <li><a href="shop.html#roses" class="text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">Roses</a></li>
@@ -725,7 +728,7 @@
         </div>
 
         <div class="lg:col-span-2">
-          <h4 class="text-white font-bold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">Discover<span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span></h4>
+          <h4 class="text-white font-semibold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">Discover<span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span></h4>
           <ul class="flex flex-col gap-2.5">
             <li><a href="custom.html" class="text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">Custom</a></li>
             <li><a href="delivery.html" class="text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">Delivery</a></li>
@@ -735,7 +738,7 @@
         </div>
 
         <div class="lg:col-span-4">
-          <h4 class="text-white font-bold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">Visit Us<span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span></h4>
+          <h4 class="text-white font-semibold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">Visit Us<span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span></h4>
           <ul class="flex flex-col gap-3">
             <li>
               <a href="contact.html#map" class="group flex items-start gap-2 text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">
@@ -751,7 +754,7 @@
             </li>
             <li class="flex items-start gap-2 text-sm text-stone-400 font-medium">
               <span class="w-6 h-6 rounded bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-yellow-500 flex-shrink-0"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>
-              <span class="pt-0.5">Monâ€“Sun Â· 8:00 AM â€“ 7:00 PM</span>
+              <span class="pt-0.5">Mon–Sun · 8:00 AM – 7:00 PM</span>
             </li>
           </ul>
         </div>

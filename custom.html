@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bloom Atelier â€” Custom Designs</title>
+  <title>Custom Arrangements — Bloom Atelier</title>
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ca8a04' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='2.5'/><path d='M12 9.5c0-3 2-5 0-8-2 3 0 5 0 8z'/><path d='M14.5 12c3 0 5-2 8 0-3 2-5 0-8 0z'/><path d='M12 14.5c0 3-2 5 0 8 2-3 0-5 0-8z'/><path d='M9.5 12c-3 0-5 2-8 0 3-2 5 0 8 0z'/></svg>" />
 
@@ -36,6 +36,9 @@
   <style>
     html { scroll-behavior: smooth; }
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    /* Consistent Typography: 600 headings, 400-550 body */
+    h1, h2, h3, h4, h5, h6 { font-weight: 600 !important; }
+    p { font-weight: 400; }
     html { scrollbar-width: thin; scrollbar-color: #ca8a04 #fefce8; }
     html.dark { scrollbar-color: #ca8a04 #1c1917; }
     ::-webkit-scrollbar { width: 8px; height: 8px; }
@@ -56,14 +59,14 @@
 <body id="top" class="bg-brandLight dark:bg-brandDark text-stone-800 dark:text-stone-100 antialiased transition-colors duration-300">
 
   <!-- ================= 1. NAVBAR (unchanged) ================= -->
-  <header class="sticky top-0 z-50 w-full bg-white/95 dark:bg-[#1c1917]/95 backdrop-blur-md border-b border-yellow-200/60 dark:border-stone-800/70 shadow-sm transition-colors duration-300">
+  <header class="sticky top-0 z-50 w-full relative bg-white/95 dark:bg-[#1c1917]/95 backdrop-blur-md border-b border-yellow-200/60 dark:border-stone-800/70 shadow-sm transition-colors duration-300">
     <nav class="max-w-[1400px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between gap-4" aria-label="Main Navigation">
       <a href="index.html" class="flex items-center gap-3 flex-shrink-0 group" aria-label="Bloom Atelier home">
         <span class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-primary to-secondary flex items-center justify-center shadow-bloom text-white transition-transform duration-300 group-hover:scale-105">
           <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2.5"/><path d="M12 9.5c0-3 2-5 0-8-2 3 0 5 0 8z"/><path d="M14.5 12c3 0 5-2 8 0-3 2-5 0-8 0z"/><path d="M12 14.5c0 3-2 5 0 8 2-3 0-5 0-8z"/><path d="M9.5 12c-3 0-5 2-8 0 3-2 5 0 8 0z"/></svg>
         </span>
         <span class="flex flex-col">
-          <span class="text-2xl font-playfair font-extrabold tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight">Bloom Atelier</span>
+          <span class="text-2xl font-playfair font-semibold tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight">Bloom Atelier</span>
           <span class="text-[9px] uppercase font-bold tracking-widest text-yellow-600 dark:text-yellow-500 -mt-1">Luxury Floral Studio</span>
         </span>
       </a>
@@ -110,7 +113,7 @@
       </button>
     </nav>
 
-    <div id="mobile-menu" class="hidden flex-col bg-white dark:bg-[#1c1917] border-t border-yellow-200/60 dark:border-stone-800/70 w-full shadow-2xl max-h-[85vh] overflow-y-auto px-6 py-8 bloom-scrollbar">
+    <div id="mobile-menu" class="hidden absolute top-full left-0 right-0 w-full flex flex-col bg-white dark:bg-[#1c1917] border-t border-yellow-200/60 dark:border-stone-800/70 shadow-2xl max-h-[85vh] overflow-y-auto px-6 py-8 bloom-scrollbar z-50">
       <div class="flex flex-col gap-6">
         <div>
           <span class="text-[11px] font-bold uppercase tracking-[0.14em] text-stone-400 block mb-2">Home</span>
@@ -151,7 +154,7 @@
         </span>
         <span class="text-[11px] font-bold tracking-[0.14em] uppercase text-white drop-shadow-md">Bespoke Designs</span>
       </div>
-      <h1 class="font-playfair text-5xl sm:text-6xl lg:text-7xl leading-[1.2] tracking-tight mb-6 text-white font-extrabold drop-shadow-lg">Custom Arrangements</h1>
+      <h1 class="font-playfair text-5xl sm:text-6xl lg:text-7xl leading-[1.2] tracking-tight mb-6 text-white font-semibold drop-shadow-lg">Custom Arrangements</h1>
       <p class="text-lg sm:text-xl text-white/90 leading-relaxed max-w-2xl drop-shadow-md">Work with our master florists to create bespoke floral designs tailored to your unique vision and special occasions.</p>
     </div>
   </section>
@@ -161,12 +164,12 @@
     <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
       <div class="max-w-2xl mx-auto text-center mb-14">
         <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">How It Works</span>
-        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-5">
+        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-stone-900 dark:text-white mb-5">
           Four steps to your
           <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">bespoke bouquet</span>
         </h2>
         <p class="text-base sm:text-lg text-stone-600 dark:text-stone-400 leading-relaxed">
-          From first conversation to final delivery â€” here's how a custom Bloom Atelier arrangement comes to life.
+          From first conversation to final delivery — here's how a custom Bloom Atelier arrangement comes to life.
         </p>
       </div>
 
@@ -177,7 +180,7 @@
           <span class="w-12 h-12 rounded-xl bg-primaryLight dark:bg-stone-800/60 text-primary dark:text-yellow-500 flex items-center justify-center mt-5 mb-5">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
           </span>
-          <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-2">Share Your Vision</h3>
+          <h3 class="font-playfair text-xl font-semibold text-stone-900 dark:text-white mb-2">Share Your Vision</h3>
           <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
             Tell us the occasion, mood, colours, and any inspiration images you love.
           </p>
@@ -188,7 +191,7 @@
           <span class="w-12 h-12 rounded-xl bg-primaryLight dark:bg-stone-800/60 text-primary dark:text-yellow-500 flex items-center justify-center mt-5 mb-5">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
           </span>
-          <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-2">We Sketch &amp; Propose</h3>
+          <h3 class="font-playfair text-xl font-semibold text-stone-900 dark:text-white mb-2">We Sketch &amp; Propose</h3>
           <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
             Our head florist designs a moodboard and pricing proposal for your approval.
           </p>
@@ -199,7 +202,7 @@
           <span class="w-12 h-12 rounded-xl bg-primaryLight dark:bg-stone-800/60 text-primary dark:text-yellow-500 flex items-center justify-center mt-5 mb-5">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2.5"/><path d="M12 9.5c0-3 2-5 0-8-2 3 0 5 0 8z"/><path d="M14.5 12c3 0 5-2 8 0-3 2-5 0-8 0z"/><path d="M12 14.5c0 3-2 5 0 8 2-3 0-5 0-8z"/><path d="M9.5 12c-3 0-5 2-8 0 3-2 5 0 8 0z"/></svg>
           </span>
-          <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-2">We Hand-Craft It</h3>
+          <h3 class="font-playfair text-xl font-semibold text-stone-900 dark:text-white mb-2">We Hand-Craft It</h3>
           <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
             Every stem is conditioned and arranged by hand in the studio the morning it ships.
           </p>
@@ -210,9 +213,9 @@
           <span class="w-12 h-12 rounded-xl bg-primaryLight dark:bg-stone-800/60 text-primary dark:text-yellow-500 flex items-center justify-center mt-5 mb-5">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
           </span>
-          <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-2">Delivered With Care</h3>
+          <h3 class="font-playfair text-xl font-semibold text-stone-900 dark:text-white mb-2">Delivered With Care</h3>
           <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
-            Hand-delivered in our signature kraft box with a care card â€” ready to display.
+            Hand-delivered in our signature kraft box with a care card — ready to display.
           </p>
         </article>
 
@@ -227,7 +230,7 @@
     <div class="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
       <div class="max-w-2xl mx-auto text-center mb-14">
         <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">Customise Every Detail</span>
-        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-5">
+        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-stone-900 dark:text-white mb-5">
           Built around
           <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">your choices</span>
         </h2>
@@ -243,9 +246,9 @@
             <span class="w-11 h-11 rounded-xl bg-primaryLight dark:bg-stone-800/60 text-primary dark:text-yellow-500 flex items-center justify-center group-hover:bg-gradient-to-tr group-hover:from-primary group-hover:to-secondary group-hover:text-white transition-all duration-300">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
             </span>
-            <h3 class="font-playfair text-lg font-bold text-stone-900 dark:text-white">Colour Palette</h3>
+            <h3 class="font-playfair text-lg font-semibold text-stone-900 dark:text-white">Colour Palette</h3>
           </div>
-          <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-5">Choose from blush, ivory, golden, coral, or lilac â€” or name your own custom palette.</p>
+          <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-5">Choose from blush, ivory, golden, coral, or lilac — or name your own custom palette.</p>
           <div class="flex gap-1.5">
             <span class="w-6 h-6 rounded-full bg-pink-200 border border-pink-300"></span>
             <span class="w-6 h-6 rounded-full bg-stone-100 border border-stone-200"></span>
@@ -261,9 +264,9 @@
             <span class="w-11 h-11 rounded-xl bg-primaryLight dark:bg-stone-800/60 text-primary dark:text-yellow-500 flex items-center justify-center group-hover:bg-gradient-to-tr group-hover:from-primary group-hover:to-secondary group-hover:text-white transition-all duration-300">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2.5"/><path d="M12 9.5c0-3 2-5 0-8-2 3 0 5 0 8z"/><path d="M14.5 12c3 0 5-2 8 0-3 2-5 0-8 0z"/><path d="M12 14.5c0 3-2 5 0 8 2-3 0-5 0-8z"/><path d="M9.5 12c-3 0-5 2-8 0 3-2 5 0 8 0z"/></svg>
             </span>
-            <h3 class="font-playfair text-lg font-bold text-stone-900 dark:text-white">Flower Mix</h3>
+            <h3 class="font-playfair text-lg font-semibold text-stone-900 dark:text-white">Flower Mix</h3>
           </div>
-          <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-5">Tell us the flowers you love (or don't) â€” we'll balance the mix around your preferences.</p>
+          <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-5">Tell us the flowers you love (or don't) — we'll balance the mix around your preferences.</p>
           <div class="flex flex-wrap gap-1.5">
             <span class="text-[10px] font-bold uppercase tracking-[0.14em] text-primary dark:text-yellow-500 bg-primary/10 px-2.5 py-1 rounded-full">Roses</span>
             <span class="text-[10px] font-bold uppercase tracking-[0.14em] text-primary dark:text-yellow-500 bg-primary/10 px-2.5 py-1 rounded-full">Peonies</span>
@@ -277,9 +280,9 @@
             <span class="w-11 h-11 rounded-xl bg-primaryLight dark:bg-stone-800/60 text-primary dark:text-yellow-500 flex items-center justify-center group-hover:bg-gradient-to-tr group-hover:from-primary group-hover:to-secondary group-hover:text-white transition-all duration-300">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h7"/></svg>
             </span>
-            <h3 class="font-playfair text-lg font-bold text-stone-900 dark:text-white">Size &amp; Shape</h3>
+            <h3 class="font-playfair text-lg font-semibold text-stone-900 dark:text-white">Size &amp; Shape</h3>
           </div>
-          <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-5">From a petite posy to a large statement arrangement â€” or a tall, sculptural design.</p>
+          <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-5">From a petite posy to a large statement arrangement — or a tall, sculptural design.</p>
           <div class="flex items-end gap-1.5">
             <span class="w-3 h-6 bg-primary/20 rounded-sm"></span>
             <span class="w-3 h-9 bg-primary/40 rounded-sm"></span>
@@ -293,7 +296,7 @@
             <span class="w-11 h-11 rounded-xl bg-primaryLight dark:bg-stone-800/60 text-primary dark:text-yellow-500 flex items-center justify-center group-hover:bg-gradient-to-tr group-hover:from-primary group-hover:to-secondary group-hover:text-white transition-all duration-300">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 3h8l-1 5a4 4 0 01-4 4 4 4 0 01-4-4L8 3z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M7 12c-1 3 0 6 5 8 5-2 6-5 5-8"/></svg>
             </span>
-            <h3 class="font-playfair text-lg font-bold text-stone-900 dark:text-white">Vase or Wrap</h3>
+            <h3 class="font-playfair text-lg font-semibold text-stone-900 dark:text-white">Vase or Wrap</h3>
           </div>
           <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-5">Choose a hand-blown vase, silk ribbon wrap, recycled kraft paper, or our signature kraft box.</p>
           <div class="flex gap-2">
@@ -308,11 +311,11 @@
             <span class="w-11 h-11 rounded-xl bg-primaryLight dark:bg-stone-800/60 text-primary dark:text-yellow-500 flex items-center justify-center group-hover:bg-gradient-to-tr group-hover:from-primary group-hover:to-secondary group-hover:text-white transition-all duration-300">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
             </span>
-            <h3 class="font-playfair text-lg font-bold text-stone-900 dark:text-white">Personal Note</h3>
+            <h3 class="font-playfair text-lg font-semibold text-stone-900 dark:text-white">Personal Note</h3>
           </div>
-          <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-5">Add a handwritten card with a message of up to 200 characters â€” we write it in ink.</p>
+          <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-5">Add a handwritten card with a message of up to 200 characters — we write it in ink.</p>
           <div class="pt-3 border-t border-dashed border-yellow-200 dark:border-stone-700">
-            <span class="font-playfair italic text-sm text-stone-500 dark:text-stone-400">"Happy birthday, Mumâ€¦"</span>
+            <span class="font-playfair italic text-sm text-stone-500 dark:text-stone-400">"Happy birthday, Mum”¦"</span>
           </div>
         </article>
 
@@ -321,7 +324,7 @@
             <span class="w-11 h-11 rounded-xl bg-primaryLight dark:bg-stone-800/60 text-primary dark:text-yellow-500 flex items-center justify-center group-hover:bg-gradient-to-tr group-hover:from-primary group-hover:to-secondary group-hover:text-white transition-all duration-300">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9" stroke-width="1.8"/></svg>
             </span>
-            <h3 class="font-playfair text-lg font-bold text-stone-900 dark:text-white">Delivery Time</h3>
+            <h3 class="font-playfair text-lg font-semibold text-stone-900 dark:text-white">Delivery Time</h3>
           </div>
           <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-5">Schedule a specific date or upgrade to same-day and express delivery windows.</p>
           <div class="flex flex-wrap gap-1.5">
@@ -340,12 +343,12 @@
     <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
       <div class="max-w-2xl mx-auto text-center mb-14">
         <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">Build Your Own</span>
-        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-5">
+        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-stone-900 dark:text-white mb-5">
           Design your bouquet,
           <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">step by step</span>
         </h2>
         <p class="text-base sm:text-lg text-stone-600 dark:text-stone-400 leading-relaxed">
-          A quick preview of our online bouquet builder â€” pick a size, choose your palette, add a note.
+          A quick preview of our online bouquet builder — pick a size, choose your palette, add a note.
         </p>
       </div>
 
@@ -356,26 +359,26 @@
 
           <!-- Step: Size -->
           <div class="mb-7">
-            <span class="block text-[10px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400 mb-3">1 Â· Choose a Size</span>
+            <span class="block text-[10px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400 mb-3">1 · Choose a Size</span>
             <div class="grid grid-cols-3 gap-3">
               <button type="button" class="group text-start bg-white dark:bg-[#1c1917] border-2 border-yellow-100 dark:border-stone-800/60 rounded-xl p-4 hover:border-primary dark:hover:border-yellow-500 transition-colors">
                 <span class="block font-playfair text-lg font-bold text-stone-900 dark:text-white">Petite</span>
-                <span class="block text-[10px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400">8â€“12 stems</span>
+                <span class="block text-[10px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400">8–12 stems</span>
               </button>
               <button type="button" class="group text-start bg-white dark:bg-[#1c1917] border-2 border-primary dark:border-yellow-500 rounded-xl p-4 shadow-bloom">
                 <span class="block font-playfair text-lg font-bold text-primary dark:text-yellow-500">Signature</span>
-                <span class="block text-[10px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400">15â€“20 stems</span>
+                <span class="block text-[10px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400">15–20 stems</span>
               </button>
               <button type="button" class="group text-start bg-white dark:bg-[#1c1917] border-2 border-yellow-100 dark:border-stone-800/60 rounded-xl p-4 hover:border-primary dark:hover:border-yellow-500 transition-colors">
                 <span class="block font-playfair text-lg font-bold text-stone-900 dark:text-white">Grand</span>
-                <span class="block text-[10px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400">25â€“35 stems</span>
+                <span class="block text-[10px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400">25–35 stems</span>
               </button>
             </div>
           </div>
 
           <!-- Step: Palette -->
           <div class="mb-7">
-            <span class="block text-[10px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400 mb-3">2 Â· Pick a Palette</span>
+            <span class="block text-[10px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400 mb-3">2 · Pick a Palette</span>
             <div class="flex flex-wrap gap-3">
               <button type="button" class="w-11 h-11 rounded-xl bg-gradient-to-br from-pink-100 via-pink-200 to-rose-300 border-2 border-yellow-100 dark:border-stone-800/60 hover:scale-105 transition-transform" aria-label="Blush palette"></button>
               <button type="button" class="w-11 h-11 rounded-xl bg-gradient-to-br from-stone-100 via-amber-50 to-yellow-100 border-2 border-primary dark:border-yellow-500 shadow-bloom" aria-label="Ivory palette"></button>
@@ -387,7 +390,7 @@
 
           <!-- Step: Add-ons -->
           <div class="mb-7">
-            <span class="block text-[10px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400 mb-3">3 Â· Add-Ons</span>
+            <span class="block text-[10px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400 mb-3">3 · Add-Ons</span>
             <div class="flex flex-col gap-2">
               <label class="flex items-center justify-between gap-4 bg-white dark:bg-[#1c1917] border border-yellow-100 dark:border-stone-800/60 rounded-xl px-4 py-3 cursor-pointer hover:border-primary/60 transition-colors">
                 <span class="flex items-center gap-3">
@@ -430,7 +433,7 @@
         <div class="lg:col-span-5">
           <div class="sticky top-28">
             <div class="relative rounded-[2rem] overflow-hidden shadow-2xl shadow-stone-900/20 border border-yellow-200/40 dark:border-stone-800/40 aspect-[4/5]">
-              <img src="img/WhatsApp Image 2026-10-09 at 1.59.52 PM (20).jpeg" alt="Bouquet preview â€” signature peony arrangement" class="w-full h-full object-cover" />
+              <img src="img/WhatsApp Image 2026-10-09 at 1.59.52 PM (20).jpeg" alt="Bouquet preview — signature peony arrangement" class="w-full h-full object-cover" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
 
               <div class="absolute top-5 start-5 bg-white/95 dark:bg-[#1c1917]/95 backdrop-blur-sm text-primary dark:text-yellow-500 text-[10px] font-bold uppercase tracking-[0.14em] px-3 py-1.5 rounded-full shadow-sm">
@@ -438,7 +441,7 @@
               </div>
 
               <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-                <span class="block text-[10px] uppercase tracking-[0.14em] font-bold text-yellow-300 mb-1">Signature Â· Ivory Â· With Card</span>
+                <span class="block text-[10px] uppercase tracking-[0.14em] font-bold text-yellow-300 mb-1">Signature · Ivory · With Card</span>
                 <span class="block font-playfair text-2xl font-bold">Your Bouquet</span>
               </div>
             </div>
@@ -467,7 +470,7 @@
   <div class="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
     <div class="max-w-2xl mx-auto text-center mb-14">
       <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">Occasions</span>
-      <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-5">
+      <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-stone-900 dark:text-white mb-5">
         Bespoke designs for
         <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">every moment</span>
       </h2>
@@ -490,7 +493,7 @@
         <!-- Content -->
         <div class="lg:col-span-5 p-6 lg:p-7 flex flex-col justify-center">
           <span class="text-[10px] uppercase tracking-[0.14em] font-bold text-primary dark:text-yellow-500 mb-2 block">Weddings</span>
-          <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-2">Bridal &amp; Ceremony Florals</h3>
+          <h3 class="font-playfair text-xl font-semibold text-stone-900 dark:text-white mb-2">Bridal &amp; Ceremony Florals</h3>
           <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-4">
             Bridal bouquets, bridesmaid posies, buttonholes, ceremony arches and full table settings — all designed to match your colour story.
           </p>
@@ -523,7 +526,7 @@
 
         <div class="lg:col-span-5 p-6 lg:p-7 flex flex-col justify-center">
           <span class="text-[10px] uppercase tracking-[0.14em] font-bold text-primary dark:text-yellow-500 mb-2 block">Anniversaries</span>
-          <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-2">Recreate Their First Bouquet</h3>
+          <h3 class="font-playfair text-xl font-semibold text-stone-900 dark:text-white mb-2">Recreate Their First Bouquet</h3>
           <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-4">
             Bring us an old photo of a beloved bouquet and we'll rebuild it from today's freshest blooms — right down to the ribbon colour.
           </p>
@@ -554,7 +557,7 @@
 
         <div class="lg:col-span-5 p-6 lg:p-7 flex flex-col justify-center">
           <span class="text-[10px] uppercase tracking-[0.14em] font-bold text-primary dark:text-yellow-500 mb-2 block">Corporate</span>
-          <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-2">Weekly Office &amp; Lobby Florals</h3>
+          <h3 class="font-playfair text-xl font-semibold text-stone-900 dark:text-white mb-2">Weekly Office &amp; Lobby Florals</h3>
           <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-4">
             Design-led weekly arrangements for hotels, offices and studios — with delivery and setup handled end-to-end.
           </p>
@@ -585,7 +588,7 @@
 
         <div class="lg:col-span-5 p-6 lg:p-7 flex flex-col justify-center">
           <span class="text-[10px] uppercase tracking-[0.14em] font-bold text-primary dark:text-yellow-500 mb-2 block">Events</span>
-          <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-2">Installations &amp; Statement Pieces</h3>
+          <h3 class="font-playfair text-xl font-semibold text-stone-900 dark:text-white mb-2">Installations &amp; Statement Pieces</h3>
           <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-4">
             Large-scale floral installations for product launches, galas and photo shoots — hung, built and struck by our team.
           </p>
@@ -616,7 +619,7 @@
     <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
       <div class="max-w-2xl">
         <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">The Gallery</span>
-        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-4">
+        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-stone-900 dark:text-white mb-4">
           Custom work,
           <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">made for real people</span>
         </h2>
@@ -724,11 +727,11 @@
             <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-white/85 mb-4">
               Ready When You Are
             </span>
-            <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-white mb-5">
+            <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-white mb-5">
               Let's design something beautiful together.
             </h2>
             <p class="text-base sm:text-lg text-white/90 leading-relaxed mb-8 max-w-lg">
-              Tell us about your occasion, colours and vibe â€” we'll come back within 24 hours with a moodboard and a quote.
+              Tell us about your occasion, colours and vibe — we'll come back within 24 hours with a moodboard and a quote.
             </p>
 
             <ul class="flex flex-col gap-3 mb-9">
@@ -765,9 +768,9 @@
           </div>
 
           <div class="w-full bg-white/10 backdrop-blur-sm border border-white/25 rounded-2xl p-7 sm:p-9">
-            <h3 class="font-playfair text-2xl font-bold text-white mb-2">Have a quick question?</h3>
+            <h3 class="font-playfair text-2xl font-semibold text-white mb-2">Have a quick question?</h3>
             <p class="text-sm text-white/85 leading-relaxed mb-6">
-              Drop your email and a short note â€” our head florist will reply personally.
+              Drop your email and a short note — our head florist will reply personally.
             </p>
 
             <form class="flex flex-col gap-3" onsubmit="event.preventDefault();">
@@ -782,7 +785,7 @@
             </form>
 
             <p class="text-[11px] text-white/75 mt-4 leading-relaxed">
-              We reply within 24 hours, Monâ€“Sun.
+              We reply within 24 hours, Mon–Sun.
             </p>
           </div>
 
@@ -804,7 +807,7 @@
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2.5"/><path d="M12 9.5c0-3 2-5 0-8-2 3 0 5 0 8z"/><path d="M14.5 12c3 0 5-2 8 0-3 2-5 0-8 0z"/><path d="M12 14.5c0 3-2 5 0 8 2-3 0-5 0-8z"/><path d="M9.5 12c-3 0-5 2-8 0 3-2 5 0 8 0z"/></svg>
             </span>
             <span class="flex flex-col">
-              <span class="text-xl font-playfair font-extrabold tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight">Bloom Atelier</span>
+              <span class="text-xl font-playfair font-semibold tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight">Bloom Atelier</span>
               <span class="text-[8px] uppercase font-bold tracking-widest text-yellow-500">Luxury Floral Studio</span>
             </span>
           </a>
@@ -815,13 +818,13 @@
           </div>
           <div class="flex gap-2">
             <a href="#" aria-label="X Profile" class="w-8 h-8 rounded-full bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-stone-400 hover:text-white hover:border-yellow-500/40 transition-all duration-300"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-            <a href="#" aria-label="Instagram Profile" class="w-8 h-8 rounded-full bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-stone-400 hover:text-white hover:border-yellow-500/40 transition-all duration-300"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/></svg></a>
+            <a href="#" aria-label="Instagram Profile" class="w-8 h-8 rounded-full bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-stone-400 hover:text-white hover:border-yellow-500/40 transition-all duration-300"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
             <a href="#" aria-label="Facebook Profile" class="w-8 h-8 rounded-full bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-stone-400 hover:text-white hover:border-yellow-500/40 transition-all duration-300"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg></a>
           </div>
         </div>
 
         <div class="lg:col-span-2">
-          <h4 class="text-white font-bold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">Flowers<span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span></h4>
+          <h4 class="text-white font-semibold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">Flowers<span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span></h4>
           <ul class="flex flex-col gap-2.5">
             <li><a href="shop.html#seasonal" class="text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">Seasonal</a></li>
             <li><a href="shop.html#roses" class="text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">Roses</a></li>
@@ -831,7 +834,7 @@
         </div>
 
         <div class="lg:col-span-2">
-          <h4 class="text-white font-bold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">Discover<span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span></h4>
+          <h4 class="text-white font-semibold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">Discover<span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span></h4>
           <ul class="flex flex-col gap-2.5">
             <li><a href="custom.html" class="text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">Custom</a></li>
             <li><a href="delivery.html" class="text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">Delivery</a></li>
@@ -841,7 +844,7 @@
         </div>
 
         <div class="lg:col-span-4">
-          <h4 class="text-white font-bold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">Visit Us<span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span></h4>
+          <h4 class="text-white font-semibold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">Visit Us<span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span></h4>
           <ul class="flex flex-col gap-3">
             <li>
               <a href="contact.html#map" class="group flex items-start gap-2 text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">
@@ -857,7 +860,7 @@
             </li>
             <li class="flex items-start gap-2 text-sm text-stone-400 font-medium">
               <span class="w-6 h-6 rounded bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-yellow-500 flex-shrink-0"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>
-              <span class="pt-0.5">Monâ€“Sun Â· 8:00 AM â€“ 7:00 PM</span>
+              <span class="pt-0.5">Mon–Sun · 8:00 AM – 7:00 PM</span>
             </li>
           </ul>
         </div>

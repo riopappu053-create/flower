@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bloom Atelier â€” Shop</title>
+  <title>Shop Flowers — Bloom Atelier</title>
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ca8a04' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='2.5'/><path d='M12 9.5c0-3 2-5 0-8-2 3 0 5 0 8z'/><path d='M14.5 12c3 0 5-2 8 0-3 2-5 0-8 0z'/><path d='M12 14.5c0 3-2 5 0 8 2-3 0-5 0-8z'/><path d='M9.5 12c-3 0-5 2-8 0 3-2 5 0 8 0z'/></svg>" />
 
@@ -36,6 +36,9 @@
   <style>
     html { scroll-behavior: smooth; }
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    /* Consistent Typography: 600 headings, 400-550 body */
+    h1, h2, h3, h4, h5, h6 { font-weight: 600 !important; }
+    p { font-weight: 400; }
     html { scrollbar-width: thin; scrollbar-color: #ca8a04 #fefce8; }
     html.dark { scrollbar-color: #ca8a04 #1c1917; }
     ::-webkit-scrollbar { width: 8px; height: 8px; }
@@ -56,14 +59,14 @@
 <body id="top" class="bg-brandLight dark:bg-brandDark text-stone-800 dark:text-stone-100 antialiased transition-colors duration-300">
 
   <!-- ================= 1. NAVBAR (unchanged) ================= -->
-  <header class="sticky top-0 z-50 w-full bg-white/95 dark:bg-[#1c1917]/95 backdrop-blur-md border-b border-yellow-200/60 dark:border-stone-800/70 shadow-sm transition-colors duration-300">
+  <header class="sticky top-0 z-50 w-full relative bg-white/95 dark:bg-[#1c1917]/95 backdrop-blur-md border-b border-yellow-200/60 dark:border-stone-800/70 shadow-sm transition-colors duration-300">
     <nav class="max-w-[1400px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between gap-4" aria-label="Main Navigation">
       <a href="index.html" class="flex items-center gap-3 flex-shrink-0 group" aria-label="Bloom Atelier home">
         <span class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-primary to-secondary flex items-center justify-center shadow-bloom text-white transition-transform duration-300 group-hover:scale-105">
           <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2.5"/><path d="M12 9.5c0-3 2-5 0-8-2 3 0 5 0 8z"/><path d="M14.5 12c3 0 5-2 8 0-3 2-5 0-8 0z"/><path d="M12 14.5c0 3-2 5 0 8 2-3 0-5 0-8z"/><path d="M9.5 12c-3 0-5 2-8 0 3-2 5 0 8 0z"/></svg>
         </span>
         <span class="flex flex-col">
-          <span class="text-2xl font-playfair font-extrabold tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight">Bloom Atelier</span>
+          <span class="text-2xl font-playfair font-semibold tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight">Bloom Atelier</span>
           <span class="text-[9px] uppercase font-bold tracking-widest text-yellow-600 dark:text-yellow-500 -mt-1">Luxury Floral Studio</span>
         </span>
       </a>
@@ -110,7 +113,7 @@
       </button>
     </nav>
 
-    <div id="mobile-menu" class="hidden flex-col bg-white dark:bg-[#1c1917] border-t border-yellow-200/60 dark:border-stone-800/70 w-full shadow-2xl max-h-[85vh] overflow-y-auto px-6 py-8 bloom-scrollbar">
+    <div id="mobile-menu" class="hidden absolute top-full left-0 right-0 w-full flex flex-col bg-white dark:bg-[#1c1917] border-t border-yellow-200/60 dark:border-stone-800/70 shadow-2xl max-h-[85vh] overflow-y-auto px-6 py-8 bloom-scrollbar z-50">
       <div class="flex flex-col gap-6">
         <div>
           <span class="text-[11px] font-bold uppercase tracking-[0.14em] text-stone-400 block mb-2">Home</span>
@@ -151,7 +154,7 @@
         </span>
         <span class="text-[11px] font-bold tracking-[0.14em] uppercase text-white drop-shadow-md">Shop Fresh Blooms</span>
       </div>
-      <h1 class="font-playfair text-5xl sm:text-6xl lg:text-7xl leading-[1.2] tracking-tight mb-6 text-white font-extrabold drop-shadow-lg">Our Floral Collection</h1>
+      <h1 class="font-playfair text-5xl sm:text-6xl lg:text-7xl leading-[1.2] tracking-tight mb-6 text-white font-semibold drop-shadow-lg">Our Floral Collection</h1>
       <p class="text-lg sm:text-xl text-white/90 leading-relaxed max-w-2xl drop-shadow-md">Explore our curated selection of seasonal bouquets and luxury arrangements, hand-tied by expert florists.</p>
     </div>
   </section>
@@ -161,7 +164,7 @@
     <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
       <div class="max-w-2xl mx-auto text-center mb-14">
         <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">Browse Categories</span>
-        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-5">
+        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-stone-900 dark:text-white mb-5">
           Find the perfect
           <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">arrangement</span>
         </h2>
@@ -175,7 +178,7 @@
           <img src="img/WhatsApp Image 2026-10-09 at 1.59.52 PM (5).jpeg" alt="Signature bouquets" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-4 text-center">
-            <p class="font-playfair text-lg font-bold text-white">Signature</p>
+            <h3 class="font-playfair text-lg font-semibold text-white">Signature</h3>
             <span class="text-[10px] uppercase tracking-[0.14em] font-bold text-yellow-300">12 Designs</span>
           </div>
         </a>
@@ -183,7 +186,7 @@
           <img src="img/WhatsApp Image 2026-10-09 at 1.59.52 PM (6).jpeg" alt="Seasonal collections" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-4 text-center">
-            <p class="font-playfair text-lg font-bold text-white">Seasonal</p>
+            <h3 class="font-playfair text-lg font-semibold text-white">Seasonal</h3>
             <span class="text-[10px] uppercase tracking-[0.14em] font-bold text-yellow-300">8 Designs</span>
           </div>
         </a>
@@ -191,7 +194,7 @@
           <img src="img/WhatsApp Image 2026-10-09 at 1.59.52 PM (7).jpeg" alt="Romance bouquets" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-4 text-center">
-            <p class="font-playfair text-lg font-bold text-white">Romance</p>
+            <h3 class="font-playfair text-lg font-semibold text-white">Romance</h3>
             <span class="text-[10px] uppercase tracking-[0.14em] font-bold text-yellow-300">10 Designs</span>
           </div>
         </a>
@@ -199,7 +202,7 @@
           <img src="img/WhatsApp Image 2026-10-09 at 1.59.52 PM (15).jpeg" alt="Celebration arrangements" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-4 text-center">
-            <p class="font-playfair text-lg font-bold text-white">Celebration</p>
+            <h3 class="font-playfair text-lg font-semibold text-white">Celebration</h3>
             <span class="text-[10px] uppercase tracking-[0.14em] font-bold text-yellow-300">9 Designs</span>
           </div>
         </a>
@@ -207,7 +210,7 @@
           <img src="img/WhatsApp Image 2026-10-09 at 1.59.52 PM (27).jpeg" alt="Luxury arrangements" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-4 text-center">
-            <p class="font-playfair text-lg font-bold text-white">Luxury</p>
+            <h3 class="font-playfair text-lg font-semibold text-white">Luxury</h3>
             <span class="text-[10px] uppercase tracking-[0.14em] font-bold text-yellow-300">6 Designs</span>
           </div>
         </a>
@@ -265,15 +268,15 @@
       <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
         <div class="max-w-2xl">
           <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">Featured Products</span>
-          <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-4">
+          <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-stone-900 dark:text-white mb-4">
             Blooming right
             <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">now</span>
           </h2>
           <p class="text-base sm:text-lg text-stone-600 dark:text-stone-400 leading-relaxed">
-            Six hand-tied arrangements ready to ship today â€” each with a handwritten card and care guide.
+            Six hand-tied arrangements ready to ship today — each with a handwritten card and care guide.
           </p>
         </div>
-        <p class="text-sm text-stone-500 dark:text-stone-400 font-medium flex-shrink-0">Showing 1â€“6 of 46 bouquets</p>
+        <p class="text-sm text-stone-500 dark:text-stone-400 font-medium flex-shrink-0">Showing 1–6 of 46 bouquets</p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 lg:gap-8">
@@ -296,7 +299,7 @@
               <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
               <span class="text-[11px] font-bold text-stone-500 dark:text-stone-400 ms-1">(128)</span>
             </div>
-            <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-2">Blush Rose Bouquet</h3>
+            <h3 class="font-playfair text-xl font-semibold text-stone-900 dark:text-white mb-2">Blush Rose Bouquet</h3>
             <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-5 flex-1">
               A romantic cluster of garden roses and eucalyptus, wrapped in ivory silk ribbon.
             </p>
@@ -331,7 +334,7 @@
               <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
               <span class="text-[11px] font-bold text-stone-500 dark:text-stone-400 ms-1">(94)</span>
             </div>
-            <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-2">Pastel Peony Dream</h3>
+            <h3 class="font-playfair text-xl font-semibold text-stone-900 dark:text-white mb-2">Pastel Peony Dream</h3>
             <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-5 flex-1">
               Soft pink peonies and lisianthus gathered into a dreamy, garden-style arrangement.
             </p>
@@ -366,9 +369,9 @@
               <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
               <span class="text-[11px] font-bold text-stone-500 dark:text-stone-400 ms-1">(67)</span>
             </div>
-            <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-2">Golden Orchid Arrangement</h3>
+            <h3 class="font-playfair text-xl font-semibold text-stone-900 dark:text-white mb-2">Golden Orchid Arrangement</h3>
             <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-5 flex-1">
-              Elegant phalaenopsis orchids in a sculptural vase â€” a modern statement piece.
+              Elegant phalaenopsis orchids in a sculptural vase — a modern statement piece.
             </p>
             <div class="flex items-center justify-between pt-5 border-t border-yellow-100 dark:border-stone-800/60">
               <div>
@@ -400,9 +403,9 @@
               <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
               <span class="text-[11px] font-bold text-stone-500 dark:text-stone-400 ms-1">(112)</span>
             </div>
-            <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-2">Rustic Garden Posy</h3>
+            <h3 class="font-playfair text-xl font-semibold text-stone-900 dark:text-white mb-2">Rustic Garden Posy</h3>
             <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-5 flex-1">
-              Tucked and gathered by hand â€” a garden-style posy with dahlias, herbs and trailing vines.
+              Tucked and gathered by hand — a garden-style posy with dahlias, herbs and trailing vines.
             </p>
             <div class="flex items-center justify-between pt-5 border-t border-yellow-100 dark:border-stone-800/60">
               <div>
@@ -435,7 +438,7 @@
               <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
               <span class="text-[11px] font-bold text-stone-500 dark:text-stone-400 ms-1">(203)</span>
             </div>
-            <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-2">Red Rose Romance</h3>
+            <h3 class="font-playfair text-xl font-semibold text-stone-900 dark:text-white mb-2">Red Rose Romance</h3>
             <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-5 flex-1">
               Two dozen long-stemmed roses, hand-wrapped in deep red silk with a handwritten note.
             </p>
@@ -469,7 +472,7 @@
               <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
               <span class="text-[11px] font-bold text-stone-500 dark:text-stone-400 ms-1">(88)</span>
             </div>
-            <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-2">Celebration Mix</h3>
+            <h3 class="font-playfair text-xl font-semibold text-stone-900 dark:text-white mb-2">Celebration Mix</h3>
             <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-5 flex-1">
               A vibrant arrangement of lilies, gerberas and tulips for milestones big and small.
             </p>
@@ -506,7 +509,7 @@
     <div class="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
       <div class="max-w-2xl mx-auto text-center mb-14">
         <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">Bundle &amp; Save</span>
-        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-5">
+        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-stone-900 dark:text-white mb-5">
           More blooms,
           <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">better value</span>
         </h2>
@@ -520,9 +523,9 @@
         <!-- Bundle 1 -->
         <article class="group bg-white dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl p-7 shadow-sm hover:shadow-bloom hover:-translate-y-1 transition-all duration-300 flex flex-col">
           <span class="inline-block bg-primary/15 text-primaryHover dark:text-yellow-500 text-[10px] font-bold uppercase tracking-[0.14em] px-3 py-1 rounded-full mb-5 self-start">Starter</span>
-          <h3 class="font-playfair text-2xl font-bold text-stone-900 dark:text-white mb-2">Petite Duo</h3>
+          <h3 class="font-playfair text-2xl font-semibold text-stone-900 dark:text-white mb-2">Petite Duo</h3>
           <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-6 flex-1">
-            Two small bouquets to brighten up a home or office â€” one for you, one for a friend.
+            Two small bouquets to brighten up a home or office — one for you, one for a friend.
           </p>
           <ul class="flex flex-col gap-2 mb-6">
             <li class="flex items-center gap-2 text-sm text-stone-600 dark:text-stone-400"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>2 hand-tied bouquets</li>
@@ -541,9 +544,9 @@
         <!-- Bundle 2 (featured) -->
         <article class="group relative bg-white dark:bg-[#292524] border-2 border-primary/40 dark:border-yellow-500/40 rounded-2xl p-7 shadow-bloom hover:shadow-bloom-hover hover:-translate-y-1 transition-all duration-300 flex flex-col">
           <span class="inline-block bg-gradient-to-r from-primary to-secondary text-white text-[10px] font-bold uppercase tracking-[0.14em] px-3 py-1 rounded-full mb-5 self-start">Best Value</span>
-          <h3 class="font-playfair text-2xl font-bold text-stone-900 dark:text-white mb-2">Bloom Trio</h3>
+          <h3 class="font-playfair text-2xl font-semibold text-stone-900 dark:text-white mb-2">Bloom Trio</h3>
           <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-6 flex-1">
-            Three signature bouquets delivered across three weeks â€” a lovely way to keep the flowers coming.
+            Three signature bouquets delivered across three weeks — a lovely way to keep the flowers coming.
           </p>
           <ul class="flex flex-col gap-2 mb-6">
             <li class="flex items-center gap-2 text-sm text-stone-600 dark:text-stone-400"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>3 signature bouquets</li>
@@ -562,9 +565,9 @@
         <!-- Bundle 3 -->
         <article class="group bg-white dark:bg-[#292524] border border-yellow-100 dark:border-stone-800/60 rounded-2xl p-7 shadow-sm hover:shadow-bloom hover:-translate-y-1 transition-all duration-300 flex flex-col">
           <span class="inline-block bg-primary/15 text-primaryHover dark:text-yellow-500 text-[10px] font-bold uppercase tracking-[0.14em] px-3 py-1 rounded-full mb-5 self-start">Premium</span>
-          <h3 class="font-playfair text-2xl font-bold text-stone-900 dark:text-white mb-2">Luxury Quartet</h3>
+          <h3 class="font-playfair text-2xl font-semibold text-stone-900 dark:text-white mb-2">Luxury Quartet</h3>
           <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-6 flex-1">
-            Four large statement arrangements delivered monthly â€” perfect for offices and event spaces.
+            Four large statement arrangements delivered monthly — perfect for offices and event spaces.
           </p>
           <ul class="flex flex-col gap-2 mb-6">
             <li class="flex items-center gap-2 text-sm text-stone-600 dark:text-stone-400"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>4 large arrangements</li>
@@ -591,7 +594,7 @@
       <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
         <div class="max-w-2xl">
           <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">Best Sellers</span>
-          <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-4">
+          <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-stone-900 dark:text-white mb-4">
             Top 3 this
             <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">week</span>
           </h2>
@@ -613,11 +616,11 @@
               <span class="font-playfair text-3xl font-extrabold">1</span>
             </div>
             <div class="sm:col-span-5 p-6 sm:py-8">
-              <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-2">Red Rose Romance</h3>
+              <h3 class="font-playfair text-xl font-semibold text-stone-900 dark:text-white mb-2">Red Rose Romance</h3>
               <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-3">Two dozen long-stemmed roses, hand-wrapped in deep red silk.</p>
               <div class="flex items-center gap-3">
                 <span class="text-[10px] font-bold uppercase tracking-[0.14em] text-primary dark:text-yellow-500 bg-primary/10 px-2.5 py-1 rounded-full">203 reviews</span>
-                <span class="text-[10px] font-bold uppercase tracking-[0.14em] text-stone-500 dark:text-stone-400">â˜… 5.0</span>
+                <span class="text-[10px] font-bold uppercase tracking-[0.14em] text-stone-500 dark:text-stone-400">★ 5.0</span>
               </div>
             </div>
             <div class="sm:col-span-3 p-6 sm:py-8 flex items-center justify-between sm:justify-end gap-4 border-t sm:border-t-0 sm:border-s border-yellow-100 dark:border-stone-800/60">
@@ -637,11 +640,11 @@
               <span class="font-playfair text-3xl font-extrabold">2</span>
             </div>
             <div class="sm:col-span-5 p-6 sm:py-8">
-              <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-2">Blush Rose Bouquet</h3>
+              <h3 class="font-playfair text-xl font-semibold text-stone-900 dark:text-white mb-2">Blush Rose Bouquet</h3>
               <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-3">Garden roses and eucalyptus, wrapped in ivory silk ribbon.</p>
               <div class="flex items-center gap-3">
                 <span class="text-[10px] font-bold uppercase tracking-[0.14em] text-primary dark:text-yellow-500 bg-primary/10 px-2.5 py-1 rounded-full">128 reviews</span>
-                <span class="text-[10px] font-bold uppercase tracking-[0.14em] text-stone-500 dark:text-stone-400">â˜… 4.9</span>
+                <span class="text-[10px] font-bold uppercase tracking-[0.14em] text-stone-500 dark:text-stone-400">★ 4.9</span>
               </div>
             </div>
             <div class="sm:col-span-3 p-6 sm:py-8 flex items-center justify-between sm:justify-end gap-4 border-t sm:border-t-0 sm:border-s border-yellow-100 dark:border-stone-800/60">
@@ -661,11 +664,11 @@
               <span class="font-playfair text-3xl font-extrabold">3</span>
             </div>
             <div class="sm:col-span-5 p-6 sm:py-8">
-              <h3 class="font-playfair text-xl font-bold text-stone-900 dark:text-white mb-2">Rustic Garden Posy</h3>
+              <h3 class="font-playfair text-xl font-semibold text-stone-900 dark:text-white mb-2">Rustic Garden Posy</h3>
               <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-3">Garden-style posy with dahlias, herbs and trailing vines.</p>
               <div class="flex items-center gap-3">
                 <span class="text-[10px] font-bold uppercase tracking-[0.14em] text-primary dark:text-yellow-500 bg-primary/10 px-2.5 py-1 rounded-full">112 reviews</span>
-                <span class="text-[10px] font-bold uppercase tracking-[0.14em] text-stone-500 dark:text-stone-400">â˜… 4.9</span>
+                <span class="text-[10px] font-bold uppercase tracking-[0.14em] text-stone-500 dark:text-stone-400">★ 4.9</span>
               </div>
             </div>
             <div class="sm:col-span-3 p-6 sm:py-8 flex items-center justify-between sm:justify-end gap-4 border-t sm:border-t-0 sm:border-s border-yellow-100 dark:border-stone-800/60">
@@ -686,7 +689,7 @@
     <div class="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
       <div class="max-w-2xl mx-auto text-center mb-14">
         <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-primary dark:text-yellow-500 mb-3">Add-ons</span>
-        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-stone-900 dark:text-white mb-5">
+        <h2 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-stone-900 dark:text-white mb-5">
           Make it a little
           <span class="italic font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">more special</span>
         </h2>
@@ -702,8 +705,8 @@
           <span class="w-16 h-16 mx-auto rounded-full bg-primaryLight dark:bg-stone-800/60 text-primary dark:text-yellow-500 flex items-center justify-center mb-4 group-hover:bg-gradient-to-tr group-hover:from-primary group-hover:to-secondary group-hover:text-white transition-all duration-300">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
           </span>
-          <h3 class="font-playfair text-lg font-bold text-stone-900 dark:text-white mb-1">Hand-Written Card</h3>
-          <p class="text-[11px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400 mb-3">+ $4.00</p>
+          <h3 class="font-playfair text-lg font-semibold text-stone-900 dark:text-white mb-1">Hand-Written Card</h3>
+          <p class="text-[11px] uppercase tracking-[0.14em] font-medium text-stone-500 dark:text-stone-400 mb-3">+ $4.00</p>
           <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">A note from our florists, written by hand and tucked inside the wrap.</p>
         </article>
 
@@ -712,8 +715,8 @@
           <span class="w-16 h-16 mx-auto rounded-full bg-primaryLight dark:bg-stone-800/60 text-primary dark:text-yellow-500 flex items-center justify-center mb-4 group-hover:bg-gradient-to-tr group-hover:from-primary group-hover:to-secondary group-hover:text-white transition-all duration-300">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2" stroke-width="1.8"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 12h18M12 7v13"/></svg>
           </span>
-          <h3 class="font-playfair text-lg font-bold text-stone-900 dark:text-white mb-1">Belgian Chocolates</h3>
-          <p class="text-[11px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400 mb-3">+ $18.00</p>
+          <h3 class="font-playfair text-lg font-semibold text-stone-900 dark:text-white mb-1">Belgian Chocolates</h3>
+          <p class="text-[11px] uppercase tracking-[0.14em] font-medium text-stone-500 dark:text-stone-400 mb-3">+ $18.00</p>
           <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">A small box of assorted dark and milk chocolates, tucked into the box.</p>
         </article>
 
@@ -722,9 +725,9 @@
           <span class="w-16 h-16 mx-auto rounded-full bg-primaryLight dark:bg-stone-800/60 text-primary dark:text-yellow-500 flex items-center justify-center mb-4 group-hover:bg-gradient-to-tr group-hover:from-primary group-hover:to-secondary group-hover:text-white transition-all duration-300">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 3h8l-1 5a4 4 0 01-4 4 4 4 0 01-4-4L8 3z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M7 12c-1 3 0 6 5 8 5-2 6-5 5-8"/></svg>
           </span>
-          <h3 class="font-playfair text-lg font-bold text-stone-900 dark:text-white mb-1">Hand-Blown Vase</h3>
-          <p class="text-[11px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400 mb-3">+ $32.00</p>
-          <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">A locally-made glass vase â€” send the whole gift ready to display.</p>
+          <h3 class="font-playfair text-lg font-semibold text-stone-900 dark:text-white mb-1">Hand-Blown Vase</h3>
+          <p class="text-[11px] uppercase tracking-[0.14em] font-medium text-stone-500 dark:text-stone-400 mb-3">+ $32.00</p>
+          <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">A locally-made glass vase — send the whole gift ready to display.</p>
         </article>
 
         <!-- Upgrade delivery -->
@@ -732,9 +735,9 @@
           <span class="w-16 h-16 mx-auto rounded-full bg-primaryLight dark:bg-stone-800/60 text-primary dark:text-yellow-500 flex items-center justify-center mb-4 group-hover:bg-gradient-to-tr group-hover:from-primary group-hover:to-secondary group-hover:text-white transition-all duration-300">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9" stroke-width="1.8"/></svg>
           </span>
-          <h3 class="font-playfair text-lg font-bold text-stone-900 dark:text-white mb-1">Morning Delivery</h3>
-          <p class="text-[11px] uppercase tracking-[0.14em] font-bold text-stone-500 dark:text-stone-400 mb-3">+ $8.00</p>
-          <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">Upgrade to a pre-9 AM delivery slot â€” perfect for surprises at the start of the day.</p>
+          <h3 class="font-playfair text-lg font-semibold text-stone-900 dark:text-white mb-1">Morning Delivery</h3>
+          <p class="text-[11px] uppercase tracking-[0.14em] font-medium text-stone-500 dark:text-stone-400 mb-3">+ $8.00</p>
+          <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">Upgrade to a pre-9 AM delivery slot — perfect for surprises at the start of the day.</p>
         </article>
 
       </div>
@@ -754,7 +757,7 @@
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2.5"/><path d="M12 9.5c0-3 2-5 0-8-2 3 0 5 0 8z"/><path d="M14.5 12c3 0 5-2 8 0-3 2-5 0-8 0z"/><path d="M12 14.5c0 3-2 5 0 8 2-3 0-5 0-8z"/><path d="M9.5 12c-3 0-5 2-8 0 3-2 5 0 8 0z"/></svg>
             </span>
             <span class="flex flex-col">
-              <span class="text-xl font-playfair font-extrabold tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight">Bloom Atelier</span>
+              <span class="text-xl font-playfair font-semibold tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight">Bloom Atelier</span>
               <span class="text-[8px] uppercase font-bold tracking-widest text-yellow-500">Luxury Floral Studio</span>
             </span>
           </a>
@@ -765,13 +768,13 @@
           </div>
           <div class="flex gap-2">
             <a href="#" aria-label="X Profile" class="w-8 h-8 rounded-full bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-stone-400 hover:text-white hover:border-yellow-500/40 transition-all duration-300"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-            <a href="#" aria-label="Instagram Profile" class="w-8 h-8 rounded-full bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-stone-400 hover:text-white hover:border-yellow-500/40 transition-all duration-300"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/></svg></a>
+            <a href="#" aria-label="Instagram Profile" class="w-8 h-8 rounded-full bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-stone-400 hover:text-white hover:border-yellow-500/40 transition-all duration-300"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
             <a href="#" aria-label="Facebook Profile" class="w-8 h-8 rounded-full bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-stone-400 hover:text-white hover:border-yellow-500/40 transition-all duration-300"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg></a>
           </div>
         </div>
 
         <div class="lg:col-span-2">
-          <h4 class="text-white font-bold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">Flowers<span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span></h4>
+          <h4 class="text-white font-semibold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">Flowers<span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span></h4>
           <ul class="flex flex-col gap-2.5">
             <li><a href="shop.html#seasonal" class="text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">Seasonal</a></li>
             <li><a href="shop.html#roses" class="text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">Roses</a></li>
@@ -781,7 +784,7 @@
         </div>
 
         <div class="lg:col-span-2">
-          <h4 class="text-white font-bold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">Discover<span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span></h4>
+          <h4 class="text-white font-semibold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">Discover<span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span></h4>
           <ul class="flex flex-col gap-2.5">
             <li><a href="custom.html" class="text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">Custom</a></li>
             <li><a href="delivery.html" class="text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">Delivery</a></li>
@@ -791,7 +794,7 @@
         </div>
 
         <div class="lg:col-span-4">
-          <h4 class="text-white font-bold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">Visit Us<span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span></h4>
+          <h4 class="text-white font-semibold tracking-[0.14em] uppercase text-xs mb-4 relative pb-2">Visit Us<span class="absolute bottom-0 left-0 w-6 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span></h4>
           <ul class="flex flex-col gap-3">
             <li>
               <a href="contact.html#map" class="group flex items-start gap-2 text-sm text-stone-400 hover:text-yellow-500 transition-colors font-medium">
@@ -807,7 +810,7 @@
             </li>
             <li class="flex items-start gap-2 text-sm text-stone-400 font-medium">
               <span class="w-6 h-6 rounded bg-stone-800/60 border border-stone-700/60 flex items-center justify-center text-yellow-500 flex-shrink-0"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>
-              <span class="pt-0.5">Monâ€“Sun Â· 8:00 AM â€“ 7:00 PM</span>
+              <span class="pt-0.5">Mon–Sun · 8:00 AM – 7:00 PM</span>
             </li>
           </ul>
         </div>
